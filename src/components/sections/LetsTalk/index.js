@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Button from "@simple/Button";
 
 import s from "./style.scss";

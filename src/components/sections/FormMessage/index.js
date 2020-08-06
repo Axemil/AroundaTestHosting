@@ -1,4 +1,3 @@
-import React, { useEffect, useRef } from "react"
 import { connect } from "react-redux"
 import hideMessage from "../../../store/actions/hideMessage"
 import hideMessage2 from "../../../store/actions/hideMessage2"
@@ -21,9 +20,9 @@ const mapDispatchToProps2 = (dispatch) => ({
 })
 
 let Message = ({ text, hideMessage, messageIsVisible }) => {
-  const timerId = useRef(null)
+  const timerId = React.useRef(null)
 
-  useEffect(() => {
+  React.useEffect(() => {
     timerId.current = setTimeout(hideMessage, 3000)
   }, [])
 

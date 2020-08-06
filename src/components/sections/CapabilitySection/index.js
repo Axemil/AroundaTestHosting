@@ -1,8 +1,7 @@
-import React , {PureComponent}from 'react';
 import TitleSecondary from '@simple/TitleSecondary';
 import Description from '@simple/Description';
 import style from './style.scss';
-import { HashLink as Link } from 'react-router-hash-link';
+import Link from 'next/link';
 
 import data from '@/data/ServiceSlide';
 
@@ -50,12 +49,12 @@ class CapabilitySection extends PureComponent {
             data.map(el => {
               return (
                 <Link
-                  to={`/services/#${el.id}`} key={el.id}
+                  href={`/services/#${el.id}`} key={el.id}
                   scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
                   className={`${style.link} stopCursor`}
                   onMouseEnter={this.handleChange}
                 >
-                  <span className={style.item} tabIndex='-1'>{el.title}</span>
+                  <a className={style.item} tabIndex='-1'>{el.title}</a>
                 </Link>
               )
             })

@@ -1,4 +1,4 @@
-import React from "react"
+
 import s from "./style.scss"
 import classnames from "classnames"
 import { connect } from "react-redux"

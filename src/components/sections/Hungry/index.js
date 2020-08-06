@@ -1,4 +1,4 @@
-import React from "react"
+
 import style from "./style.scss"
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 import { connect } from "react-redux"

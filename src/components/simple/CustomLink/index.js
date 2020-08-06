@@ -1,4 +1,4 @@
-import React from 'react';
+
 import s from './style.scss';
 
 const CustomLink = ({button, text, href, large}) => {

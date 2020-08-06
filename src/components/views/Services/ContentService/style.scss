@@ -1,0 +1,38 @@
+@import '@/scss/variables.scss';
+
+.content{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 25 / -8;
+    @media (max-width: $maxLaptop){
+        grid-column: 26 / -4;
+    }
+    .text{
+        font-size: 18px;
+        margin: 16px 0 26px;
+		max-width: 525px;
+		@media (max-width: $maxTablet){
+			margin: 12px 0 20px;
+		}
+    }
+    .list{
+		margin: 0 0 46px;
+		@media (max-width: $maxTablet){
+			margin: 0 0 40px;
+		}
+        li{
+            margin: 0 0 6px;
+            position: relative;
+			display: flex;
+			align-items: center;
+			font-size: 18px;
+            &:before{
+                content: '-';
+				display: block;
+				margin: 0 4px;
+            }
+        }
+    }
+}

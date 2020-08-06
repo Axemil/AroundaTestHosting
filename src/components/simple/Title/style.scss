@@ -1,5 +1,5 @@
-@import "../../../scss/variables.scss";
-@import "../../../scss/mixins.scss";
+@import "@/scss/variables.scss";
+@import "@/scss/mixins.scss";
 
 .title{
     @include font(50px, 38px, $maxLaptop, $minTablet);

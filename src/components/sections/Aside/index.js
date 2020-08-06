@@ -1,13 +1,11 @@
-import React, { PureComponent } from "react"
+
 import { TimelineLite, Power0 } from "gsap"
-import { Link } from "react-router-dom"
+import Link from 'next/link'
 
 import TitleH from "@simple/TitleH"
 import s from "./style.scss"
 
-
-
-class Aside extends PureComponent {
+class Aside extends React.PureComponent {
 	UNSAFE_componentWillReceiveProps(nextProps) {
 		if (nextProps.openMenu) {
 			this.timeline()
@@ -88,11 +86,11 @@ class Aside extends PureComponent {
 									return (
 										<li key={i} className={`${el.disable ? s.disable : ""}`}>
 											<Link
-												className={`${s.link} menu-link stopCursor`}
-												onClick={handleCloseMenu}
-												to={el.link}
+												href={el.link}
 											>
-												{el.title}
+												<a className={`${s.link} menu-link stopCursor`} onClick={handleCloseMenu}>
+													{el.title}
+												</a>
 											</Link>
 											<div className={s.desc}>{el.desc}</div>
 										</li>
@@ -106,19 +104,39 @@ class Aside extends PureComponent {
 							</div>
 							<ul ref={(el) => (this.socials = el)} className={s.footerList}>
 								<li>
-									<Link to={""} className={`${s.listItem} stopCursor`}> Food delivery </Link>
+									<Link href={""}> 
+										<a className={`${s.listItem} stopCursor`}>
+											Food delivery 
+										</a>
+									</Link>
 								</li>
 								<li>
-									<Link to={""} className={`${s.listItem} stopCursor`}> SaaS </Link>
+									<Link href={""}> 
+										<a className={`${s.listItem} stopCursor`}>
+											SaaS 
+										</a>
+									</Link>
 								</li>
 								<li>
-									<Link to={""} className={`${s.listItem} stopCursor`}> Fintech </Link>
+									<Link href={""}> 
+										<a className={`${s.listItem} stopCursor`}>
+											Fintech 
+										</a>
+									</Link>
 								</li>
 								<li>
-									<Link to={""} className={`${s.listItem} stopCursor`}>	Health&Meditation </Link>
+									<Link href={""}> 
+										<a className={`${s.listItem} stopCursor`}>
+											Health&Meditation 
+										</a>
+									</Link>
 								</li>
 								<li>
-									<Link to={""} className={`${s.listItem} stopCursor`}> Cryprocurrency </Link>
+									<Link href={""}> 
+										<a className={`${s.listItem} stopCursor`}>
+											Cryprocurrency 
+										</a>
+									</Link>
 								</li>
 							</ul>
 						</div>

@@ -1,5 +1,4 @@
-import React , {PureComponent} from 'react';
-import {Link} from 'react-router-dom';
+import Link from 'next/link';
 import style from './style.scss';
 import TitleSecondary from '@simple/TitleSecondary';
 import Description from '@simple/Description';
@@ -121,8 +120,10 @@ class HowSection extends PureComponent {
                         })}
                     </div>
                     <div className={style.more}>
-                        <Link to={'/services'} className={`${style.link} stopCursor`}>
-                            More about expertise
+                        <Link href={'/services'}>
+                            <a className={`${style.link} stopCursor`}>
+                                More about expertise
+                            </a>
                         </Link>
                     </div>
         </section>

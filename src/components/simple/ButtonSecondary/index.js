@@ -1,5 +1,4 @@
-import React from 'react';
-import { Link } from "react-router-dom";
+import Link from 'next/link';
 
 import Arrow from "@svg/buttonSecondary/icon_arrow.svg";
 import Plus from "@svg/buttonSecondary/icon_plus.svg";
@@ -9,18 +8,18 @@ import s from "./style.scss";
 const ButtonSecondary = ({ children, href, icon="arrow" }) => (
 	href ? (
 		<Link 
-			to={href}
+			href={href}
 			className={`
 				stopCursor
 				${s.button}
 			`}
-		> 
-			<span> 
+		>
+			<a> 
 				{ children } 
 				<i className={s.icon}>
 					{ icon === "arrow" ? <Arrow /> : <Plus /> }
 				</i>
-			</span> 
+			</a> 
 		</Link>
 	) : (
 		<button 

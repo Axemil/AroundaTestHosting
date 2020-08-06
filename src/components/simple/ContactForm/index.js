@@ -1,10 +1,9 @@
-import React, { Component, Fragment } from 'react';
 import Select, { components } from 'react-select';
 import style from './style.scss';
 import Textarea from 'react-textarea-autosize';
 import TitleSecondary from '@simple/TitleSecondary';
 import Description from '@simple/Description';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import axios from 'axios';
 import utmcookie from '@/functions/utmcookie';
 
@@ -44,7 +43,7 @@ const customStyles = {
     })
 }
 
-export default class ContactForm extends Component {
+export default class ContactForm extends React.Component {
     state = {
         name: '',
         email: '',
@@ -188,7 +187,7 @@ export default class ContactForm extends Component {
     render() {
         const { name, email, project, include, budget, disable, emptyValue, successSend } = this.state;
         return (
-            <Fragment>
+            <>
                 <form className={style.grid} onSubmit={(e) => e.preventDefault()}>
                     <div className={style.inputWrapper}>
                         <input className={style.input} value={name} type='text' placeholder='What’s your name' onChange={this.handleInput} name='name' required />
@@ -275,11 +274,15 @@ export default class ContactForm extends Component {
                                 <Description light text={'We will contact you as soon as possible.'} />
                             </div>
                             <div className={style.linkWrapper}>
-                                <Link className={style.btn} to={'/'}>Go to Home page</Link>
+                                <Link href={'/'}>
+                                    <a className={style.btn}>
+                                        Go to Home page
+                                    </a>
+                                </Link>
                             </div>
                         </div> : null
                 }
-            </Fragment>
+            </>
         );
     }
 }

@@ -1,4 +1,3 @@
-import React, {Fragment} from 'react';
 
 import Works from '@simple/Works';
 import ButtonSecondary from "@simple/ButtonSecondary";

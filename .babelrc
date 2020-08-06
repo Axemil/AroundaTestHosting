@@ -9,7 +9,8 @@
 					"last 2 versions"
 				]
 			}
-		]
+		],
+		"next/babel"
 	],
 	"plugins": [
 		"react-hot-loader/babel",

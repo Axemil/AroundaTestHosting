@@ -1,4 +1,4 @@
-import React from "react";
+
 
 import Icon1 from "@svg/servicesSection-1.svg";
 import Icon2 from "@svg/servicesSection-3.svg";

@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
@@ -7,7 +7,8 @@ import TitleH from "@simple/TitleH";
 import s from './style.scss';
 
 
-const Works = ({ worksData }) => (
+const Works = ({ worksData }) => {
+	return (
 	<div className={s.row}>
 		{
 			worksData.map(work => (
@@ -32,6 +33,6 @@ const Works = ({ worksData }) => (
 			))
 		}
 	</div>
-);
+)};
 
 export default Works;

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { TweenMax, TimelineMax } from "gsap";
 import style from "./style.scss";
 

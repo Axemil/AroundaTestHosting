@@ -1,10 +1,11 @@
-import React, { useEffect } from "react"
+
+
 import style from "./style.scss"
 import VisibilitySensor from "react-visibility-sensor"
 import { connect } from "react-redux"
 import fetchPosts from "../../../store/actions/fetchPosts"
 import uniqueRandom from "unique-random"
-import { Link } from "react-router-dom"
+import Link from 'next/link'
 
 const mapStateToProps = (state, ownProps) => {
   return {

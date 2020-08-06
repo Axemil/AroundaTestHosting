@@ -1,12 +1,11 @@
-import React, { Component, Fragment } from 'react';
 import Title from '@simple/Title';
 import Subtitle from '@simple/Subtitle';
 import style from './style.scss';
 
-export default class ServicesHeader extends Component {
+export default class ServicesHeader extends React.Component {
   render() {
     return (
-      <Fragment>
+      <>
         <section className={style.headingSection}>
           <div className={style.titleWrapper}>
             <Title text='Co-create digital products from scratch' />
@@ -65,7 +64,7 @@ export default class ServicesHeader extends Component {
             </div>
           </div> */}
         </section>
-      </Fragment>
+      </>
     );
   }
 }

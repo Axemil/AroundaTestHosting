@@ -1,4 +1,4 @@
-import React from "react"
+
 import s from "./style.scss"
 import { useMediaQuery } from "react-responsive"
 import TagLink from "@sections/TagLink"

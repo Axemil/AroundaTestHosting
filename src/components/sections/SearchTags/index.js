@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+
+
 import style from './style.scss';
 import Search from '@/assets/svg/search.svg';
 import SubscribeButton from '@simple/SubscribeButton'
 
 const SearchTags = props => {
-  const [tags, setTags] = useState([
+  const [tags, setTags] = React.useState([
     {
       id: 1,
       name: 'All topics'
@@ -34,8 +35,8 @@ const SearchTags = props => {
       name: 'Tools'
     }
   ]);
-  const [isMobileList, setIsMobileList] = useState(false);
-  const [textMobileEl, setTextMobileEl] = useState('All topics');
+  const [isMobileList, setIsMobileList] = React.useState(false);
+  const [textMobileEl, setTextMobileEl] = React.useState('All topics');
 
   return (
     <div className={style.SearchTags}>

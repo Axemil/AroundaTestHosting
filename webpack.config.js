@@ -10,12 +10,6 @@ const NODE_ENV = process.env.NODE_ENV || "development"
 const isDev = NODE_ENV === "development"
 
 module.exports = {
-	entry: ["babel-polyfill", "./src/index.js"],
-	output: {
-		path: path.resolve(__dirname, "dist"),
-		filename: "bundle.js",
-		publicPath: "/"
-	},
 	optimization: {
 		minimizer: [
 			new OptimizeCssAssetsPlugin({
@@ -29,6 +23,7 @@ module.exports = {
 	resolve: {
 		modules: ["node_modules", path.resolve(__dirname, "src")],
 		alias: {
+			"pages": path.join(__dirname, "pages/"),
 			"@": path.join(__dirname, "src/"),
 			"@sections": path.join(__dirname, "src/components/sections"),
 			"@assets": path.join(__dirname, "src/assets/"),
@@ -141,9 +136,5 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: "bundle.css"
 		}),
-		// new PrerenderSPAPlugin({
-		// 	staticDir: path.join(__dirname, "dist"),
-		// 	routes: ["/"]
-		// })
 	]
 }

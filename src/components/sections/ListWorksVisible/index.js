@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+
 import { connect } from 'react-redux';
 import fetchPosts from '../../../store/actions/fetchPosts';
 import { useLocation } from 'react-router-dom';
@@ -8,18 +8,20 @@ import ListWorks from '@sections/ListWorks';
 const mapStateToProps = ({ posts, tags }) => ({ posts, tags });
 
 const useQuery = () => {
-  return new URLSearchParams(useLocation().search);
+  if(process.browser) {
+    return new URLSearchParams(useLocation().search);
+  }
 };
 
 let ListWorksVisible = ({ posts, tags, fetchPosts }) => {
-  const tagName = useQuery().get('tag');
+  const tagName = useQuery() && useQuery().get('tag');
   let tagId;
 
   if (tagName && tags && tags[tagName]) {
     tagId = tags[tagName].id;
   }
 
-  useEffect(() => {
+  React.useEffect(() => {
     fetchPosts(tagId);
   }, [tagId]);
 

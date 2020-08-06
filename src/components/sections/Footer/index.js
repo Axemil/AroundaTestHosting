@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
+import Link from 'next/link';
 
 import nav from "@/data/nav";
 import socials from "@/data/socials";
 
 import s from './style.scss';
 
-
 const Footer = () => {
-	const [date, setDate] = useState("");
+	const [date, setDate] = React.useState("");
 
-	useEffect(() => {
+	React.useEffect(() => {
 		handleYear();
 	}, [date])
 
@@ -44,7 +42,11 @@ const Footer = () => {
 								nav.map(link => (
 									!link.button &&
 									<li key={link.id}>
-										<Link to={link.href} className={`${s.listItem} stopCursor`}> {link.name} </Link>
+										<Link href={link.href}>
+											<a className={`${s.listItem} stopCursor`}>
+											{link.name}
+											</a>
+										</Link>
 									</li>
 								))
 							}
@@ -54,19 +56,39 @@ const Footer = () => {
 						<div className={s.title}>Expertise</div>
 						<ul className={s.footerList}>
 							<li>
-								<Link to={""} className={`${s.listItem} stopCursor`}> Food delivery </Link>
+								<Link href={""}>
+									<a className={`${s.listItem} stopCursor`}>
+										Food delivery
+									</a>
+								</Link>
 							</li>
 							<li>
-								<Link to={""} className={`${s.listItem} stopCursor`}> SaaS </Link>
+								<Link href={""}>
+									<a className={`${s.listItem} stopCursor`}>
+										SaaS
+									</a>
+								</Link>
 							</li>
 							<li>
-								<Link to={""} className={`${s.listItem} stopCursor`}> Fintech </Link>
+								<Link href={""}>
+									<a className={`${s.listItem} stopCursor`}>
+										Fintech
+									</a>
+								</Link>
 							</li>
 							<li>
-								<Link to={""} className={`${s.listItem} stopCursor`}>	Health&Meditation </Link>
+								<Link href={""}>
+									<a className={`${s.listItem} stopCursor`}>
+										Health&Meditation
+									</a>
+								</Link>
 							</li>
 							<li>
-								<Link to={""} className={`${s.listItem} stopCursor`}> Cryprocurrency </Link>
+								<Link href={""}>
+									<a className={`${s.listItem} stopCursor`}>
+										Cryprocurrency
+									</a>
+								</Link>
 							</li>
 						</ul>
 					</div>

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react"
+
+
 import s from "./style.scss"
 import { connect } from "react-redux"
 import closePopup from "../../../store/actions/closePopup"

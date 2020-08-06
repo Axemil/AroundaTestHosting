@@ -1,9 +1,8 @@
-import React, { Component, Fragment } from 'react';
 import style from './style.scss';
 
 
 
-export default class SortSection extends Component {
+export default class SortSection extends React.Component {
 
     render() {
     

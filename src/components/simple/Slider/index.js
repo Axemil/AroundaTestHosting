@@ -1,5 +1,3 @@
-import React, { useRef } from 'react';
-
 import Slider from "react-slick";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
@@ -12,7 +10,7 @@ import slides from "@/data/mainPageSlider";
 import s from "./style.scss";
 
 const SliderSection = () => {
-	const slider = useRef(null);
+	const slider = React.useRef(null);
 
 	const next = () => {
 		slider.current.slickNext();

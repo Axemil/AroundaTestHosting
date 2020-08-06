@@ -1,18 +1,20 @@
-import React, { Fragment } from "react"
+
 import style from "./style.scss"
-import { Link } from "react-router-dom"
+import Link from 'next/link'
 
 const StartSection = (props) => {
 	return (
-		<Fragment>
+		<>
 			<div className={style.title}>
 				Got a project?
-        <br />
-				<Link to={"/contact"} className="stopCursor">
-					Let's start.
-        </Link>
+				<br />
+				<Link href={"/contact"}>
+					<a className="stopCursor">
+						Let's start.
+					</a>
+				</Link>
 			</div>
-		</Fragment>
+		</>
 	)
 }
 export default StartSection

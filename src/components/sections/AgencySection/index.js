@@ -1,4 +1,3 @@
-import React from 'react';
 import Title from '@simple/Title';
 import Subtitle from '@simple/Subtitle';
 import Description from '@simple/Description';

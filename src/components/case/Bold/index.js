@@ -1,19 +1,18 @@
-import React, { Fragment, Component } from 'react';
 import s from './style.scss';
 import data from '@/data/Works';
 
 import Title from '@simple/Title';
-import TitleSecondary from '@simple/TitleSecondary';
+import TitleSecondary from '../../../../pages/Contacts/node_modules/@simple/TitleSecondary';
 import Description from '@simple/Description';
 import CustomLink from '@simple/CustomLink';
 import WorkSection from '@sections/WorkSection';
-import Footer from '@sections/Footer';
+import AFooter from '../../../../pages/Contacts/node_modules/@sections/AFooter';
 
 
-export default class BoldCase extends Component {
+export default class BoldCase extends React.Component {
     render() {
         return (
-            <Fragment>
+            <>
                 <section className={s.sectionHead}>
                     <div className={s.container}>
                         <div className={s.contentWrapper}>
@@ -487,8 +486,8 @@ export default class BoldCase extends Component {
                         </div>
                     </div>
                 </section>
-                <Footer />
-            </Fragment>
+                <AFooter />
+            </>
         )
     }
 }

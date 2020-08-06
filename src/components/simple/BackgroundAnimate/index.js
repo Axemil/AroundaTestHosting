@@ -1,9 +1,8 @@
-import React, {Component} from 'react';
 import {  TimelineMax } from 'gsap';
 
 
 
-export default class BackgroundAnimate  extends Component {
+export default class BackgroundAnimate  extends React.Component {
 
     get tween () {
         const t = new TimelineMax();

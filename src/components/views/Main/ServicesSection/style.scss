@@ -1,0 +1,96 @@
+@import "@/scss/variables.scss";
+
+.servicesSection{
+	display: inherit;
+	grid-template-columns: inherit;
+	grid-column: 1 / -1;
+	padding: 156px 0;
+	background-color: var(--gray300);
+	@media (max-width: $maxTablet){
+		padding: 140px 0;
+	}
+	@media (max-width: $maxMobile){
+		padding: 110px 0;
+	}
+}
+.container{
+	width: 100%;
+	grid-column: var(--mainWidth);
+}
+.titleWrapper{
+	text-align: center;
+	margin: 0 auto 80px;
+	max-width: 910px;
+	@media (max-width: $maxTablet){
+		text-align: left;
+		max-width: 610px;
+		margin: 0 0 80px;
+	}
+	@media (max-width: $minTablet){
+		max-width: 515px;
+	}
+	@media (max-width: $maxMobile){
+		margin: 0 0 50px;
+		max-width: 340px;
+	}
+}
+.titleWrapper:before{
+	content: "SERVICES";
+	display: block;
+	margin: 0 auto 20px;
+	font-weight: 500;
+	font-size: var(--fsM);
+	@media (max-width: $maxTablet){
+		margin: 0 0 20px;
+	}
+}
+.titleWrapper p{
+	margin: 20px auto 0;
+	text-align: center;
+	font-size: var(--fsL);
+	max-width: 740px;
+	@media (max-width: $maxTablet){
+		text-align: left;
+		margin: 20px 0 0;
+	}
+} 
+.servicesWrapper{
+	max-width: 1048px;
+	margin: 0 auto 100px;
+	display: flex;
+	justify-content: space-between;
+	@media (max-width: $maxTablet){
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+		margin: 0 ;
+		max-width: 740px;
+		grid-row-gap: 65px;
+	}
+	@media (max-width: $maxMobile){
+		grid-template-columns: 1fr 1fr;
+		grid-row-gap: 40px;
+	}
+}
+.item{
+	max-width: 140px;
+}
+.itemIcon{
+	margin: 0 0 25px;
+	@media (max-width: $minTablet){
+		margin: 0 0 20px;
+	}
+}
+.btnWrapper{
+	display: flex;
+	justify-content: flex-end;
+	@media (max-width: $maxTablet){
+		margin: 10px 0 0;
+	}
+	@media (max-width: $minTablet){
+		margin: 80px 0 0;
+		justify-content: flex-start;
+	}
+	@media (max-width: $maxMobile){
+		margin: 60px 0 0;
+	}
+}

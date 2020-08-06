@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react"
+
 import s from "./style.scss"
 import { connect } from "react-redux"
 import hideErrorMessage from "../../../store/actions/hideErrorMessage"
 
-console.log(hideErrorMessage)
+// console.log(hideErrorMessage)
 const mapStateToProps = (state, ownProps) => {
   return {
     show: state.errorMessage

@@ -1,20 +1,18 @@
-import React from 'react';
-import { Link } from "react-router-dom";
+import Link from 'next/link';
 
 import s from "./style.scss";
 
 const Button = ({ children, href, size="md" }) => (
 	href ? (
 		<Link 
-			to={href}
-			className={`
+			href={href}
+		>
+			<a className={`
 				stopCursor
 				${s.button}
 				${size === "sm" ? s.sm : ""}
 				${size === "md" ? s.md : ""}
-			`}
-		> 
-			<span> { children } </span>
+			`}> { children } </a>
 		</Link>
 	) : (
 		<button 

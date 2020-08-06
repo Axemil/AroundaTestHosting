@@ -1,7 +1,6 @@
-import React, { Fragment, Component } from 'react';
 
 
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import parse from 'html-react-parser';
 import Slider from 'react-slick';
 import axios from "axios";
@@ -22,7 +21,7 @@ import s from './style.scss';
 
 
 
-export default class Velonto extends Component {
+export default class Velonto extends React.Component {
 	state = {
 		slider: dataSlider,
 		name: "",
@@ -114,7 +113,7 @@ export default class Velonto extends Component {
     render() {
 		const { slider, name, email } = this.state;
         return (
-            <Fragment>
+            <>
                 <section className={s.sectionHead}>
                     <div className={s.container}>
                         <div className={s.titleWrapper}>
@@ -123,7 +122,11 @@ export default class Velonto extends Component {
                         <div className={s.descWrapper}>
                             <p>Rapid and innovative solutions for startups and enterprise innovators that want to create and launch new digital products</p>
                         </div>
-                        <Link className={`${s.link} stopCursor`} to="/contact">Let's discuss your project</Link>
+                        <Link href="/contact">
+                            <a className={`${s.link} stopCursor`}>
+                                Let's discuss your project
+                            </a>
+                        </Link>
                     </div>
                 </section>
                 <section className={s.sectionService}>
@@ -666,7 +669,7 @@ export default class Velonto extends Component {
                     </div>
                 </section>
                 <Footer />
-            </Fragment>
+            </>
         )
     }
 }
