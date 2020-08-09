@@ -1,26 +1,27 @@
 // pages/_app.js
 
 import App from 'next/app';
-import { Provider } from "react-redux";
+import store from '@/store';
+import "@/style.scss";
 
 import SubscribePopup from "@sections/SubscribePopup";
 
-import store from "@/store";
-
 import { TimelineMax } from "gsap"
-
-import MediaQuery from "react-responsive"
 import noScroll from "no-scroll"
-
-
-import Cursor from "@simple/Cursor"
 import Header from "@sections/Header"
 import Aside from "@sections/Aside"
 import Layout from "@sections/Layout"
 
 import utmcookie from '@/functions/utmcookie';
 
-import "@/style.scss";
+
+
+import Cursor from "@simple/Cursor"
+
+import {
+	BrowserView,
+	MobileView,
+} from "react-device-detect";
 
 class MyApp extends App {
 	state = {
@@ -34,7 +35,7 @@ class MyApp extends App {
 		this.setState({ mounted: true })
 		setTimeout(() => {
 			this.tl()
-		}, 500)
+		}, 100)
 
 		noScroll.on()
 
@@ -86,16 +87,12 @@ class MyApp extends App {
 	render() {
 		const { Component, pageProps } = this.props;
 		const { openMenu } = this.state
-		let isDesktop = process.browser;
 		return (
-			<Provider store={store}>
-				{isDesktop && <SubscribePopup />}
-				<Layout>
-					{isDesktop && <MediaQuery minDeviceWidth={1081}>
-						{(matches) => {
-							return matches ? <Cursor></Cursor> : ''
-						}}
-					</MediaQuery>}
+			<Layout>
+					<SubscribePopup />
+					<BrowserView renderWithFragment>
+						<Cursor displayFrom="lg"></Cursor>
+					</BrowserView>
 					<Header
 						ref={(el) => {
 							this.header = el
@@ -105,10 +102,9 @@ class MyApp extends App {
 					/>
 					<Aside openMenu={openMenu} handleCloseMenu={this.handleCloseMenu} />
 					<Component {...pageProps} />
-				</Layout>
-			</Provider>
+			</Layout>
 		)
 	}
 }
 
-export default MyApp;
+export default store.withRedux(MyApp);

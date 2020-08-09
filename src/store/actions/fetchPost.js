@@ -12,7 +12,7 @@ const fetchPost = (slug) => (dispatch) => {
 
 const transformResponse = (res) => {
   const id = res.items[0].sys.id
-  const { title, content, date, category } = res.items[0].fields
+  const { title, content, date, category = '' } = res.items[0].fields
   const imageUrl = `https:${res.items[0].fields.image.fields.file.url}`
 
   let author = res.items[0].fields.author
@@ -26,7 +26,7 @@ const transformResponse = (res) => {
     id,
     title,
     date: composeDate(date),
-    category,
+    // category,
     author,
     imageUrl,
     content: content

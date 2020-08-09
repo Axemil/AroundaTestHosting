@@ -1,7 +1,7 @@
 
-import { connect } from "react-redux"
-import Link from 'next/link'
 import style from "./style.scss"
+
+import Link from 'next/link'
 import { LazyLoadImage } from "react-lazy-load-image-component"
 
 const ListWorks = ({ posts }) => {

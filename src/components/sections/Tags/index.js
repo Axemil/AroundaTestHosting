@@ -4,31 +4,28 @@ import { connect } from "react-redux"
 import s from "./style.scss"
 import TagLink from "@sections/TagLink"
 import Link from 'next/link'
-import fetchTags from "../../../store/actions/fetchTags"
 import { reactSelectOptionsFromTags } from "../../../store/selectors"
-// import { useHistory } from "react-router-dom"
+import { useRouter } from 'next/router'
 import TagMenuVertical from "@sections/TagMenuVertical"
 import TagMenuHorizontal from "@sections/TagMenuHorizontal"
 
-let Tags = ({ tagNames, fetchTags }) => {
-  // const history = useHistory()
+let Tags = ({ tagNames }) => {
+  const router = useRouter()
+  const handleTagChange = (path) => {
+    router.push(path)
+  }
 
-  React.useEffect(() => {
-    fetchTags()
-  }, [])
-
-  const options = []
-  // const options = reactSelectOptionsFromTags(tagNames)
+  const options = reactSelectOptionsFromTags(tagNames)
 
   return (
     <>
-      <TagMenuVertical options={options} onChange={(path) => history.push(path)} />
+      <TagMenuVertical options={options} onChange={(value) => handleTagChange(value)} />
       <TagMenuHorizontal options={options} />
     </>
   )
 }
 
 const mapStateToProps = ({ tagNames }) => ({ tagNames })
-Tags = connect(mapStateToProps, { fetchTags })(Tags)
+Tags = connect(mapStateToProps)(Tags)
 
 export default Tags

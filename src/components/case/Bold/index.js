@@ -2,11 +2,11 @@ import s from './style.scss';
 import data from '@/data/Works';
 
 import Title from '@simple/Title';
-import TitleSecondary from '../../../../pages/Contacts/node_modules/@simple/TitleSecondary';
+import TitleSecondary from '@/views/Contacts/node_modules/@simple/TitleSecondary';
 import Description from '@simple/Description';
 import CustomLink from '@simple/CustomLink';
 import WorkSection from '@sections/WorkSection';
-import AFooter from '../../../../pages/Contacts/node_modules/@sections/AFooter';
+import AFooter from '@/views/Contacts/node_modules/@sections/AFooter';
 
 
 export default class BoldCase extends React.Component {

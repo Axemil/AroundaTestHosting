@@ -1,7 +1,7 @@
 import style from './style.scss';
-import {TimelineMax} from 'gsap/TimelineMax';
-import {TweenMax} from 'gsap/TweenMax';
-import {ScrollToPlugin} from 'gsap/ScrollToPlugin';
+import TimelineMax from 'gsap/TimelineMax';
+import TweenMax from 'gsap/TweenMax';
+import ScrollToPlugin from 'gsap/ScrollToPlugin';
 
 import _debounce from 'lodash/debounce';
 
@@ -68,7 +68,8 @@ export default class ServiceSlideSection extends React.Component {
     // Positioning the item content
     positionItem = () => {
         const section = this.section.current;
-        const child = section.querySelector(`#${this.state.activeItem}`);
+        if(!section) return
+        const child = section && section.querySelector(`#${this.state.activeItem}`);
         const scrollTop = window.pageYOffset || window.scrollY;
         const { top, bottom } = section.getBoundingClientRect();
         const childTop = child.getBoundingClientRect().top;
@@ -174,8 +175,7 @@ export default class ServiceSlideSection extends React.Component {
 
     // Render Images
     renderImages = item => (
-        <div 
-            key={`image-${item.props.id}`}>
+        <div key={`image-${item.props.id}`}>
             <div 
                 className={`${style.videoWrapper} section__video`}
                 ref={c => this.videos[item.props.id] = c}

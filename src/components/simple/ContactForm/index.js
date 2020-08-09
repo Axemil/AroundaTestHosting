@@ -233,6 +233,7 @@ export default class ContactForm extends React.Component {
                             style={{ height: '41px' }}
                             placeholder={'Tell us more about your idea'}
                             name='idea'
+                            instanceId="idea"
                             onChange={this.handleInput}
                         />
                         <label>Your message</label>

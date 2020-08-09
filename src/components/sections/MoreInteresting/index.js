@@ -23,7 +23,7 @@ const Spacer = () => (
 )
 
 let MoreInteresting = ({ posts, fetchPosts, currentPostId }) => {
-  useEffect(() => {
+  React.useEffect(() => {
     fetchPosts()
   }, [])
 

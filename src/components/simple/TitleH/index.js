@@ -1,6 +1,5 @@
 import s from "./style.scss";
 
-
 const TitleH = ({ children, size="h4"}) => (
 	<>
 		{size === "hero" && <h1 className={`${s.title} ${s.hero}`}> { children } </h1>}

@@ -1,9 +1,14 @@
 import Select, { components } from "react-select"
 import s from "./style.scss"
-import { useMediaQuery } from "react-responsive"
+
 import SubscribeButton from "@simple/SubscribeButton"
 import ArrowDown from "../../../assets/svg/select-arrow.svg"
 import ArrowUp from "../../../assets/svg/select-arrow-up.svg"
+
+import {
+	BrowserView,
+	MobileView,
+} from "react-device-detect";
 
 const IndicatorSeparator = () => null
 
@@ -17,6 +22,7 @@ const DropdownIndicator = (props) => {
 
 /* Calculate width of the text in pixels */
 const textWidth = (text) => {
+	if(!process.browser || !text) return text;
 	const span = document.createElement("span")
 	document.body.appendChild(span)
 	span.style.fontSize = "16px"
@@ -29,7 +35,7 @@ const textWidth = (text) => {
 
 const customStyles = {
 	container: (prov, state) => {
-		const label = state.getValue()[0].label
+		const label = state.getValue()[0] && state.getValue()[0].label
 
 		return {
 			...prov,
@@ -76,25 +82,24 @@ const customStyles = {
 }
 
 const TagMenuVertical = ({ options, onChange }) => {
-	const isMobile = useMediaQuery({
-		query: "(max-width: 767px)"
-	})
-
-	return isMobile ? (
-		<div className={s.wrapper}>
-			<Select
-				// className={s.tags}
-				styles={customStyles}
-				options={options}
-				onChange={({ value }) => onChange(value)}
-				// onChange={({ value }) => onChange(value)}
-				components={{ IndicatorSeparator, DropdownIndicator }}
-				defaultValue={options[0]}
-			// menuIsOpen
-			/>
-			<SubscribeButton className={s.subscribe} text="Subscribe" />
-		</div>
-	) : null
+	return (
+		<MobileView renderWithFragment>
+			<div className={s.wrapper}>
+				<Select
+					// className={s.tags}
+					styles={customStyles}
+					options={options}
+					onChange={({ value }) => onChange(value)}
+					// onChange={({ value }) => onChange(value)}
+					components={{ IndicatorSeparator, DropdownIndicator }}
+					defaultValue={options[0]}
+					instanceId="select"
+				// menuIsOpen
+				/>
+				<SubscribeButton className={s.subscribe} text="Subscribe" />
+			</div>
+		</MobileView>
+	)
 }
 
 export default TagMenuVertical

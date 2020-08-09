@@ -1,17 +1,19 @@
 
 
-import MediaQuery from 'react-responsive';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Head from 'next/head';
 
-
-
 import ServicesHero from './ServicesHero';
 import Capabilities from './Capabilities';
-import ServiceSlideSection from './ServiceSlideSection';
 import ContentService from './ContentService';
 import LetsTalk from '@sections/LetsTalk';
+import ServiceSlideSection from './ServiceSlideSection';
 import ServiceSlideSectionTablet from './ServiceSlideSectionTablet';
+
+import {
+	BrowserView,
+	MobileView,
+} from "react-device-detect";
 
 import data from '@/data/ServiceSlide';
 
@@ -36,30 +38,25 @@ const Services = () => {
 				</div>
 			</section>
 			<Capabilities />
-			<MediaQuery minDeviceWidth={1050}>
-				{matches => {
-					if (matches) {
-						return (
-							<ServiceSlideSection>
-								{data.map(el => (
-									<ContentService
-										key={el.id}
-										id={el.id}
-										title={el.title}
-										description={el.description}
-										image={el.image}
-										background={el.background}
-										video={el.video}
-										list={el.list}
-									/>
-								))}
-							</ServiceSlideSection>
-						);
-					} else {
-						return <ServiceSlideSectionTablet />;
-					}
-				}}
-			</MediaQuery>
+			<BrowserView renderWithFragment>
+				<ServiceSlideSection>
+					{data.map(el => (
+						<ContentService
+							key={el.id}
+							id={el.id}
+							title={el.title}
+							description={el.description}
+							image={el.image}
+							background={el.background}
+							video={el.video}
+							list={el.list}
+						/>
+					))}
+				</ServiceSlideSection>
+			</BrowserView>
+			<MobileView renderWithFragment>
+				<ServiceSlideSectionTablet />;
+			</MobileView>
 			<LetsTalk />
 			
 			<Footer />

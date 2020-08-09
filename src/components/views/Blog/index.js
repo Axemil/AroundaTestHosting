@@ -30,7 +30,6 @@ const TempSeparator = () => (
 
 const Blog = (props) => {
   const [search, setSearch] = React.useState(false)
-
   return (
     <section className={style.Blog}>
       <PopupSearch search={search} setSearch={setSearch} />
@@ -39,7 +38,7 @@ const Blog = (props) => {
       <Hungry blue />
       <TempSeparator />
       <StartSection />
-      <Footer />
+    <Footer />
     </section>
   )
 }

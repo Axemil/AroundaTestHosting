@@ -65,7 +65,7 @@ const SearchTags = props => {
           ))}
         </ul>
         <SubscribeButton className={style.indexPageSubscribeButton} text="Subscribe" />
-        {/*}
+        {/*
         <div className={style.searchIcon} onClick={() => props.setSearch(true)}>
           <Search />
         </div>

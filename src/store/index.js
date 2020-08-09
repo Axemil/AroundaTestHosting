@@ -1,4 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
+import { createWrapper } from 'next-redux-wrapper';
+
 import thunk from 'redux-thunk';
 import root from './reducers/root';
 
@@ -8,4 +10,5 @@ if(process.browser) {
 } else {
     composeEnhancers = compose
 }
-export default createStore(root, composeEnhancers(applyMiddleware(thunk)));
+export const initStore = () => createStore(root, composeEnhancers(applyMiddleware(thunk)))
+export default createWrapper(initStore);

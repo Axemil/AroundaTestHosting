@@ -14,22 +14,12 @@ import BackgroundAnimate from '@simple/BackgroundAnimate';
 import LetsTalk from '@sections/LetsTalk';
 import AFooter from '@sections/Footer';
 
-
-
 import data from '@/data/Works'
-
-
-
 
 import s from './style.scss';
 
-
-
-
-
-
 class Main extends React.Component {
-	get tl() {
+	componentDidMount() {
 		const tl = new TimelineLite();
 		const bgTl = new TimelineLite();
 

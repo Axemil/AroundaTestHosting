@@ -15,7 +15,7 @@ export default class BackgroundAnimate  extends React.Component {
     render() {
         
         return (
-            <div ref={el => this.bg = el} className={`bg` }></div>
+            <div ref={el => this.bg = el} className={`bg`}></div>
         )
     }
 };

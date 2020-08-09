@@ -1,27 +1,34 @@
 const path = require("path")
 const webpack = require("webpack")
-const CopyWebpackPlugin = require("copy-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin")
 const TerserPlugin = require("terser-webpack-plugin")
 
-const withSass = require('@zeit/next-sass')
+const withTM = require('next-transpile-modules')(['gsap']);
+const withStyles = require('@webdeb/next-styles')
+const { plugins } = require("./webpack.config")
 
 const NODE_ENV = process.env.NODE_ENV || "development"
 const isDev = NODE_ENV === "development"
-
-module.exports = withSass({
-    cssModules: true,
+console.log(`CURRENTLY RUNNING IN: ${isDev} MODE`)
+module.exports = withTM(withStyles({
+    sass: true,
+    modules: true,
+    cssLoaderOptions: {
+            modules: {
+                // localIdentName: isDev ?
+                //     "[name]__[local]__[hash:base64:5]" :
+                //     "[hash:base64:12]",
+                localIdentName: '[name]__[local]___[hash:base64:5]', 
+            },
+            importLoaders: 1,
+        },
+        miniCssExtractOptions: {
+            ignoreOrder: true,
+        },
     webpack: (config, options) => {
-        // config.optimization = {
-        //     minimizer: [
-        //         new OptimizeCssAssetsPlugin({
-        //             cssProcessorOptions: {
-        //                 zindex: false
-        //             }
-        //         }),
-        //         new TerserPlugin()
-        //     ]
-        // }
+        
         config.resolve = {
             modules: ["node_modules", path.resolve(__dirname, "src")],
             alias: {
@@ -50,6 +57,10 @@ module.exports = withSass({
         //         warnings: false,
         //         errors: true
         //     }
+        // }
+        // config.stats = {
+        //     ...config.stats,
+        //     warningsFilter: warn => warn.indexOf('Conflicting order between:') > -1 // if true will ignore
         // }
         config.module.rules = [...config.module.rules, {
                 test: /\.js$/,
@@ -92,14 +103,7 @@ module.exports = withSass({
         config.plugins.push(new webpack.DefinePlugin({
             __DEV__: JSON.stringify(isDev)
         }))
-        // config.plugins.push(new CopyWebpackPlugin([{
-        //     from: path.resolve("./src/static"),
-        //     to: path.resolve("./dist")
-        // }]))
-        // config.plugins.push(new MiniCssExtractPlugin({
-        //     filename: "bundle.css"
-        // }))
-
+      
         return config
     },
-})
+}))

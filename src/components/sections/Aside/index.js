@@ -3,7 +3,7 @@ import { TimelineLite, Power0 } from "gsap"
 import Link from 'next/link'
 
 import TitleH from "@simple/TitleH"
-import s from "./style.scss"
+import s from "./style.module.scss"
 
 class Aside extends React.PureComponent {
 	UNSAFE_componentWillReceiveProps(nextProps) {
