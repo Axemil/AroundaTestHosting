@@ -8,7 +8,7 @@ export const getServerSideProps = storeWrapper.getServerSideProps(async (context
     const { query, store } = context;
     const slug = query.slug
     if(!/\.ico+$/i.test(slug)) {
-        let a = await fetchPost(slug)(store.dispatch)
+        await fetchPost(slug)(store.dispatch)
     }
 });
 

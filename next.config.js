@@ -1,17 +1,13 @@
 const path = require("path")
 const webpack = require("webpack")
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-
-const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin")
-const TerserPlugin = require("terser-webpack-plugin")
 
 const withTM = require('next-transpile-modules')(['gsap']);
 const withStyles = require('@webdeb/next-styles')
-const { plugins } = require("./webpack.config")
 
 const NODE_ENV = process.env.NODE_ENV || "development"
 const isDev = NODE_ENV === "development"
-console.log(`CURRENTLY RUNNING IN: ${isDev} MODE`)
+
+console.log(`CURRENTLY RUNNING IN: ${NODE_ENV} MODE`)
 module.exports = withTM(withStyles({
     sass: true,
     modules: true,
@@ -28,7 +24,6 @@ module.exports = withTM(withStyles({
             ignoreOrder: true,
         },
     webpack: (config, options) => {
-        
         config.resolve = {
             modules: ["node_modules", path.resolve(__dirname, "src")],
             alias: {
@@ -44,24 +39,6 @@ module.exports = withTM(withStyles({
                 "@case": path.join(__dirname, "src/components/case")
             }
         }
-        // devServer: {
-        //     port: 9090,
-        //     historyApiFallback: true,
-        //     open: true,
-        //     hot: true,
-        //     publicPath: "/",
-        //     stats: {
-        //         colors: true
-        //     },
-        //     overlay: {
-        //         warnings: false,
-        //         errors: true
-        //     }
-        // }
-        // config.stats = {
-        //     ...config.stats,
-        //     warningsFilter: warn => warn.indexOf('Conflicting order between:') > -1 // if true will ignore
-        // }
         config.module.rules = [...config.module.rules, {
                 test: /\.js$/,
                 exclude: /node_modules/,
