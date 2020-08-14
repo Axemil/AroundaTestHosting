@@ -7,7 +7,6 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    
     "old_deploy": "npm run build && firebase deploy",
     "old_server": "node server.js"
   },

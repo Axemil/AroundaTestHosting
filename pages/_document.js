@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-                {/* <script dangerouslySetInnerHTML={{__html: `;(function(w, d, s, l, i) {
+                <script dangerouslySetInnerHTML={{__html: `;(function(w, d, s, l, i) {
                     w[l] = w[l] || []
                     w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" })
                     var f = d.getElementsByTagName(s)[0],
@@ -20,7 +20,7 @@ class MyDocument extends Document {
                     j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl
                     f.parentNode.insertBefore(j, f)
                 })(window, document, "script", "dataLayer", "GTM-55T4HZL")`}}>
-                </script> */}
+                </script>
 
                 <link rel="icon" type="image/x-icon" href="favicon_arounda.ico" />
                 <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon-16x16.ico" />
@@ -43,6 +43,7 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         </body>
       </Html>
     )

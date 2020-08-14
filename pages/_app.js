@@ -14,8 +14,6 @@ import Layout from "@sections/Layout"
 
 import utmcookie from '@/functions/utmcookie';
 
-
-
 import Cursor from "@simple/Cursor"
 
 import {
