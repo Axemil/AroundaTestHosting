@@ -4,11 +4,9 @@
   "description": "",
   "main": "./src/index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
-    "old_deploy": "npm run build && firebase deploy",
-    "old_server": "node server.js"
+    "start": "NODE_ENV=production node server.js"
   },
   "proxy": "http://localhost:9091",
   "author": "Vlad Tsugulskiy",
