@@ -149,7 +149,7 @@ const BlogItem = (props) => {
         <div className={style.top}>
           <img src={post.imageUrl} alt={post.category} className={style.img} />
           <div className={style.wrapTitle}>
-            <Link href="/blog">
+            <Link href="/blog/">
               <a>
                 Back to blog
               </a>
@@ -176,7 +176,7 @@ const BlogItem = (props) => {
             <div className={style.top}>
               <img src={blog.img} alt={blog.tag} className={style.img} />
               <div className={style.wrapTitle}>
-                <Link href="/blog">Back to blog</Link>
+                <Link href="/blog/">Back to blog</Link>
                 <h1>{blog.title}</h1>
                 <p>{blog.public}</p>
               </div>

@@ -8,7 +8,7 @@ const StartSection = (props) => {
 			<div className={style.title}>
 				Got a project?
 				<br />
-				<Link href={"/contact"}>
+				<Link href={"/contact/"}>
 					<a className="stopCursor">
 						Let's start.
 					</a>

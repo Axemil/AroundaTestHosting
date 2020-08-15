@@ -44,13 +44,13 @@ let MoreInteresting = ({ posts, fetchPosts, currentPostId }) => {
     <div className={style.MoreInteresting}>
       <div className={style.wrapTop}>
         <h1 className={style.title}>More interesting</h1>
-        <a className={style.link} href="/blog">
+        <a className={style.link} href="/blog/">
           All articles
         </a>
       </div>
       <div className={style.advices}>
         {morePosts.map((post, i) => (
-          <a key={i} href={`/blog/${post.slug}`}>
+          <a key={i} href={`/blog/${post.slug}/`}>
             <p>{post.tags.join(", ")}</p>
             <h2>{post.title}</h2>
             <p>{`${post.date} by ${post.author}`}</p>

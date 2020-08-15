@@ -2,12 +2,18 @@ const express = require('express');
 const next = require('next');
 const axios = require('axios');
 
+const generateSitemap = require('./sitemap');  
+
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
 const port = process.env.PORT || 3000;
 
-(async () => {
+if(!dev) {
+  await generateSitemap();
+}
+
+;(async () => {
   try {
     await app.prepare();
     const server = express();
@@ -29,13 +35,18 @@ const port = process.env.PORT || 3000;
       
     server.use('/contact/', router);
     // API ROUTING END
+    
+    server.get('/regenerate-sitemap-links', async (req, res) => {
+      await generateSitemap();
+      res.send('OK');
+    })
 
     server.all("*", (req, res) => {
       return handle(req, res);
     });
     server.listen(port, (err) => {
       if (err) throw err;
-      console.log(`> Ready on localhost:${port} - env ${process.env.NODE_ENV}`);
+      console.log(`> Ready on http://localhost:${port} - env ${process.env.NODE_ENV}`);
     });
   } catch (e) {
     console.error(e);

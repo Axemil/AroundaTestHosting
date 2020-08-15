@@ -122,7 +122,7 @@ export default class Velonto extends React.Component {
                         <div className={s.descWrapper}>
                             <p>Rapid and innovative solutions for startups and enterprise innovators that want to create and launch new digital products</p>
                         </div>
-                        <Link href="/contact">
+                        <Link href="/contact/">
                             <a className={`${s.link} stopCursor`}>
                                 Let's discuss your project
                             </a>

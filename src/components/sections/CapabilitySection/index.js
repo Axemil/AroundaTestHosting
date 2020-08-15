@@ -49,7 +49,7 @@ class CapabilitySection extends PureComponent {
             data.map(el => {
               return (
                 <Link
-                  href={`/services/#${el.id}`} key={el.id}
+                  href={`/services/#${el.id}/`} key={el.id}
                   scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
                   className={`${style.link} stopCursor`}
                   onMouseEnter={this.handleChange}

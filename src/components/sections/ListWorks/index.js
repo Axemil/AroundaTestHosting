@@ -11,7 +11,7 @@ const ListWorks = ({ posts }) => {
         posts.map(({ id, slug, imageUrl, tags, title, date, author }) => {
           return (
             <div key={id}>
-              <Link href={`/blog/${slug}`}>
+              <Link href={`/blog/${slug}/`}>
                 <a className={style.item}>
                   <div
                     className={style.thumbnailContainer}

@@ -163,7 +163,7 @@ const BlogPost = ({ post: postData }) => {
             />
             {/* <img src={post.imageUrl} alt={post.category} className={style.img} /> */}
             <div className={style.wrapTitle}>
-              <Link href="/blog">
+              <Link href="/blog/">
                 <a>
                   Back to blog
                 </a>

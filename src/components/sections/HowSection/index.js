@@ -120,7 +120,7 @@ class HowSection extends PureComponent {
                         })}
                     </div>
                     <div className={style.more}>
-                        <Link href={'/services'}>
+                        <Link href={'/services/'}>
                             <a className={`${style.link} stopCursor`}>
                                 More about expertise
                             </a>

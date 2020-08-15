@@ -46,7 +46,7 @@ class Aside extends React.PureComponent {
 			{
 				title: "Works",
 				desc: "Our amazing works",
-				link: "/works",
+				link: "/works/",
 				disable: false
 			},
 			{
@@ -58,19 +58,19 @@ class Aside extends React.PureComponent {
 			{
 				title: "Services",
 				desc: "Our capabilities",
-				link: "/services",
+				link: "/services/",
 				disable: false
 			},
 			{
 				title: "Blog",
 				desc: "Our thoughts",
-				link: "/blog",
+				link: "/blog/",
 				disable: false
 			},
 			{
 				title: "Contact",
 				desc: "Let`s chat",
-				link: "/contact",
+				link: "/contact/",
 				disable: false
 			}
 		]
