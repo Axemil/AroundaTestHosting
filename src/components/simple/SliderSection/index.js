@@ -4,9 +4,9 @@ import Partners from "@simple/Partners";
 
 import s from "./style.scss";
 
-const SliderSection = () => {
+const SliderSection = ({darkBackground = false}) => {
 	return (
-		<section className={s.sliderSection}>
+		<section className={darkBackground ? s.sliderSectionDark : s.sliderSection}>
 			<div className={s.container}>
 				<Slider />
 				<Partners />

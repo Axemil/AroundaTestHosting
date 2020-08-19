@@ -38,7 +38,7 @@ const customStyles = {
     }),
     container: (provided, state) => ({
         ...provided,
-        borderBottom: '1px solid',
+        borderBottom: '2px solid',
         borderColor: state.hasValue ? '#30FDDC' : 'rgba(157, 157, 157, 0.158)'
     })
 }

@@ -3,7 +3,9 @@ import SortSection from '@sections/SortSection';
 import InnovationSection from '@sections/InnovationSection';
 import StartSection from '@sections/StartSection';
 import WorkSection from '@sections/WorkSection';
-import SliderSection from '@sections/SliderSection';
+import SliderSection from '@simple/SliderSection';
+import WorkHero from './WorkHero';
+import LetsTalk from '@sections/LetsTalk';
 import categoryContent from '@/data/CategoryContent';
 import data from '@/data/Works';
 import Footer from '@sections/Footer';
@@ -88,6 +90,7 @@ export default class Work extends React.Component {
 		const { sortList, selectedItem, showDropdown, categories, selectedCategory, worksData } = this.state;
 		return (
 			<>
+				<WorkHero />
 				<SortSection
 					sortList={sortList}
 					selectedItem={selectedItem}
@@ -103,17 +106,18 @@ export default class Work extends React.Component {
 				<section className={style.wrapWorkSection}>
 					<WorkSection worksData={worksData} title={"Recent work"} />
 				</section>
-				<section className={style.wrapInnovationSection}>
-					<InnovationSection btn='' />
-				</section>
-				<SliderSection />
-				<section className={style.wrapStartSection}>
-					<StartSection />
-				</section>
+				<SliderSection darkBackground />
+				<LetsTalk />
 				<Footer />
+				<h1 className={'h1-seo'}>
+					We make successful digital experiences
+				</h1>
 				<Head>
-					<title>Works. Latest cases from Arounda</title>
-					<meta name="description" content="Beautifull and clean Arounda works." />
+					<title>
+						Our works — Web & Mobile Apps, Marketing websites, Landing pages, Two-sided platforms we`ve made | Arounda
+					</title>
+					<meta name="description" content="Arounda helps clients to meet their business needs and conquer new markets through Discovery & Strategy, UI/UX design, Branding, Web design, App development." />
+					<link rel="canonical" href="https://arounda.agency/works" />
 				</Head>
 			</>
 		);

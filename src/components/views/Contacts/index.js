@@ -19,9 +19,15 @@ const Contacts = (props) => {
                     <ContactForm/>
             </section>
             <Footer/>
+            <h1 className={'h1-seo'}>
+                Hello, let`s talk!
+            </h1>
             <Head>
-                <title>Contact. Let`s write to Arounda</title>
-                <meta name="description" content="Got a project? Contact the best team at Arounda." />
+                <title>
+                    Contact Us — Questions and Project Inquiries to Dedicated Design & Development team | Arounda
+                </title>
+                <meta name="description" content="Got a project? Our team will carefully study your task and suggest on the best solution for your business. Tell us more about your idea: info@arounda.agency" />
+                <link rel="canonical" href="https://arounda.agency/contact" />
             </Head>
         </>
     )

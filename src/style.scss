@@ -3,7 +3,6 @@
 @import "@/scss/variables.scss";
 @import "@/scss/mixins.scss";
 
-
 body {
 	background-color: #fff;
 	color: var(--black);
@@ -449,5 +448,15 @@ button, a, input {
 		.lazy-load-image-background.blur.lazy-load-image-loaded>img {
 			opacity: 1;
 		}
+	}
+	.h1-seo{
+		position: absolute;
+		clip: rect(1px 1px 1px 1px); /* for Internet Explorer */
+		clip: rect(1px, 1px, 1px, 1px);
+		padding: 0;
+		border: 0;
+		height: 1px;
+		width: 1px;
+		overflow: hidden;
 	}
 }

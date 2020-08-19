@@ -60,10 +60,16 @@ const Services = () => {
 			<LetsTalk />
 			
 			<Footer />
-			<Head>
-				<title>Services. What we do at Arounda</title>
-				<meta name="description" content="We create and evolve digital products thought Arounda capabilities." />
-			</Head>
+            <h1 className={'h1-seo'}>
+				Create and evolve digital products through design
+            </h1>
+            <Head>
+                <title>
+					Services — Discovery & Strategy, UI/UX Design, Branding, Web design, Front-end development | Arounda
+                </title>
+                <meta name="description" content="If you`re opening a new product MVP or redesigning existing one — don`t forget about Competitors research, IA, Wireframes, Prototyping, User testing, Brand identity. We extend your design & development departments of startups and enterprise innovators." />
+				<link rel="canonical" href="https://arounda.agency/services" />
+            </Head>
 		</>
 	);
 }

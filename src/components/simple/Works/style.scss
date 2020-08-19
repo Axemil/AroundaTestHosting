@@ -43,7 +43,7 @@
 }
 
 .item:nth-child(even) {
-	transform: translateY(-130px);
+	transform: translateY(-80px);
 	@media (max-width: $maxTablet) {
 		transform: translateY(-112px);
 	}

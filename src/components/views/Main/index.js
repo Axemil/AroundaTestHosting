@@ -7,7 +7,7 @@ import Hero from "./MainHero";
 import WorksSection from './WorksSection';
 import OurExpertise from "./OurExpertise";
 import ServicesSection from './ServicesSection';
-import SliderSection from './SliderSection';
+import SliderSection from '@simple/SliderSection';
 import AboutUsSection from './AboutUsSection';
 import BlogSection from './BlogSection';
 import BackgroundAnimate from '@simple/BackgroundAnimate';
@@ -49,9 +49,15 @@ class Main extends React.Component {
 				</section>
 				<LetsTalk />
 				<AFooter />
+				<h1 className={'h1-seo'}>
+					Digital product design agency for startups and enterprise innovators
+				</h1>
 				<Head>
-					<title>Arounda. Digital Product Agency</title>
-					<meta name="description" content="Arounda is a Digital Product Agency that create and evolve innovative, mobile and web apps, marketing websites and brand identities for startups and enterprises through strategy, UX/UI design, development & branding." />
+					<title>
+						Arounda — Digital Product Design Agency	
+					</title>
+					<meta name="description" content="We create and evolve web and mobile apps, websites through Branding, Web design, UX/UI design, App development for startups and enterprises." />
+					<link rel="canonical" href="https://arounda.agency" />
 				</Head>
 			</>
 		);

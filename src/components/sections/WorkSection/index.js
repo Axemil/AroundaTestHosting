@@ -10,9 +10,6 @@ const WorkSection = ({worksData}) => {
     return (
         <div className={s.workSection}>
             <Works worksData={worksData}/>
-			<div className={s.buttonWrapper}>
-				<ButtonSecondary icon="plus">More works</ButtonSecondary>
-			</div>
         </div>
     )
 };

@@ -17,7 +17,8 @@ module.exports = withTM(withStyles({
                 // localIdentName: isDev ?
                 //     "[name]__[local]__[hash:base64:5]" :
                 //     "[hash:base64:12]",
-                localIdentName: '[name]__[local]___[hash:base64:5]', 
+                // localIdentName: '[name]__[local]___[hash:base64:5]', 
+                localIdentName: "[hash:base64:5]",
             },
             importLoaders: 1,
         },

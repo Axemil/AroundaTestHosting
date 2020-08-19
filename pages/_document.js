@@ -22,10 +22,10 @@ class MyDocument extends Document {
                 })(window, document, "script", "dataLayer", "GTM-55T4HZL")`}}>
                 </script>
 
-                <link rel="icon" type="image/x-icon" href="favicon_arounda.ico" />
-                <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon-16x16.ico" />
-                <link rel="icon" type="image/x-icon" sizes="32x32" href="favicon-32x32.ico" />
-                <link rel="icon" type="image/x-icon" sizes="48x48" href="favicon-48x48.ico" />
+                <link rel="icon" type="image/x-icon" href="/favicon_arounda.ico" />
+                <link rel="icon" type="image/x-icon" sizes="16x16" href="/favicon-16x16.ico" />
+                <link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon-32x32.ico" />
+                <link rel="icon" type="image/x-icon" sizes="48x48" href="/favicon-48x48.ico" />
 
                 <script id="mcjs" dangerouslySetInnerHTML={{__html: `!(function(c, h, i, m, p) {
                     ;(m = c.createElement(h)),

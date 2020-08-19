@@ -1,7 +1,7 @@
 const slides = [
 	{
 		id: "0",
-		src: "assets/images/mainSlider/josef.jpg",
+		src: "/assets/images/mainSlider/josef.jpg",
 		srcMobile: "assets/images/josefMob.jpg",
 		desc: "Arounda’s work and mindset represents the pinnacle of perfection while still being highly efficient and communicative.",
 		name: "Josef Chen",
@@ -10,7 +10,7 @@ const slides = [
 	},
 	{
 		id: "1",
-		src: "assets/images/trent.jpg",
+		src: "/assets/images/trent.jpg",
 		srcMobile: "assets/images/trentMob.jpg",
 		desc: "Everything Arounda has produced, from design to code, has been enterprise-grade quality they are fantastic to work with!",
 		name: "Trent Waskey",
@@ -19,7 +19,7 @@ const slides = [
 	},
 	{
 		id: "2",
-		src: "assets/images/el-asmar.jpg",
+		src: "/assets/images/el-asmar.jpg",
 		srcMobile: "assets/images/el-asmarMob.jpg",
 		desc: "Arounda has been our strategic partner for 3 years. A talented team that consistently delivers 1st class results on our projects.",
 		name: "El Asmar",
@@ -28,7 +28,7 @@ const slides = [
 	},
 	{
 		id: "3",
-		src: "assets/images/tim.jpg",
+		src: "/assets/images/tim.jpg",
 		srcMobile: "assets/images/timMob.jpg",
 		desc: "Professional communication, quick turnaround and consistently excellent and well considered results.",
 		name: "Tim O’Dwyer",
@@ -37,7 +37,7 @@ const slides = [
 	},
 	{
 		id: "4",
-		src: "assets/images/mikhail.jpg",
+		src: "/assets/images/mikhail.jpg",
 		srcMobile: "assets/images/mikhailMob.jpg",
 		desc: "These guys from Arounda are really awesome!  My advice -don’t think, hire them.",
 		name: "Mikhail Nikonorov ",

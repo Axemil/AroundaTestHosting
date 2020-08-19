@@ -7,25 +7,25 @@
   grid-template-columns: inherit;
 }
 .sortSection {
-  padding: 260px 0 6px;
+  padding: 0px 0 6px;
   grid-column: 1 / -1;
   display: inherit;
   grid-template-columns: inherit;
   @media (max-width: $maxTablet) {
-    padding: 172px 0 57px;
+    padding: 0px 0 57px;
   }
   @media (max-width: $maxMobile) {
-    padding: 150px 0 44px;
+    padding: 00px 0 44px;
   }
 }
 .sortWrapper {
-  grid-column: var(--desktopWidth);
-  @media (max-width: $maxLaptop) {
-    grid-column: 5 / -5;
-  }
-  @media (max-width: $maxTablet) {
-    grid-column: 4 / -4;
-  }
+	grid-column: var(--mainWidth);
+  // @media (max-width: $maxLaptop) {
+  //   grid-column: 5 / -5;
+  // }
+  // @media (max-width: $maxTablet) {
+  //   grid-column: 4 / -4;
+  // }
 }
 .sort {
   @include font(29px, 21px, $maxTablet, $maxMobile);
@@ -70,17 +70,17 @@
   }
 }
 .categories {
-  grid-column: var(--desktopWidth);
+	grid-column: var(--mainWidth);
   padding: 46px 0 0;
-  @media (max-width: $maxLaptop) {
-    grid-column: 5 / -5;
-  }
-  @media (max-width: $maxTablet) {
-    grid-column: 4 / -4;
-  }
-  @media (max-width: $maxMobile){
-    padding: 40px 0 0;
-  }
+  // @media (max-width: $maxLaptop) {
+  //   grid-column: 5 / -5;
+  // }
+  // @media (max-width: $maxTablet) {
+  //   grid-column: 4 / -4;
+  // }
+  // @media (max-width: $maxMobile){
+  //   padding: 40px 0 0;
+  // }
 }
 .categories ul {
   display: grid;
