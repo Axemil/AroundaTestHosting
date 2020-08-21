@@ -1,7 +1,7 @@
 import { TimelineLite } from 'gsap';
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import Head from 'next/head';
+import MetaData from '@simple/MetaData';
 
 import Hero from "./MainHero";
 import WorksSection from './WorksSection';
@@ -49,16 +49,11 @@ class Main extends React.Component {
 				</section>
 				<LetsTalk />
 				<AFooter />
-				<h1 className={'h1-seo'}>
-					Digital product design agency for startups and enterprise innovators
-				</h1>
-				<Head>
-					<title>
-						Arounda — Digital Product Design Agency	
-					</title>
-					<meta name="description" content="We create and evolve web and mobile apps, websites through Branding, Web design, UX/UI design, App development for startups and enterprises." />
-					<link rel="canonical" href="https://arounda.agency" />
-				</Head>
+
+				<MetaData h1="Digital product design agency for startups and enterprise innovators"
+						title="Arounda — Digital Product Design Agency"
+						description="We create and evolve web and mobile apps, websites through Branding, Web design, UX/UI design, App development for startups and enterprises."
+						link="https://arounda.agency" />
 			</>
 		);
 	}

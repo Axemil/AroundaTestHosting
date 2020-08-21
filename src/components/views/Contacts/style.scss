@@ -27,12 +27,17 @@
     grid-column: var(--tabletWidth);
   }
 }
+.title {
+  font-weight: 500;
+  font-size: 70px;
+  line-height: 105px;
+}
 .titleWrapper {
   margin: 0 0 118px;
   grid-column-end: span 10;
   p {
     font-size: 19px;
-    margin: 13px 0 0;
+    // margin: 13px 0 0;
     color: $gray;
     a {
       transform: translateY(-1px);

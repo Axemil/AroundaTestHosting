@@ -1,35 +1,38 @@
 import style from './style.scss';
-import ContactForm from '@simple/ContactForm';
-import TitleSecondary from '@simple/TitleSecondary';
-import Footer from '@sections/Footer';
-import Head from 'next/head';
+import Title from '@simple/Title';
+import PositionsSection from '@sections/PositionsSection';
+import MetaData from '@simple/MetaData';
 
+import ContactHero from './ContactHero';
+import ContactForm from './ContactForm';
+import Positions from './Positions';
 
 const Contacts = (props) => {
     return (
-        <>
-            <section className={style.sectionContacts}>
-                
-                    <div className={style.grid}>
-                        <div className={style.titleWrapper}>
-                            <TitleSecondary text={'Contact us'}/>
-                            <p>Fill in the form, or if you prefer <a className='stopCursor' href="mailto:info@arounda.agency">send us an email</a></p>
-                        </div>
-                    </div>
-                    <ContactForm/>
-            </section>
-            <Footer/>
-            <h1 className={'h1-seo'}>
-                Hello, let`s talk!
-            </h1>
-            <Head>
-                <title>
-                    Contact Us — Questions and Project Inquiries to Dedicated Design & Development team | Arounda
-                </title>
-                <meta name="description" content="Got a project? Our team will carefully study your task and suggest on the best solution for your business. Tell us more about your idea: info@arounda.agency" />
-                <link rel="canonical" href="https://arounda.agency/contact" />
-            </Head>
+        <>        
+            <ContactHero />
+            <ContactForm />
+            <Positions />
+
+            <MetaData h1="Hello, let`s talk!"
+                title="Contact Us — Questions and Project Inquiries to Dedicated Design & Development team | Arounda"
+                description="Got a project? Our team will carefully study your task and suggest on the best solution for your business. Tell us more about your idea: info@arounda.agency"
+                link="https://arounda.agency/contact" />
         </>
     )
 };
 export default Contacts;
+
+const a = {
+    checked: {
+        get() {
+          return process.browser ? ((localStorage.getItem("EXCHANGE_DISTANATION_TAG_ENABLED") && localStorage.getItem("EXCHANGE_DISTANATION_TAG_ENABLED")[this.$route.params._id]) || false) : false;
+        },
+        set(payload) {
+          return localStorage.setItem(
+            "EXCHANGE_DISTANATION_TAG_ENABLED",
+            {[this.$route.params._id]: payload}
+          );
+        }
+      },
+}

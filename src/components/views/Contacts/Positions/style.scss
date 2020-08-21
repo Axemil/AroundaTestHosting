@@ -1,0 +1,118 @@
+@import "../../../../scss/variables.scss";
+
+.positions{
+	display: inherit;
+	grid-template-columns: inherit;
+	grid-column: 1 / -1;
+	padding: 170px 0 120px;
+	@media (max-width: $maxTablet){
+		padding: 140px 0;
+	}
+	@media (max-width: $maxMobile){
+		padding: 110px 0;
+	}
+}
+.positionsContent{
+	grid-column: var(--mainWidth);
+	max-width: 1040px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 94px;
+	@media (max-width: $maxTablet){
+		margin-bottom: 60px;
+	}
+	@media (max-width: $maxMobile){
+		flex-direction: column;
+	}
+}
+.titleWrapper{
+	max-width: 450px;
+	@media (max-width: $maxTablet){
+		max-width: 410px;
+	}
+	@media (max-width: $minTablet){
+		max-width: 380px;
+	}
+	@media (max-width: $maxMobile){
+		max-width: 300px;
+		margin: 0 0 30px; 
+	}
+}
+.titleWrapper::before{
+	content: "WELCOME TO OUR OFFICE";
+	display: block;
+	font-size: var(--fsM);
+	margin: 0 0 20px;
+	font-weight: 500;
+	@media (max-width: $maxTablet){
+		margin: 0 0 10px;
+	}
+}
+.positionsList{
+	padding-top: 70px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.position{
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	border-bottom: 3px solid var(--primary);
+	font-size: 18px;
+	font-weight: 500;
+	@media (max-width: $maxMobile){
+		padding: 0;
+	}
+}
+.position svg{
+	margin-left: 10px;
+}
+.positionsImages{
+	grid-column: 6 / -1;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	scroll-snap-type: x mandatory;
+	display: flex;
+	@media (max-width: $maxTablet){
+		grid-column: 4 / -1;
+	}
+	@media (max-width: $maxMobile){
+		grid-column: 3 / -1;
+	}
+}
+.image{
+	--count: 1;
+	scroll-snap-align: center;
+	width: 770px;
+	height: 520px;
+	margin-right: calc(var(--cellSize) * var(--count));
+	flex-shrink: 0;
+	&:nth-child(even){
+		width: 560px;
+	}
+	@media (max-width: $maxTablet){
+		width: 506px;
+		height: 342px;
+		&:nth-child(even){
+			width: 368px;
+		}
+	}
+	@media (max-width: $maxTablet){
+		width: 368px;
+		height: 252px;
+		&:nth-child(even){
+			width: 270px;
+		}
+	}
+	@media (max-width: $maxMobile){
+		--count: 2;
+		width: 320px;
+		height: 220px;
+	}
+}
+.image img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}

@@ -81,7 +81,7 @@ export default class Header extends React.Component {
 
 	render() {
 		const { fixedHeader } = this.state
-		const { openMenu, toggleMenu, actives } = this.props
+		const { openMenu, toggleMenu, hideLinks, actives } = this.props
 		return (
 			<header className={`${s.header} ${fixedHeader ? s.fixed : ""}`}>
 				<div className={s.row}>
@@ -91,7 +91,7 @@ export default class Header extends React.Component {
 							className={`${s.menu} ${openMenu ? s.active : ""}`}
 						>
 							{
-								nav.map(link => (
+								!hideLinks && nav.map(link => (
 									<li key={link.id}>
 										{link.button ? (
 												<Button href={link.href} size="sm"> {link.name} </Button>

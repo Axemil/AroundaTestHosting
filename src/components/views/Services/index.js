@@ -1,30 +1,22 @@
 
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import Head from 'next/head';
+import MetaData from '@simple/MetaData';
 
 import ServicesHero from './ServicesHero';
 import Capabilities from './Capabilities';
 import ContentService from './ContentService';
+import ContentServiceTablet from './ContentServiceTablet';
 import LetsTalk from '@sections/LetsTalk';
 import ServiceSlideSection from './ServiceSlideSection';
 import ServiceSlideSectionTablet from './ServiceSlideSectionTablet';
 
-import {
-	BrowserView,
-	MobileView,
-} from "react-device-detect";
-
 import data from '@/data/ServiceSlide';
-
-import Footer from '@sections/Footer';
-
-
 
 import s from './style.scss';
 
 
-const Services = () => {
+const Services = ({isMobile}) => {
 	return (
 		<>
 			<ServicesHero />
@@ -38,8 +30,20 @@ const Services = () => {
 				</div>
 			</section>
 			<Capabilities />
-			<BrowserView renderWithFragment>
-				<ServiceSlideSection>
+			{ isMobile ?
+				<ServiceSlideSectionTablet>
+					{
+						data.map((el, i) => {
+							return <ContentServiceTablet
+							key={el.id}
+							id={el.id} 
+							title={el.title}
+							desc={el.description}
+							list={el.list}
+							image={el.image}
+							/>})
+					}
+				</ServiceSlideSectionTablet> : <ServiceSlideSection>
 					{data.map(el => (
 						<ContentService
 							key={el.id}
@@ -53,23 +57,13 @@ const Services = () => {
 						/>
 					))}
 				</ServiceSlideSection>
-			</BrowserView>
-			<MobileView renderWithFragment>
-				<ServiceSlideSectionTablet />;
-			</MobileView>
+			}
 			<LetsTalk />
 			
-			<Footer />
-            <h1 className={'h1-seo'}>
-				Create and evolve digital products through design
-            </h1>
-            <Head>
-                <title>
-					Services — Discovery & Strategy, UI/UX Design, Branding, Web design, Front-end development | Arounda
-                </title>
-                <meta name="description" content="If you`re opening a new product MVP or redesigning existing one — don`t forget about Competitors research, IA, Wireframes, Prototyping, User testing, Brand identity. We extend your design & development departments of startups and enterprise innovators." />
-				<link rel="canonical" href="https://arounda.agency/services" />
-            </Head>
+			<MetaData h1="Create and evolve digital products through design"
+					title="Services — Discovery & Strategy, UI/UX Design, Branding, Web design, Front-end development | Arounda"
+					description="If you`re opening a new product MVP or redesigning existing one — don`t forget about Competitors research, IA, Wireframes, Prototyping, User testing, Brand identity. We extend your design & development departments of startups and enterprise innovators."
+					link="https://arounda.agency/services" />
 		</>
 	);
 }

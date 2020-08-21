@@ -10,7 +10,6 @@ import Hungry from "@sections/Hungry"
 import MoreInteresting from "@sections/MoreInteresting"
 import StartSection from "@sections/StartSection"
 import VisibilitySensor from "react-visibility-sensor"
-import Footer from "@sections/Footer"
 import SubscribeButton from "@simple/SubscribeButton"
 import { LazyLoadImage } from "react-lazy-load-image-component"
 
@@ -197,7 +196,6 @@ const BlogPost = ({ post: postData }) => {
         <Hungry blue />
         <MoreInteresting currentPostId={post.id} />
         <StartSection />
-        <Footer />
       </section>
     )
   )

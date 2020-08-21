@@ -9,16 +9,17 @@ const ButtonSecondary = ({ children, href, icon="arrow" }) => (
 	href ? (
 		<Link 
 			href={href}
-			className={`
+		>
+			<a className={`
 				stopCursor
 				${s.button}
-			`}
-		>
-			<a> 
-				{ children } 
-				<i className={s.icon}>
-					{ icon === "arrow" ? <Arrow /> : <Plus /> }
-				</i>
+			`}> 
+				<span>
+					{ children } 
+					<i className={s.icon}>
+						{ icon === "arrow" ? <Arrow /> : <Plus /> }
+					</i>
+				</span>
 			</a> 
 		</Link>
 	) : (

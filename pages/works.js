@@ -1,1 +1,1 @@
-export { default } from '@/components/views/Work';
+export { default } from '@/components/views/Works';

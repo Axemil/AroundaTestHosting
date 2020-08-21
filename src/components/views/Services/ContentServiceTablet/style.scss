@@ -1,6 +1,6 @@
 @import '@/scss/variables.scss';
 
-.contentWrapper{
+.serviceContentWrapper{
     grid-column: 1 / -1;
     display: inherit;
 	grid-template-columns: inherit;
@@ -12,6 +12,7 @@
     position: relative;
     @media (max-width: $maxMobile){
         padding: 320px 0 0;
+        grid-column: 1 / -1;
     }
     img{
         position: absolute;

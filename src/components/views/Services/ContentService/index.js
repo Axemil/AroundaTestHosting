@@ -1,10 +1,10 @@
 
+import s from './style.scss';
 import Observer from "react-intersection-observer";
 
 import TitleH from '@simple/TitleH';
 import ButtonSecondary from '@simple/ButtonSecondary';
 
-import s from './style.scss';
 
 const ContentService = ({id, description, onChange, title, list}) => {
 

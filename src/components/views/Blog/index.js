@@ -7,8 +7,7 @@ import Tags from "@sections/Tags"
 import ListWorksVisible from "@sections/ListWorksVisible"
 import Hungry from "@sections/Hungry"
 import PopupSearch from "@sections/PopupSearch"
-import Footer from "@sections/Footer"
-import Head from 'next/head';
+import MetaData from '@simple/MetaData';
 
 const TempSeparator = () => (
   <div
@@ -19,27 +18,21 @@ const TempSeparator = () => (
   ></div>
 )
 
-const Blog = (props) => {
+const Blog = ({isMobile}) => {
   const [search, setSearch] = React.useState(false)
   return (
     <section className={style.Blog}>
       <PopupSearch search={search} setSearch={setSearch} />
-      <Tags />
+      <Tags isMobile={isMobile} />
       <ListWorksVisible />
       <Hungry blue />
       <TempSeparator />
       <StartSection />
-      <Footer />
-      <h1 className={'h1-seo'}>
-        Blog & News
-      </h1>
-      <Head>
-					<title>
-            Blog — Useful Articles on Web & Mobile App Design | Arounda
-          </title>
-					<meta name="description" content="Arounda blog is where you will find newest design stories, insights, latest design trends and useful tips that will help your business grow." />
-          <link rel="canonical" href="https://arounda.agency/blog" />
-      </Head>
+      
+      <MetaData h1="Blog & News"
+                title="Blog — Useful Articles on Web & Mobile App Design | Arounda"
+                description="Arounda blog is where you will find newest design stories, insights, latest design trends and useful tips that will help your business grow."
+                link="https://arounda.agency/blog" />
     </section>
   )
 }

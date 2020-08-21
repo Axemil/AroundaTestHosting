@@ -135,17 +135,17 @@
 	content: "";
 	background-color: var(--black);
 	position: absolute;
-	left: 50%;
+	left: 0;
 	bottom: -3px;
-	width: 0;
-	right: 0;
+	width: 100%;
 	height: 2px;
 	transition: all .3s ease-in-out;
+	transform: scaleX(0);
+	will-change: transform;
 }
 
 .link:hover:after {
-	width: 100%;
-	left: 0;
+	transform: scaleX(1);
 }
 
 

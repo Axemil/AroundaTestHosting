@@ -1,0 +1,33 @@
+@import "../../../../scss/variables.scss";
+
+.contactHero {
+	grid-column: var(--mainWidth);
+	padding: 212px 0 90px;
+	@media (max-width: $maxTablet){
+		padding: 200px 0 60px;
+	}
+	@media (max-width: $minTablet){
+		padding: 160px 0 60px;
+	}
+	@media (max-width: $maxMobile){
+		padding: 140px 0 40px;
+	}
+	p {
+		font-size: var(--fsM);
+
+		@media (max-width: $maxMobile) {
+			max-width: 240px;
+			margin: 10px 0 0;
+		}
+	}
+
+	a {
+		position: relative;
+		border-bottom: 2px solid var(--gray400);
+		transition: all .3s ease-in-out;
+
+		&:hover {
+			border-color: var(--black);
+		}
+	}
+}

@@ -12,7 +12,6 @@ import Description from '@simple/Description';
 import CustomLink from '@simple/CustomLink';
 import list from '@/data/Innovation';
 import { dataSlider } from '@/data/velontoLandingSlider';
-import Footer from '@sections/Footer';
 
 import { validateEmail } from "@/functions/validateEmail";
 import utmcookie from '@/functions/utmcookie';
@@ -668,7 +667,6 @@ export default class Velonto extends React.Component {
                         </form>
                     </div>
                 </section>
-                <Footer />
             </>
         )
     }

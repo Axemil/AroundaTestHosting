@@ -25,7 +25,7 @@ const data = [
         type: ['health', 'corporate websites', 'mobile applications','landing pages','brand identity']
     },
     {
-        id: 3,
+        id: 4,
         image: '/assets/images/metricly.jpg',
         title: 'Metricly, SaaS',
         desc: 'Branding, UX/UI Design',

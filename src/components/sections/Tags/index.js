@@ -9,7 +9,7 @@ import { useRouter } from 'next/router'
 import TagMenuVertical from "@sections/TagMenuVertical"
 import TagMenuHorizontal from "@sections/TagMenuHorizontal"
 
-let Tags = ({ tagNames }) => {
+let Tags = ({ tagNames, isMobile }) => {
   const router = useRouter()
   const handleTagChange = (path) => {
     router.push(path)
@@ -17,12 +17,7 @@ let Tags = ({ tagNames }) => {
 
   const options = reactSelectOptionsFromTags(tagNames)
 
-  return (
-    <>
-      <TagMenuVertical options={options} onChange={(value) => handleTagChange(value)} />
-      <TagMenuHorizontal options={options} />
-    </>
-  )
+  return isMobile ? <TagMenuVertical options={options} onChange={(value) => handleTagChange(value)} /> : <TagMenuHorizontal options={options} />
 }
 
 const mapStateToProps = ({ tagNames }) => ({ tagNames })

@@ -5,11 +5,6 @@ import SubscribeButton from "@simple/SubscribeButton"
 import ArrowDown from "../../../assets/svg/select-arrow.svg"
 import ArrowUp from "../../../assets/svg/select-arrow-up.svg"
 
-import {
-	BrowserView,
-	MobileView,
-} from "react-device-detect";
-
 const IndicatorSeparator = () => null
 
 const DropdownIndicator = (props) => {
@@ -83,7 +78,6 @@ const customStyles = {
 
 const TagMenuVertical = ({ options, onChange }) => {
 	return (
-		<MobileView renderWithFragment>
 			<div className={s.wrapper}>
 				<Select
 					// className={s.tags}
@@ -93,12 +87,13 @@ const TagMenuVertical = ({ options, onChange }) => {
 					// onChange={({ value }) => onChange(value)}
 					components={{ IndicatorSeparator, DropdownIndicator }}
 					defaultValue={options[0]}
+					id="select"
 					instanceId="select"
+					inputId="select"
 				// menuIsOpen
 				/>
 				<SubscribeButton className={s.subscribe} text="Subscribe" />
 			</div>
-		</MobileView>
 	)
 }
 
