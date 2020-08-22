@@ -46,7 +46,6 @@ class Heading extends React.Component {
 	}
 
 	mouseOut = (e) => {
-		console.log('oiut')
 		const { x, y, size } = this.state;
 
 		this.tweenOut
