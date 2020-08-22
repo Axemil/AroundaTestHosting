@@ -46,6 +46,7 @@ class Heading extends React.Component {
 	}
 
 	mouseOut = (e) => {
+		console.log('oiut')
 		const { x, y, size } = this.state;
 
 		this.tweenOut
@@ -54,20 +55,19 @@ class Heading extends React.Component {
 	}
 
 	render() {
+		const {children = '', className} = this.props;
 		return (
-			<div className={style.mainTitle}>
+			<div className={`${className}`}>
 					<div className={`${style.wrapper} slowCursor`}
 						onMouseMove={this.mouseMove}
 						onMouseOut={this.mouseOut}
 					>
-						<h1>
-							Create and evolve 
-							innovative, valuable 
-							digital products</h1>
-						<h1 className={style.mask} ref={title => this.title = title}>
-							Create and evolve 
-							innovative, valuable 
-							digital products</h1>
+						<div className={style.text}>
+							{children}	
+						</div>
+						<div className={`${style.mask} ${style.text}`} ref={title => this.title = title}>
+							{children}	
+						</div>
 					</div>
 			</div>
 		);
