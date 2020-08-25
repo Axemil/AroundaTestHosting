@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 import TitleH from "@simple/TitleH"
 import s from "./style.module.scss"
+import expertise from "@/data/expertise";
 
 class Aside extends React.PureComponent {
 	UNSAFE_componentWillReceiveProps(nextProps) {
@@ -103,41 +104,19 @@ class Aside extends React.PureComponent {
 								<TitleH size="h5">Expertise</TitleH>
 							</div>
 							<ul ref={(el) => (this.socials = el)} className={s.footerList}>
-								<li>
-									<Link href={""}> 
-										<a className={`${s.listItem} stopCursor`}>
-											Food delivery 
-										</a>
-									</Link>
-								</li>
-								<li>
-									<Link href={""}> 
-										<a className={`${s.listItem} stopCursor`}>
-											SaaS 
-										</a>
-									</Link>
-								</li>
-								<li>
-									<Link href={""}> 
-										<a className={`${s.listItem} stopCursor`}>
-											Fintech 
-										</a>
-									</Link>
-								</li>
-								<li>
-									<Link href={""}> 
-										<a className={`${s.listItem} stopCursor`}>
-											Health&Meditation 
-										</a>
-									</Link>
-								</li>
-								<li>
-									<Link href={""}> 
-										<a className={`${s.listItem} stopCursor`}>
-											Cryprocurrency 
-										</a>
-									</Link>
-								</li>
+								{expertise.map((link, i) => {
+									return (
+										<li key={i} className={`${link.disable ? s.disable : ""}`}>
+											<Link
+												href={link.link}
+											>
+												<a className={`${s.listItem} ${link.disable ? s.listItemDisabled : 'stopCursor menu-link'}`} onClick={handleCloseMenu}>
+													{link.title}
+												</a>
+											</Link>
+										</li>
+									)
+								})}
 							</ul>
 						</div>
 					</div>

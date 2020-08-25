@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import nav from "@/data/nav";
+import expertise from "@/data/expertise";
 import socials from "@/data/socials";
 
 import s from './style.scss';
@@ -55,41 +56,16 @@ const Footer = () => {
 					<div>
 						<div className={s.title}>Expertise</div>
 						<ul className={s.footerList}>
-							<li>
-								<Link href={""}>
-									<a className={`${s.listItem} stopCursor`}>
-										Food delivery
-									</a>
-								</Link>
-							</li>
-							<li>
-								<Link href={""}>
-									<a className={`${s.listItem} stopCursor`}>
-										SaaS
-									</a>
-								</Link>
-							</li>
-							<li>
-								<Link href={""}>
-									<a className={`${s.listItem} stopCursor`}>
-										Fintech
-									</a>
-								</Link>
-							</li>
-							<li>
-								<Link href={""}>
-									<a className={`${s.listItem} stopCursor`}>
-										Health&Meditation
-									</a>
-								</Link>
-							</li>
-							<li>
-								<Link href={""}>
-									<a className={`${s.listItem} stopCursor`}>
-										Cryprocurrency
-									</a>
-								</Link>
-							</li>
+							{
+								expertise.map(link => <li>
+										<Link href={link.link}>
+											<a className={`${s.listItem} ${link.disable ? s.listItemDisabled : 'stopCursor'}`}>
+												{link.title}
+											</a>
+										</Link>
+									</li>
+								)
+							}
 						</ul>
 					</div>
 				</div>

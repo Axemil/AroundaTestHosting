@@ -3,6 +3,8 @@ import Link from 'next/link';
 import TitleH from "@simple/TitleH";
 import ButtonSecondary from "@simple/ButtonSecondary";
 
+import {expertiseBlock} from "@/data/expertise";
+
 import s from "./style.scss";
 
 const OurExpertise = () => (
@@ -15,48 +17,22 @@ const OurExpertise = () => (
 				<p className={s.contentDesc}>Working with dozens of digital products, we have got invaluable experience that helps our partners achieve quantifiable goals, save time and money.</p>
 			</div>
 			<div className={s.contentBtn}>
-				<ButtonSecondary> Our expertise </ButtonSecondary>
+				<ButtonSecondary href={'/services'}> Our expertise </ButtonSecondary>
 			</div>
 			<div className={s.listWrapper}>
 				<div className={s.listTitle}>
 					<TitleH>Niches</TitleH>
 				</div>
 				<ul className={s.listItems}>
-					<li>
-						<Link href="/" passHref>
-							<a>
-								Food delivery
-							</a>
-						</Link>
-					</li>
-					<li>
-						<Link href="/" passHref>
-							<a>
-								Fintech
-							</a>
-						</Link>
-					</li>
-					<li>
-						<Link href="/" passHref>
-							<a>
-								Blockchain
-							</a>
-						</Link>
-					</li>
-					<li>
-						<Link href="/" passHref>
-							<a>
-								Meditation&Health
-							</a>
-						</Link>
-					</li>
-					<li>
-						<Link href="/" passHref>
-							<a className={"stopCursor"}>
-								SaaS
-							</a>
-						</Link>
-					</li>
+					{
+						expertiseBlock.map(link => <li>
+							<Link href={link.link} passHref>
+								<a className={`${s.listItem} ${link.disable ? s.listItemDisabled : 'stopCursor'}`}>
+									{link.title}
+								</a>
+							</Link>
+						</li>)
+					}
 				</ul>
 			</div>
 		</div>

@@ -424,7 +424,7 @@ export default class Velonto extends React.Component {
                 </section>
                 <section className={s.sectionKnow}>
                     <div className={s.image}>
-                        <img src="../assets/images/velontoLanding/android-velonto.jpg" alt="velonto" />
+                        <img src="/assets/images/velontoLanding/android-velonto.jpg" alt="velonto" />
                     </div>
                     <div className={s.content}>
                         <div className={s.titleWrapper}>
@@ -514,7 +514,7 @@ export default class Velonto extends React.Component {
                     </div>
                 </section>
                 <section className={s.sectionBg}>
-                    <img src={'../assets/images/velontoLanding/sectionBg-velonto.jpg'} alt='velonto background' />
+                    <img src={'/assets/images/velontoLanding/sectionBg-velonto.jpg'} alt='velonto background' />
                 </section>
                 <section className={s.sectionFlexible}>
                     <div className={s.container}>
@@ -576,7 +576,7 @@ export default class Velonto extends React.Component {
                     <div className={`${s.column} ${s.columnFirst}`}>
                         <div className={`${s.item} ${s.strategy}`}>
                             <div className={s.image}>
-                                <img src="../assets/images/velontoLanding/flexible1.jpg" alt="our team" />
+                                <img src="/assets/images/velontoLanding/flexible1.jpg" alt="our team" />
                             </div>
                             <div className={s.itemWrapper}>
                                 <div className={s.category}>
@@ -589,7 +589,7 @@ export default class Velonto extends React.Component {
                         </div>
                         <div className={`${s.item} ${s.branding}`}>
                             <div className={s.image}>
-                                <img src="../assets/images/velontoLanding/flexible2.jpg" alt="our team" />
+                                <img src="/assets/images/velontoLanding/flexible2.jpg" alt="our team" />
                             </div>
                             <div className={s.itemWrapper}>
                                 <div className={s.category}>
@@ -604,7 +604,7 @@ export default class Velonto extends React.Component {
                     <div className={`${s.column} ${s.columnSecond}`}>
                         <div className={`${s.item} ${s.design}`}>
                             <div className={s.image}>
-                                <img src="../assets/images/velontoLanding/flexible3.jpg" alt="our team" />
+                                <img src="/assets/images/velontoLanding/flexible3.jpg" alt="our team" />
                             </div>
                             <div className={s.itemWrapper}>
                                 <div className={s.category}>
@@ -617,7 +617,7 @@ export default class Velonto extends React.Component {
                         </div>
                         <div className={`${s.item} ${s.development}`}>
                             <div className={s.image}>
-                                <img src="../assets/images/velontoLanding/flexible4.jpg" alt="our team" />
+                                <img src="/assets/images/velontoLanding/flexible4.jpg" alt="our team" />
                             </div>
                             <div className={s.itemWrapper}>
                                 <div className={s.category}>

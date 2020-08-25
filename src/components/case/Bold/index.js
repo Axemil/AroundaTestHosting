@@ -1,35 +1,38 @@
+import React, { Fragment, Component } from 'react';
 import s from './style.scss';
 import data from '@/data/Works';
 
 import Title from '@simple/Title';
-import TitleSecondary from '@/views/Contacts/node_modules/@simple/TitleSecondary';
+import TitleH from '@simple/TitleH';
+import TitleSecondary from '@simple/TitleSecondary';
 import Description from '@simple/Description';
 import CustomLink from '@simple/CustomLink';
-import WorkSection from '@sections/WorkSection';
-import AFooter from '@/views/Contacts/node_modules/@sections/AFooter';
+import WorksSection from '@sections/WorksSection';
 
 
-export default class BoldCase extends React.Component {
+export default class BoldCase extends Component {
     render() {
         return (
-            <>
+            <Fragment>
                 <section className={s.sectionHead}>
                     <div className={s.container}>
                         <div className={s.contentWrapper}>
                             <div className={s.titleWrapper}>
-                                <Title text={'Move mountains, move waves'} />
+                                <TitleH size={'hero'}>
+                                    Move mountains, move waves
+                                </TitleH>
                             </div>
                             <div className={s.descWrapper}>
                                 <Description text={'What was first a small design tweak request turned into a complete makeover of an existing app, leading us to replace poor usability and a crude UI with a fresh interface and intelligent app-flow. We took Bold from a UX audit and niche analysis to complex product development and go-to-market strategy.'} />
                             </div>
                         </div>
-                        <div className={s.linkWrapper}>
+                        {/* <div className={s.linkWrapper}>
                             <a className={s.link}>iOS App</a>
-                        </div>
+                        </div> */}
                     </div>
                 </section>
                 <section className={s.sectionBg}>
-                    <img src="assets/images/bold/bold-hero.jpg" alt="bold image" />
+                    <img src="/assets/images/bold/bold-hero.jpg" alt="bold image" />
                 </section>
                 <section className={s.sectionServices}>
                     <div className={s.contentWrapper}>
@@ -62,7 +65,7 @@ export default class BoldCase extends React.Component {
                     </div>
                 </section>
                 <section className={s.sectionBgSecond}>
-                    <img src="assets/images/bold/boldLogo-bg.jpg" alt="bold" />
+                    <img src="/assets/images/bold/boldLogo-bg.jpg" alt="bold" />
                 </section>
                 <section className={s.sectionWhat}>
                     <div className={s.infoWrapper}>
@@ -99,7 +102,7 @@ export default class BoldCase extends React.Component {
                             <q>These guys from Arounda are really awesome! <br /> My advice - don’t think, hire them</q>
                             <div className={s.author}>
                                 <div className={s.image}>
-                                    <img src="assets/images/bold/bold_avatar.jpg" alt="Mikhail Nikonorov" />
+                                    <img src="/assets/images/bold/bold_avatar.jpg" alt="Mikhail Nikonorov" />
                                 </div>
                                 <div className={s.name}>
                                     Mikhail Nikonorov
@@ -185,13 +188,13 @@ export default class BoldCase extends React.Component {
                         <Description light text={'Once the UX audit was made we found major issues and several missing screens in the UX-flow that ended up making it difficult to interact with the initial app. Our senior development team rethought the app UX and came up with a new unique interface.'} />
                     </div>
                     <div className={`${s.image} ${s.image1}`}>
-                        <img src={'assets/images/bold/boldMobile-1.jpg'} alt={'velonto image'} />
+                        <img src={'/assets/images/bold/boldMobile-1.jpg'} alt={'velonto image'} />
                     </div>
                     <div className={`${s.image} ${s.image2}`}>
-                        <img src={'assets/images/bold/boldMobile-3.jpg'} alt={'velonto image'} />
+                        <img src={'/assets/images/bold/boldMobile-3.jpg'} alt={'velonto image'} />
                     </div>
                     <div className={`${s.image} ${s.image3}`}>
-                        <img src={'assets/images/bold/boldMobile-2.jpg'} alt={'velonto image'} />
+                        <img src={'/assets/images/bold/boldMobile-2.jpg'} alt={'velonto image'} />
                     </div>
                 </section>
                 <section className={s.sectionLanding}>
@@ -202,7 +205,7 @@ export default class BoldCase extends React.Component {
                             <Description text="The custom landing page that was created by our professional team. The landing page delivers the product's core message — stay bold — and it is clear just like the app with all the distinctive graphics and animations. The easy-to-use design helps users get exactly what they are looking for." />
                         </div>
                         <div className={s.imageWrapper}>
-                            <img src="assets/images/bold/bold_landing.jpg" alt="bold landing" />
+                            <img src="/assets/images/bold/bold_landing.jpg" alt="bold landing" />
                         </div>
                 </section>
                 <section className={s.sectionHelped}>
@@ -476,7 +479,7 @@ export default class BoldCase extends React.Component {
                     </div>
                 </section>
                 <section className={s.sectionWorks}>
-                    <WorkSection worksData={data} title={"More work"} />
+                    <WorksSection worksData={data}  />
                 </section>
                 <section className={s.sectionGotProject}>
                     <div className={s.container}>
@@ -486,8 +489,7 @@ export default class BoldCase extends React.Component {
                         </div>
                     </div>
                 </section>
-                <AFooter />
-            </>
+            </Fragment>
         )
     }
 }

@@ -22,9 +22,9 @@ const AboutUsSection = () => (
 					Our team consists of multidisciplinary digital product experts consisting of experienced product managers, designers, developers, and business analysts.
 				</p>	
 			</div>
-			<div className={s.btnWrapper}>
+			{/* <div className={s.btnWrapper}>
 					<ButtonSecondary>About us</ButtonSecondary>
-				</div>
+				</div> */}
 			<div className={s.statistics}>
 				<div className={s.item}>
 					<p className={s.number}>21+</p>

@@ -50,7 +50,7 @@ const SliderSection = () => {
 									<div className={s.author}>
 										<TitleH size="h6">{slide.name}</TitleH>
 										<p className={s.position}>
-											{`${slide.position} at  `}  <a className="stopCursor" href="/"> {slide.company} </a>
+											{`${slide.position} at  `}  <a className="stopCursor" href={slide.companyLink}> {slide.company} </a>
 										</p>
 										<button 
 											className={`${s.btn}  ${s.prev}`} 

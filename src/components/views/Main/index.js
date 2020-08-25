@@ -48,8 +48,6 @@ class Main extends React.Component {
 					/>
 				</section>
 				<LetsTalk />
-				<AFooter />
-
 				<MetaData h1="Digital product design agency for startups and enterprise innovators"
 						title="Arounda — Digital Product Design Agency"
 						description="We create and evolve web and mobile apps, websites through Branding, Web design, UX/UI design, App development for startups and enterprises."

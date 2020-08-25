@@ -24,22 +24,22 @@ export const dataSlider = {
 	images: [
 		{
 			id: "1341413e",
-			src: "../assets/images/velontoLanding/slide1-velonto.jpg",
+			src: "/assets/images/velontoLanding/slide1-velonto.jpg",
 			alt: "Customer panel"
 		},
 		{
 			id: "1341431413132342e",
-			src: "../assets/images/velontoLanding/slide2-velonto.jpg",
+			src: "/assets/images/velontoLanding/slide2-velonto.jpg",
 			alt: "Delivery personnel"
 		},
 		{
 			id: "13411341341413e",
-			src: "../assets/images/velontoLanding/slide3-velonto.jpg",
+			src: "/assets/images/velontoLanding/slide3-velonto.jpg",
 			alt: "Restaurant & Store"
 		},
 		{
 			id: "13411341341412141243e",
-			src: "../assets/images/velontoLanding/slide4-velonto.jpg",
+			src: "/assets/images/velontoLanding/slide4-velonto.jpg",
 			alt: "Admin panel"
 		},
 	]

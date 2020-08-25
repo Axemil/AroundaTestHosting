@@ -60,8 +60,13 @@
 		li{
 			line-height: 1.5;
 			cursor: pointer;
+			font-weight: 500;
+			color: $gray;
+			transition: all .3s $cubic;
 		}
-
+		li:hover {
+			color: $black;
+		}
 		li:not(:last-child) {
 			margin: 0 0 14px;
 		}

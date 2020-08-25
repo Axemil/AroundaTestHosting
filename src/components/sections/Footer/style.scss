@@ -42,6 +42,11 @@
 .footerList .listItem:hover{
 	border-color: inherit;
 }
+.footerList .listItemDisabled {
+	// pointer-events: none;	
+	filter: grayscale(.5);
+	cursor: not-allowed;
+}
 
 .socials{
 	margin-left: 58px;

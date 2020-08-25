@@ -105,3 +105,12 @@
 	}
 }
 
+
+.listItem:hover{
+	border-color: inherit;
+}
+.listItemDisabled {
+	// pointer-events: none;	
+	filter: grayscale(.5);
+	cursor: not-allowed;
+}

@@ -7,7 +7,7 @@
     grid-column: 1/-1;
     padding: 224px 0 226px;
     margin-top: 130px;
-    background-image: url(../../../static/assets/images/velontoLanding/velonto-header.jpg);
+    background-image: url(/assets/images/velontoLanding/velonto-header.jpg);
     background-size: cover;
     background-position: 100% 100%;
 
@@ -17,7 +17,7 @@
 
     @media (max-width: $maxTablet) {
         padding: 100px 0 426px;
-        background-image: url(../../../static/assets/images/velontoLanding/velonto-header--768.jpg);
+        background-image: url(/assets/images/velontoLanding/velonto-header--768.jpg);
     }
 
     @media (max-width: $maxMobile) {
@@ -192,13 +192,13 @@
     grid-column: 1 / -1;
 
     @media (max-width: $minTablet) {
-        background: url(../../../static/assets/images/velontoLanding/velonto-mask--768.jpg) no-repeat;
+        background: url(/assets/images/velontoLanding/velonto-mask--768.jpg) no-repeat;
         background-position: left top;
         background-size: cover;
     }
 
     @media (max-width: 620px) {
-        background: url(../../../static/assets/images/velontoLanding/velonto-mask--384.jpg) no-repeat;
+        background: url(/assets/images/velontoLanding/velonto-mask--384.jpg) no-repeat;
         background-position: left top;
         background-size: cover;
     }
@@ -206,7 +206,7 @@
     .container {
         display: inherit;
         grid-column: 3 / -3;
-        background: url(../../../static/assets/images/velontoLanding/velonto-mask.jpg) no-repeat;
+        background: url(/assets/images/velontoLanding/velonto-mask.jpg) no-repeat;
         background-position: left top;
         background-size: cover;
         justify-items: end;

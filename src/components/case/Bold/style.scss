@@ -34,7 +34,7 @@
     }
 
     .contentWrapper {
-        max-width: 670px;
+        max-width: 874px;
 
         @media (max-width: $maxTablet) {
             max-width: 540px;
@@ -43,7 +43,7 @@
 
     .titleWrapper {
         margin: 0 0 24px;
-        max-width: 500px;
+        max-width: 750px;
 
         @media (max-width: $minTablet) {
             margin: 0 0 20px;
@@ -178,9 +178,11 @@
         }
 
         .panelTitle {
-            color: $gray;
-            font-size: 28px;
-            margin: 0 0 26px;
+            color: $black;
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 45px;
+            margin: 0 0 16px;
 
             @media (max-width: $maxTablet) {
                 margin: 0 0 2px;
@@ -202,8 +204,9 @@
             }
 
             li {
-                margin: 0 0 18px;
-                font-size: 21px;
+                margin: 0 0 6px;
+                font-size: 22px;
+                line-height: 40px;
                 color: #393939;
                 font-family: "PT Sans", sans-serif;
 
@@ -563,7 +566,7 @@
 
 .sectionCheck {
     padding: 170px 0;
-    background-image: url(../../../static/assets/images/bold/boldCheck-bg.jpg);
+    background-image: url(/assets/images/bold/boldCheck-bg.jpg);
     background-size: cover;
     display: inherit;
     grid-template-columns: inherit;
@@ -893,18 +896,18 @@
 
     @media (max-width: $maxLaptop) {
         grid-column: 1 / -1;
-        background: url(../../../static/assets/images/bold/bold-mask--1296.jpg) no-repeat;
+        background: url(/assets/images/bold/bold-mask--1296.jpg) no-repeat;
         background-position: left top;
         background-size: cover;
     }
     @media (max-width: $minTablet){
-        background: url(../../../static/assets/images/bold/bold-mask--768.jpg) no-repeat;
+        background: url(/assets/images/bold/bold-mask--768.jpg) no-repeat;
         background-position: left top;
         background-size: cover;
     }
 
     @media (max-width: 620px) {
-        background: url(../../../static/assets/images/bold/bold-mask--384.jpg) no-repeat;
+        background: url(/assets/images/bold/bold-mask--384.jpg) no-repeat;
         background-position: left top;
         background-size: cover;
     }
@@ -912,7 +915,7 @@
     .container {
         display: inherit;
         grid-column: 3 / -3;
-        background: url(../../../static/assets/images/velontoLanding/velonto-mask.jpg) no-repeat;
+        background: url(/assets/images/velontoLanding/velonto-mask.jpg) no-repeat;
         background-position: left top;
         background-size: cover;
         justify-items: end;

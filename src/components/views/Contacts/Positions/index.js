@@ -1,4 +1,4 @@
-import React from 'react';
+import Link from 'next/link';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import TitleH from "@simple/TitleH";
@@ -14,7 +14,7 @@ const Positions = () => (
 				<TitleH size="h2">Let’s create great things together!</TitleH>
 			</div>
 			<div className={s.positionsList}>
-				<div className={s.position}>Sales manager <Arrow /></div>
+				<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdnUK1cjeTe3NJsada3zbZjbeQJkMk7UGIlyEN2eCC86_6eXQ/viewform" className={s.position}>Sales manager <Arrow /></a>
 			</div>
 		</div>
 		<div className={s.positionsImages}>

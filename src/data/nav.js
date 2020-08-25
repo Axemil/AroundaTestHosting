@@ -9,11 +9,11 @@ const nav = [
 		name: "Services",
 		href: "/services/",
 	},
-	{
-		id: "314etqetq1341",
-		name: "About",
-		href: "/about/",
-	},
+	// {
+	// 	id: "314etqetq1341",
+	// 	name: "About",
+	// 	href: "/about/",
+	// },
 	{
 		id: "314qetqetq1341",
 		name: "Blog",

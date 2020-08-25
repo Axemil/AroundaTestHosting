@@ -7,6 +7,7 @@ const slides = [
 		name: "Josef Chen",
 		position: "CEO",
 		company: "Velonto",
+		companyLink: "https://velonto.at/",
 	},
 	{
 		id: "1",
@@ -15,7 +16,8 @@ const slides = [
 		desc: "Everything Arounda has produced, from design to code, has been enterprise-grade quality they are fantastic to work with!",
 		name: "Trent Waskey",
 		position: "Marketing Director",
-		company: "Metricly"
+		company: "Metricly",
+		companyLink: "https://www.metricly.com/",
 	},
 	{
 		id: "2",
@@ -25,6 +27,7 @@ const slides = [
 		name: "El Asmar",
 		position: "CEO",
 		company: "Gigzi",
+		companyLink: "https://gigzi.com/",
 	},
 	{
 		id: "3",
@@ -34,6 +37,7 @@ const slides = [
 		name: "Tim O’Dwyer",
 		position: "Co-Founder",
 		company: "Lustery",
+		companyLink: "https://www.metricly.com/",
 	},
 	{
 		id: "4",
@@ -42,7 +46,8 @@ const slides = [
 		desc: "These guys from Arounda are really awesome!  My advice -don’t think, hire them.",
 		name: "Mikhail Nikonorov ",
 		position: "CEO & Founder",
-		company: "Bold"
+		company: "Bold",
+		companyLink: "https://thebold.app/",
 	},
 ];
 

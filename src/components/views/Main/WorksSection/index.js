@@ -11,7 +11,7 @@ const WorksSection = ({worksData, title}) => {
         <div className={s.worksSection}>
             <Works worksData={worksData}/>
 			<div className={s.buttonWrapper}>
-				<ButtonSecondary icon="plus">More works</ButtonSecondary>
+				<ButtonSecondary href={'works'} icon="plus">More works</ButtonSecondary>
 			</div>
         </div>
     )

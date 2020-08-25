@@ -1,3 +1,4 @@
+import React, { Fragment } from 'react';
 import s from './style.scss';
 
 import Title from '@simple/Title';
@@ -7,7 +8,7 @@ import CustomLink from '@simple/CustomLink';
 
 const VelontoCase = (props) => {
     return (
-        <>
+        <Fragment>
             <section className={s.sectionHead}>
                 <div className={s.container}>
                     <div className={s.contentWrapper}>
@@ -182,7 +183,7 @@ const VelontoCase = (props) => {
                     </div>
                 </div>
             </section> 
-        </>
+        </Fragment>
     )
 };
 export default VelontoCase;
