@@ -81,9 +81,9 @@ export default class Header extends React.Component {
 
 	render() {
 		const { fixedHeader } = this.state
-		const { openMenu, toggleMenu, hideLinks, actives } = this.props
+		const { openMenu, toggleMenu, hideLinks, isMobile, actives } = this.props
 		return (
-			<header className={`${s.header} ${fixedHeader ? s.fixed : ""}`}>
+			<header className={`${s.header} ${fixedHeader || isMobile ? s.fixed : ""}`}>
 				<div className={s.row}>
 					<nav className={s.nav}>
 						<ul

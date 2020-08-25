@@ -8,7 +8,7 @@ import Aside from "@sections/Aside"
 import Footer from '@sections/Footer';
 import s from "./style.scss";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, isMobile }) => {
 	let [openMenu, setOpenMenu] = React.useState(false)
 	let [header, setHeader] = React.useState(false)
 
@@ -66,6 +66,7 @@ const Layout = ({ children }) => {
 			<Header
 				ref={(el) => setHeader(el)}
 				toggleMenu={toggleMenu}
+				isMobile={isMobile}
 				openMenu={openMenu}
 				hideLinks={pathname == '/404'}
 			/>

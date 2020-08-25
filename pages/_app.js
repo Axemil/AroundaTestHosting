@@ -35,7 +35,7 @@ class MyApp extends App {
 		const { Component, pageProps, isMobile } = this.props;
 		
 		return (
-			<Layout>
+			<Layout isMobile={isMobile}>
 					<SubscribePopup />
 					{!isMobile && <Cursor></Cursor>}				
 					<Component {...pageProps} isMobile={isMobile} />
