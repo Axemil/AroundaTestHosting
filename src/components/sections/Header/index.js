@@ -9,9 +9,13 @@ import s from "./style.scss";
 
 export default class Header extends React.Component {
 	state = {
-		fixedHeader: false
+		fixedHeader: false,
+		logo: false,
+		menu: false,
+		burgerWrap: false,
+		burger: false,
 	}
-
+	
 	get tl() {
 		const t = new TimelineMax()
 
@@ -61,9 +65,7 @@ export default class Header extends React.Component {
 	}
 
 	componentDidMount() {
-		setTimeout(() => {
-			window.addEventListener("scroll", this.handleScroll)
-		}, 2000)
+		window.addEventListener("scroll", this.handleScroll)
 	}
 
 	handleScroll = (e) => {

@@ -12,10 +12,13 @@
 	@media (max-width: $maxTablet) {
 		padding: 30px 0;
 	}
-
-	&.fixed {
-		pointer-events: none;
+	@media (min-width: $maxTablet) {
+		padding: 30px 0;
+		&.fixed {
+			pointer-events: none;
+		}
 	}
+
 }
 
 .headerFixed {
