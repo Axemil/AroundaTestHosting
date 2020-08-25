@@ -14,7 +14,7 @@ const ServicesSection = (props) => (
 			</div>
 			<ServicesList />
 			<div className={s.btnWrapper}>
-				<ButtonSecondary>Our services</ButtonSecondary>
+				<ButtonSecondary href="/services">Our services</ButtonSecondary>
 			</div>
 		</div>
 	</section>
