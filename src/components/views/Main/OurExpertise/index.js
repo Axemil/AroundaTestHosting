@@ -25,7 +25,7 @@ const OurExpertise = () => (
 				</div>
 				<ul className={s.listItems}>
 					{
-						expertiseBlock.map(link => <li>
+						expertiseBlock.map(link => <li key={link.title}>
 							<Link href={link.link} passHref>
 								<a className={`${s.listItem} ${link.disable ? s.listItemDisabled : 'stopCursor'}`}>
 									{link.title}
