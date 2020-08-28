@@ -14,7 +14,7 @@
 }
 
 .item {
-	margin: 0 0 72px;
+	margin: 0 0 70px;
 	@media (max-width: $maxTablet) {
 		margin: 0 0 44px;
 	}
@@ -43,7 +43,7 @@
 }
 
 .item:nth-child(even) {
-	transform: translateY(-80px);
+	transform: translateY(-130px);
 	@media (max-width: $maxTablet) {
 		transform: translateY(-112px);
 	}

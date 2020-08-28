@@ -45,7 +45,7 @@ const SliderSection = () => {
 								<div className={s.slideContent}>
 									<p className={s.reviews}>REVIEWS</p>
 									<div className={s.comment}>
-										<TitleH>{slide.desc}</TitleH>
+										<TitleH size={'h3'}>{slide.desc}</TitleH>
 									</div>
 									<div className={s.author}>
 										<TitleH size="h6">{slide.name}</TitleH>

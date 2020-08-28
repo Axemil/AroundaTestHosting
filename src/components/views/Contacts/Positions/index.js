@@ -11,7 +11,7 @@ const Positions = () => (
 	<section className={s.positions}>
 		<div className={s.positionsContent}>
 			<div className={s.titleWrapper}>
-				<TitleH size="h2">Let’s create great things together!</TitleH>
+				<TitleH size="h1">Let’s create great things together!</TitleH>
 			</div>
 			<div className={s.positionsList}>
 				<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdnUK1cjeTe3NJsada3zbZjbeQJkMk7UGIlyEN2eCC86_6eXQ/viewform" className={s.position}>Sales manager <Arrow /></a>

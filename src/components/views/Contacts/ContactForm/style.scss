@@ -283,7 +283,7 @@
 	grid-row: 3/ 4;
 	align-self: end;
 	justify-self: end;
-	transform: translateY(-16px);
+	transform: translate(-24px, -2px);
 
 	@media (max-width: $maxTablet) {
 		grid-column: 1 / -1;
@@ -397,7 +397,7 @@
 	}
 
 	.item:not(:last-child) {
-		margin-right: 20px;
+		margin-right: 30px;
 	}
 }
 

@@ -4,9 +4,12 @@
 	font-weight: 500;
 	color: inherit;
 	line-height: 1.5;
+	letter-spacing: 1.5px;
 }
 .hero{
 	font-size: 70px;
+	line-height: 105px;
+	letter-spacing: 3px;
 	@media (max-width: $maxTablet){
 		font-size: 56px;
 	}

@@ -4,7 +4,7 @@
 	display: inherit;
 	grid-template-columns: inherit;
 	grid-column: 1 / -1;
-	padding: 180px 0;
+	padding: 160px 0 170px;
 	background-color: var(--gray300);
 	@media (max-width: $maxTablet){
 		padding: 140px 0;
@@ -46,13 +46,14 @@
 	margin-left: 10px;
 	font-size: var(--fsM);
 	font-weight: 500;
+	letter-spacing: 1.5px;
 }
 .titleWrapper{
 	margin: 0 0 20px;
 }
 .descWrapper{
 	font-size: var(--fsM);
-	margin: 0 0 62px;
+	margin: 0 0 115px;
 	@media (max-width: $maxTablet){
 		margin: 0 0 50px;
 	}
@@ -94,7 +95,7 @@
 .item .number{
 	font-size: 36px;
 	font-weight: bold;
-	line-height: 1.4;
+	line-height: 54px;
 	@media (max-width: $maxTablet){
 		font-size: 32px;
 	}

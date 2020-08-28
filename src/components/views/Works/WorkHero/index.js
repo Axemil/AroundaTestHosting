@@ -5,7 +5,7 @@ import s from "./style.scss";
 
 const WorkHero = () => (
 	<section className={s.workHero}>
-		<TitleH size="hero">We make successful digital products </TitleH>
+		<TitleH size="hero">We make successful digital experiences</TitleH>
 	</section>
 );
 

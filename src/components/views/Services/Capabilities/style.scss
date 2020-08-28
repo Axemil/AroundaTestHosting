@@ -23,8 +23,8 @@
 	}
 }
 .titleWrapper{
-	max-width: 590px;
-	margin: 0 0 80px;
+	max-width: 620px;
+	margin: 0 0 115px;
 	@media (max-width: $maxTablet){
 		max-width: 420px;
 	}
@@ -36,6 +36,7 @@
 .titleWrapper p{
 	margin: 20px 0 0;
 	font-size: var(--fsL);
+	letter-spacing: 1.1px;
 }
 
 .capabilities ul{

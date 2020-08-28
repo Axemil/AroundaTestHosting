@@ -1,0 +1,13 @@
+.listItem{
+	border-bottom: 2px solid var(--gray400);
+	transition: all .3s ease-in-out;
+}
+
+.listItem:hover{
+	border-color: inherit;
+}
+.listItemDisabled {
+	// pointer-events: none;	
+	filter: grayscale(.5);
+	cursor: not-allowed;
+}

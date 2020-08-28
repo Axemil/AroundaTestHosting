@@ -3,7 +3,7 @@ import { TimelineLite, Power0 } from "gsap"
 import Link from 'next/link'
 
 import TitleH from "@simple/TitleH"
-import s from "./style.module.scss"
+import s from "./style.scss"
 import expertise from "@/data/expertise";
 
 class Aside extends React.PureComponent {

@@ -2,7 +2,6 @@
 @import '@/scss/mixins.scss';
 
 .sliderSection {
-  min-height: 100vh;
   margin: 100px 0;
   padding: 110px 0 160px;
   background: #fafafa;
@@ -29,7 +28,6 @@
 }
 
 .wrapInnovationSection {
-  min-height: 100vh;
   grid-column: 1 / -1;
   display: inherit;
   grid-template-columns: inherit;

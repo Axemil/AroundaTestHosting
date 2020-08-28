@@ -57,7 +57,7 @@ const Footer = () => {
 						<div className={s.title}>Expertise</div>
 						<ul className={s.footerList}>
 							{
-								expertise.map(link => <li key={link.link}>
+								expertise.map(link => <li key={link.title}>
 										<Link href={link.link}>
 											<a className={`${s.listItem} ${link.disable ? s.listItemDisabled : 'stopCursor'}`}>
 												{link.title}

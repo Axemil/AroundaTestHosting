@@ -9,7 +9,7 @@ import data from '@/data/Works';
 import MetaData from '@simple/MetaData';
 
 const categoriesList = {
-	'project type': ['All projects', 'Platforms', 'Corporate websites', 'Web applications', 'Mobile applications', 'Landing pages', 'Brand identity'],
+	'project type': ['All project type', 'Platforms', 'Corporate websites', 'Web applications', 'Mobile applications', 'Landing pages', 'Brand identity'],
 	'industry': ['Food delivery', 'Fintech', 'Health', 'SaaS']
 };
 

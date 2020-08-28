@@ -3,7 +3,7 @@ const slides = [
 		id: "0",
 		src: "/assets/images/mainSlider/josef.jpg",
 		srcMobile: "assets/images/josefMob.jpg",
-		desc: "Arounda’s work and mindset represents the pinnacle of perfection while still being highly efficient and communicative.",
+		desc: "Arounda’s work and mindset represents the pinnacle of perfection while still being efficient and communicative.",
 		name: "Josef Chen",
 		position: "CEO",
 		company: "Velonto",

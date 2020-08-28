@@ -65,7 +65,7 @@ export default class ContactForm extends Component {
 					value: 'UX/UI Design'
 				},
 				{
-					name: 'Development',
+					name: 'App development',
 					value: 'Development'
 				},
 				{
@@ -73,7 +73,7 @@ export default class ContactForm extends Component {
 					value: 'Branding'
 				},
 				{
-					name: 'Graphic design',
+					name: 'Web design',
 					value: 'Graphic design'
 				}
 			]
@@ -194,11 +194,11 @@ export default class ContactForm extends Component {
 			<Fragment>
 				<form className={style.grid} onSubmit={(e) => e.preventDefault()}>
 					<div className={style.inputWrapper}>
-						<input className={style.input} value={name} type='text' placeholder='What’s your name' onChange={this.handleInput} name='name' required />
+						<input className={style.input} value={name} type='text' placeholder='Your name' onChange={this.handleInput} name='name' required />
 						<label>Your name</label>
 					</div>
 					<div className={style.inputWrapper}>
-						<input onChange={this.handleInput} value={email} className={style.input} type='email' placeholder='What’s your email' name='email' required />
+						<input onChange={this.handleInput} value={email} className={style.input} type='email' placeholder='Your email' name='email' required />
 						<label>Your email</label>
 					</div>
 					<div className={style.selectWrapper}>
@@ -248,7 +248,7 @@ export default class ContactForm extends Component {
 						<label>Your message</label>
 					</div>
 					<div className={style.includeWrapper}>
-						<label>Services</label>
+						<label>What to include?</label>
 						<ul className={style.list}>
 							{include['services'].map((el, i) => {
 								return (
