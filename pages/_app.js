@@ -11,7 +11,7 @@ import SubscribePopup from "@sections/SubscribePopup";
 import Cursor from "@simple/Cursor"
 
 import utmcookie from '@/functions/utmcookie';
-import MobileProvider from '@/functions/mobileProvider';
+import MobileProvider from '@/functions/MobileProvider';
 
 
 class MyApp extends App {

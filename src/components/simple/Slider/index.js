@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { Context as MobileContext } from '@/functions/mobileProvider';
+import { Context as MobileContext } from '@/functions/MobileProvider';
 
 import TitleH from "@simple/TitleH";
 
