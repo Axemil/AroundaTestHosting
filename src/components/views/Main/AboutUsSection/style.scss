@@ -9,6 +9,9 @@
 	@media (max-width: $maxTablet){
 		padding: 140px 0;
 	}
+	@media (max-width: $minTablet){
+		padding: 140px 0 204px;
+	}
 	@media (max-width: $maxMobile){
 		padding: 110px 0;
 	}
@@ -57,6 +60,10 @@
 	@media (max-width: $maxTablet){
 		margin: 0 0 50px;
 	}
+	@media (max-width: $minTablet){
+		margin: 0 0 34px;
+		line-height: 29px;
+	}
 }
 .btnWarapper{
 	grid-row: 2 / 3;
@@ -101,6 +108,7 @@
 	}
 	@media (max-width: $minTablet){
 		font-size: 24px;
+		line-height: 50px;
 	}
 	@media (max-width: $maxMobile){
 		font-size: 22px;

@@ -9,7 +9,7 @@
 		padding: 130px 0 240px;
 	}
 	@media (max-width: $minTablet){
-		padding: 140px 0;
+		padding: 138px 0;
 	}
 	@media (max-width: $maxMobile){
 		padding: 110px 0;
@@ -28,6 +28,10 @@
 	@media (max-width: $maxTablet){
 		max-width: 420px;
 	}
+	@media (max-width: $minTablet){
+		max-width: 420px;
+		margin: 0 0 75px;
+	}
 	@media (max-width: $maxMobile){
 		max-width: 340px;
 	}
@@ -37,6 +41,11 @@
 	margin: 20px 0 0;
 	font-size: var(--fsL);
 	letter-spacing: 1.1px;
+	@media (max-width: $minTablet){
+		margin: 18px 0 0;
+		letter-spacing: 0;
+		line-height: 29px;
+	}
 }
 
 .capabilities ul{

@@ -8,6 +8,9 @@
 	@media (max-width: $maxTablet){
 		padding: 140px 0;
 	}
+	@media (max-width: $minTablet){
+		padding: 136px 0;
+	}
 	@media (max-width: $maxMobile){
 		padding: 110px 0;
 	}
@@ -53,6 +56,9 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	@media (max-width: $minTablet){
+		padding-top: 50px;
+	}
 }
 .position{
 	display: flex;

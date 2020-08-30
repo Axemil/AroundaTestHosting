@@ -88,9 +88,13 @@
 	grid-auto-rows: min-content;
 	grid-row-gap: 62px;
 	position: relative;
-
+	
 	@media (max-width: $maxTablet) {
 		grid-row-gap: 25px;
+	}
+	@media (max-width: $minTablet) {
+		grid-row-gap: 25px;
+		grid-template-columns: repeat(12, 2fr);
 	}
 }
 
@@ -136,6 +140,10 @@
 		grid-column: 1/ -1;
 		margin: 0 0 30px;
 	}
+	@media (max-width: $minTablet) {
+		grid-column: span 6;
+		margin: 0 0 34px;
+	}
 
 	@media (max-width: $maxMobile) {
 		margin: 0 0 25px;
@@ -167,6 +175,9 @@
 	@media (max-width: $maxTablet) {
 		grid-column: 1 / -1;
 		margin: 0 0 30px;
+	}
+	@media (max-width: $minTablet) {
+		grid-column: span 6;
 	}
 
 	@media (max-width: $maxMobile) {
@@ -291,6 +302,9 @@
 		padding: 15px 0 0;
 		transform: translateY(0);
 	}
+	@media (max-width: $minTablet) {
+		padding: 8px 0 0;
+	}
 	@media (max-width: $maxMobile){
 		justify-self: start;
 	}
@@ -310,6 +324,12 @@
 	@media (max-width: $maxTablet) {
 		grid-column: 1 / -1;
 		grid-row: 5 / 6;
+	}
+	
+	@media (max-width: $minTablet) {
+		grid-column: 1 / -1;
+		grid-row: 3 / 6;
+		margin-bottom: 12px;
 	}
 
 	label {
@@ -392,12 +412,17 @@
 			color: inherit;
 			cursor: pointer;
 			font-family: inherit;
-
+			@media (max-width: $minTablet) {
+				letter-spacing: .7px;
+			}	
 		}
 	}
 
 	.item:not(:last-child) {
 		margin-right: 30px;
+		@media (max-width: $minTablet) {
+			margin: 5px 24px 14px 0px;
+		}
 	}
 }
 

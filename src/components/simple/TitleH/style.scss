@@ -12,9 +12,12 @@
 	letter-spacing: 3px;
 	@media (max-width: $maxTablet){
 		font-size: 56px;
+		line-height: 84px;
 	}
 	@media (max-width: $minTablet){
 		font-size: 44px;
+		line-height: 66px;
+		letter-spacing: 1.5px;
 	}
 	@media (max-width: $maxMobile){
 		font-size: 30px;

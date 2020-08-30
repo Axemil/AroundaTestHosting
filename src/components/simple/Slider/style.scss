@@ -10,6 +10,9 @@
 	align-items: center;
 	outline: none;
 	padding-right: 20px;
+	@media (max-width: $minTablet){
+		padding-right: 0px;
+	}
 	@media (max-width: $maxMobile){
 		padding-right: 0;
 		flex-direction: column;
@@ -27,7 +30,7 @@
 		max-width: 352px;
 	}
 	@media (max-width: $minTablet){
-		margin: 0 calc(var(--cellSize) * 2) 0 0;
+		margin: 0 calc(100vw / 24 * 2) 0 0;
 		height: 414px;
 		max-width: 290px;
 	}
@@ -55,7 +58,7 @@
 	font-weight: 500;
 	margin: 0 0 20px;
 	@media (max-width: $maxTablet){
-		margin: 0 0 60px;
+		margin: 0px 0 60px;
 	}
 	@media (max-width: $maxMobile){
 		margin: 0 0 40px;

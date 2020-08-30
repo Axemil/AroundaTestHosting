@@ -7,12 +7,12 @@ import TitleH from "@simple/TitleH";
 import s from './style.scss';
 
 
-const Works = ({ worksData }) => {
+const Works = ({ worksData, tight }) => {
 	return (
 	<div className={s.row}>
 		{
 			worksData.map(work => (
-				<div key={work.id} className={s.item}>
+				<div key={work.id} className={`${s.item} ${tight && s.itemTight}`}>
 					<a href={`${work.link}`} className={`${s.link} stopCursor`} target='_blank'>
 						<div className={s.image}>
 							<LazyLoadImage

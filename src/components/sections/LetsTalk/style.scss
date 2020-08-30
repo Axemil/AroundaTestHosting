@@ -9,6 +9,9 @@
 	@media (max-width: $maxTablet){
 		padding: 140px 0;
 	}
+	@media (max-width: $minTablet){
+		padding: 130px 0 125px;
+	}
 	@media (max-width: $maxMobile){
 		padding: 110px 0;
 	}
@@ -19,7 +22,8 @@
 	letter-spacing: 1.2px;
 	margin: 0 0 10px;
 	@media (max-width: $minTablet){
-		margin: 0 0 10px;
+		margin: 0 0 4px;
+		letter-spacing: 0;
 	}
 }
 .email{
@@ -32,7 +36,7 @@
 	}
 	@media (max-width: $minTablet){
 		font-size: 44px;
-		margin: 0 0 20px;
+		margin: 0 0 13px;
 	}
 	@media (max-width: $maxMobile){
 		font-size: 30px;
@@ -41,4 +45,10 @@
 .btnWrapper{
 	display: flex;
 	justify-content: center;
+	@media (max-width: $minTablet){
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 100%;		
+		letter-spacing: -0.02em;
+	}
 }

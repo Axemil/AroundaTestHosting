@@ -16,6 +16,12 @@
 		padding: 0;
 	}
 }
+.workSectionTight {
+	padding: 86px 0 92px;
+	@media (max-width: $minTablet){
+		padding: 102px 0 106px;
+	}
+}
 
 .buttonWrapper{
 	position: absolute;

@@ -33,6 +33,9 @@
 
 .footerList li{
 	margin: 0 0 8px;
+	@media (max-width: $minTablet){
+		margin: 0 0 14px;
+	}
 }
 .footerList .listItem{
 	border-bottom: 2px solid var(--gray400);

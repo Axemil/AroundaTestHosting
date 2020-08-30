@@ -79,7 +79,7 @@ const Works = () => {
 				handlerToggle={handlerToggle}
 				handleSelectCategory={handleSelectCategory}
 			/>
-			<WorksSection worksData={worksData} />
+			<WorksSection tight worksData={worksData} />
 			<SliderSection darkBackground />
 			<LetsTalk />
 

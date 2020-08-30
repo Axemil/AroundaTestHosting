@@ -471,7 +471,7 @@ export default class BoldCase extends Component {
                                 </div>
                                 <div className={s.btnWrapper}>
                                     <button className={s.btn}>
-                                        Send a request
+                                        Send a Request
                                 </button>
                                 </div>
                             </form>

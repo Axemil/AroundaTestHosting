@@ -6,10 +6,10 @@ import s from './style.scss';
 
 
 
-const WorkSection = ({worksData}) => {    
+const WorkSection = ({worksData, tight}) => {    
     return (
-        <div className={s.workSection}>
-            <Works worksData={worksData}/>
+        <div className={`${s.workSection} ${tight && s.workSectionTight}`}>
+            <Works tight worksData={worksData}/>
         </div>
     )
 };

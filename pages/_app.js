@@ -11,6 +11,7 @@ import SubscribePopup from "@sections/SubscribePopup";
 import Cursor from "@simple/Cursor"
 
 import utmcookie from '@/functions/utmcookie';
+import MobileProvider from '@/functions/mobileProvider';
 
 
 class MyApp extends App {
@@ -35,11 +36,13 @@ class MyApp extends App {
 		const { Component, pageProps, isMobile } = this.props;
 		
 		return (
-			<Layout isMobile={isMobile}>
-					<SubscribePopup />
-					{!isMobile && <Cursor></Cursor>}				
-					<Component {...pageProps} isMobile={isMobile} />
-			</Layout>
+			<MobileProvider isMobile={isMobile}>
+				<Layout isMobile={isMobile}>
+						<SubscribePopup />
+						{!isMobile && <Cursor></Cursor>}				
+						<Component {...pageProps} isMobile={isMobile} />
+				</Layout>
+			</MobileProvider>
 		)
 	}
 }

@@ -1,5 +1,6 @@
 import Slider from "react-slick";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { Context as MobileContext } from '@/functions/mobileProvider';
 
 import TitleH from "@simple/TitleH";
 
@@ -11,7 +12,7 @@ import s from "./style.scss";
 
 const SliderSection = () => {
 	const slider = React.useRef(null);
-
+	const { isMobile } = React.useContext(MobileContext)
 	const next = () => {
 		slider.current.slickNext();
 	}
@@ -26,7 +27,6 @@ const SliderSection = () => {
 		fade: true,
 		speed: 700,
 	}
-
 	return (
 		<div className={s.slider}>
 			<Slider ref={slider} {...settings}>
@@ -45,7 +45,7 @@ const SliderSection = () => {
 								<div className={s.slideContent}>
 									<p className={s.reviews}>REVIEWS</p>
 									<div className={s.comment}>
-										<TitleH size={'h3'}>{slide.desc}</TitleH>
+										<TitleH size={isMobile? 'h4' : 'h3'}>{slide.desc}</TitleH>
 									</div>
 									<div className={s.author}>
 										<TitleH size="h6">{slide.name}</TitleH>

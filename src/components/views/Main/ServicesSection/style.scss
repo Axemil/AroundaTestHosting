@@ -28,6 +28,7 @@
 	}
 	@media (max-width: $minTablet){
 		max-width: 515px;
+		margin: 0 0 77px;
 	}
 	@media (max-width: $maxMobile){
 		margin: 0 0 50px;
@@ -53,6 +54,10 @@
 		text-align: left;
 		margin: 20px 0 0;
 	}
+	@media (max-width: $minTablet){
+		text-align: left;
+		line-height: 26px
+	}
 } 
 .servicesWrapper{
 	max-width: 1048px;
@@ -65,6 +70,9 @@
 		margin: 0 ;
 		max-width: 740px;
 		grid-row-gap: 65px;
+	}
+	@media (max-width: $minTablet){
+		grid-row-gap: 59px;
 	}
 	@media (max-width: $maxMobile){
 		grid-template-columns: 1fr 1fr;
@@ -87,7 +95,7 @@
 		margin: 10px 0 0;
 	}
 	@media (max-width: $minTablet){
-		margin: 80px 0 0;
+		margin: 74px 0 0;
 		justify-content: flex-start;
 	}
 	@media (max-width: $maxMobile){

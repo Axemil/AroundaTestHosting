@@ -11,6 +11,9 @@
 	@media (max-width: $maxTablet) {
 		padding: 140px 0;
 	}
+	@media (max-width: $minTablet) {
+		padding: 118px 0;
+	}
 	@media (max-width: $maxMobile) {
 		padding: 110px 0;
 	}
@@ -45,7 +48,8 @@
 			margin: 0 0 65px;
 
 			@media (max-width: $minTablet) {
-				margin: 0 0 60px;
+				margin: 0 0 49px;
+				grid-template-columns: minmax(110px, 112px) 1fr;
 			}
 			@media (max-width: $maxMobile) {
 				margin: 0 0 40px;
@@ -74,7 +78,10 @@
 		font-size: 16px;
 		line-height: 28px;
 		padding: 18px 0 0;
-
+		
+		@media (max-width: $minTablet) {
+			padding: 14px 0 0;
+		}
 		@media (max-width: $maxMobile) {
 			padding: 0;
 			grid-row: 2 / 2;
@@ -106,7 +113,10 @@
 			font-size: 24px;
 		}
 		@media (max-width: $minTablet) {
-			font-size: 20px;
+			font-size: 28px;
+			letter-spacing: .9px;
+			font-weight: bold;
+			line-height: 44px;
 		}
 		@media (max-width: $maxMobile) {
 			margin: 0 0 20px;

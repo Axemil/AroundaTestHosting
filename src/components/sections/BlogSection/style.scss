@@ -10,6 +10,9 @@
 	@media (max-width: $maxTablet) {
 		padding: 140px 0 140px;
 	}
+	@media (max-width: $minTablet) {
+		padding: 140px 0 140px;
+	}
 
 	@media (max-width: $maxMobile) {
 		padding: 84px 0 84px;
