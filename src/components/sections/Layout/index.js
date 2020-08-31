@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router'
+import Router, { useRouter } from 'next/router'
 import { TimelineMax } from "gsap"
 import noScroll from "no-scroll"
 
@@ -50,16 +50,13 @@ const Layout = ({ children, isMobile }) => {
 		tl()
 	}, 100)
 
-	noScroll.on()
-
+	// noScroll.on()
 
 	const {pathname} = useRouter();
-	React.useEffect(() => {
-		if (process.browser) {
-			window.scrollTo(0,0);
-		}
-	}, [pathname]);
-
+	
+	Router.events.on('routeChangeComplete', () => { {
+		window.scrollY != 0 && window.scrollTo(0, 0);
+	} })
 
 	return (
 		<div className={s.grid}>
