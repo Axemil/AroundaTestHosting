@@ -10,7 +10,7 @@
 		padding: 160px 0 83px;
 	}
 	@media (max-width: $maxMobile){
-		padding: 140px 0 40px;
+		padding: 138px 0 65px;
 	}
 	p {
 		font-size: var(--fsM);
@@ -21,7 +21,8 @@
 		}
 		@media (max-width: $maxMobile) {
 			max-width: 240px;
-			margin: 10px 0 0;
+			margin: 8px 0 0;
+			line-height: 30px;
 		}
 	}
 

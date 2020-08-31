@@ -12,7 +12,7 @@
 		padding: 138px 0;
 	}
 	@media (max-width: $maxMobile){
-		padding: 110px 0;
+		padding: 112px 0;
 	}
 }
 .container{
@@ -34,6 +34,7 @@
 	}
 	@media (max-width: $maxMobile){
 		max-width: 340px;
+		margin: 0 0 48px;
 	}
 }
 

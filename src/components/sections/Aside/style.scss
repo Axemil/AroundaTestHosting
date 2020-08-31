@@ -80,7 +80,7 @@
 	@media (max-width: $maxMobile) {
 		justify-content: flex-start;
 		grid-column: var(--mainWidth);
-		margin: 0 0 60px; 
+		margin: 0 0 66px; 
 	}
 
 	li {
@@ -101,7 +101,7 @@
 				padding: 7px 15px 0 0;
 			}
 			@media (max-width: $maxMobile) {
-				margin: 0 0 34px;
+				margin: 0 0 23px;
 			}
 		}
 
@@ -220,7 +220,9 @@
 		visibility: hidden;
 		font-size: var(--fsM);
 		letter-spacing: 1.5px;
-
+		@media (max-width: $maxMobile) {
+			margin: 0 0 10px;
+		}
 		a {
 			text-transform: capitalize;
 			border-bottom: 3px solid var(--gray400);

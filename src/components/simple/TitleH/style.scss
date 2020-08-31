@@ -20,7 +20,8 @@
 		letter-spacing: 1.5px;
 	}
 	@media (max-width: $maxMobile){
-		font-size: 30px;
+		font-size: 32px;
+		line-height: 48px;
 	}
 }
 .h1{
@@ -45,6 +46,7 @@
 	}
 	@media (max-width: $maxMobile){
 		font-size: 28px;
+		letter-spacing: 2.1px
 	}
 }
 .h3{
@@ -58,6 +60,10 @@
 	@media (max-width: $minTablet){
 		font-size: 20px;
 	}
+	@media (max-width: $maxMobile){
+		letter-spacing: 1px;
+	}
+
 }
 .h5{
 	font-size: 24px;

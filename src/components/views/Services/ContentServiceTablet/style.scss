@@ -21,6 +21,9 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+        @media (max-width: $maxMobile){
+            width: 95%;
+        }
     }
 
 }
@@ -29,7 +32,7 @@
 	max-width: 540px;
     padding: 90px 0 140px;
     @media (max-width: $maxMobile){
-        padding: 80px 0 145px;
+        padding: 56px 0 114px;
     }
 }
 .desc{
@@ -42,6 +45,9 @@
     li{
         font-size: 16px;
         margin: 0 0 6px;
+        @media (max-width: $maxMobile){
+        margin: 0 0 5px;
+        }
 		position: relative;
 		display: flex;
 		align-items: center;

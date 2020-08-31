@@ -13,7 +13,7 @@
 		padding: 140px 0 204px;
 	}
 	@media (max-width: $maxMobile){
-		padding: 110px 0;
+		padding: 80px 0 18px;
 	}
 }
 .container{
@@ -44,12 +44,19 @@
 	display: flex;
 	align-items: center;
 	margin: 0 0 20px;
+	@media (max-width: $maxMobile){
+		margin: 0 0 27px;
+	}
 }
 .topRated span{
 	margin-left: 10px;
 	font-size: var(--fsM);
 	font-weight: 500;
 	letter-spacing: 1.5px;
+	@media (max-width: $maxMobile){
+		margin-top: 6px;
+		line-height: 1;
+	}
 }
 .titleWrapper{
 	margin: 0 0 20px;
@@ -63,6 +70,11 @@
 	@media (max-width: $minTablet){
 		margin: 0 0 34px;
 		line-height: 29px;
+	}
+	@media (max-width: $maxMobile){
+		line-height: 28px;
+		letter-spacing: 1px;
+		max-width: 90%;
 	}
 }
 .btnWarapper{
@@ -89,7 +101,7 @@
 		margin: 0 0 60px;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-row-gap: 40px;
+		grid-row-gap: 27px;
 	}
 }
 .item{
@@ -112,6 +124,13 @@
 	}
 	@media (max-width: $maxMobile){
 		font-size: 22px;
+		line-height: 1;
+		margin: 15px 0 9px;
+	}
+}
+.item p {
+	@media (max-width: $maxMobile){
+		letter-spacing: 1px;
 	}
 }
 

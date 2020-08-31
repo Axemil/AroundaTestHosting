@@ -146,7 +146,8 @@
 	}
 
 	@media (max-width: $maxMobile) {
-		margin: 0 0 25px;
+		grid-column: span 12;
+		margin: 0 0 23px;
 	}
 
 	label {
@@ -181,6 +182,7 @@
 	}
 
 	@media (max-width: $maxMobile) {
+		grid-column: span 12;
 		margin: 0 0 25px;
 	}
 
@@ -207,6 +209,9 @@
 
 		@media (max-width: $maxTablet) {
 			margin: 0 0 30px;
+		}
+		@media (max-width: $maxMobile) {
+			margin: 0 0 21px;
 		}
 	}
 }
@@ -331,6 +336,11 @@
 		grid-row: 3 / 6;
 		margin-bottom: 12px;
 	}
+	
+	@media (max-width: $maxMobile) {
+		grid-row: unset;
+		margin-bottom: 20px;
+	}
 
 	label {
 		position: absolute;
@@ -346,7 +356,10 @@
 		}
 
 		@media (max-width: $maxMobile) {
-			top: -24px;
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 25px;
+			top: -18px;
 		}
 	}
 }
@@ -422,6 +435,9 @@
 		margin-right: 30px;
 		@media (max-width: $minTablet) {
 			margin: 5px 24px 14px 0px;
+		}
+		@media (max-width: $maxMobile) {
+			margin: 5px 24px 11px 0px;
 		}
 	}
 }

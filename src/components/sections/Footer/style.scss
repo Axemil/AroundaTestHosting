@@ -20,6 +20,9 @@
 		grid-template-columns: 1fr 1fr;
 		grid-row-gap: 40px;
 	}
+	@media (max-width: $maxMobile){
+		grid-row-gap: 50px;
+	}
 }
 
 .row {
@@ -29,6 +32,9 @@
 .title {
 	font-weight: 500;
 	margin: 0 0 6px;
+	@media (max-width: $maxMobile){
+		margin: 0 0 9px;
+	}
 }
 
 .footerList li{
@@ -36,6 +42,10 @@
 	@media (max-width: $minTablet){
 		margin: 0 0 14px;
 	}
+	@media (max-width: $maxMobile){
+		margin: 0 0 12px;
+	}
+
 }
 .footerList .listItem{
 	border-bottom: 2px solid var(--gray400);

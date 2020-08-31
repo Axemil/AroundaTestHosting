@@ -9,7 +9,7 @@
 		padding: 229px 0 160px;
 	}
 	@media (max-width: $maxMobile){
-		font-size: 230px 0 135px;
+		padding: 200px 0 100px;
 	}
 }
 .container{
@@ -24,11 +24,14 @@
 		max-width: 565px;
 	}
 	@media (max-width: $maxMobile){
-		max-width: 345px;
+		max-width: 100%;
 	}
 }	
 .heroTitle{
 	margin: 0 0 20px;
+	@media (max-width: $maxMobile){
+		margin: 0 0 15px;
+	}
 }
 .heroDesc{
 	font-size: var(--fsL);

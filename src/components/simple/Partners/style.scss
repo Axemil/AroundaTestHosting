@@ -11,6 +11,9 @@
 		justify-content: flex-start;
 		scroll-snap-type: x mandatory;
 	}
+	@media (max-width: $maxMobile){
+		margin: 70px 0 0;
+	}
 }
 .partners li{
 	height: 48px;

@@ -16,7 +16,7 @@ const BlogSection = props => {
 		},
 		{
 			id: 1,
-			date: 'February 17',
+			date: 'Feb 17',
 			category: 'UI Design',
 			title: 'How an Online food Ordering System Can Drive New Sales and Improve Profits',
 			link: 'https://dribbble.com/stories/2019/02/15/what-defines-good-ui-design',

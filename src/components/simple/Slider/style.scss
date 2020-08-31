@@ -35,7 +35,7 @@
 		max-width: 290px;
 	}
 	@media (max-width: $maxMobile){
-		margin: 0 0 70px;
+		margin: 0 0 73px;
 		height: 290px;
 		max-width: 100%;
 	}
@@ -61,7 +61,7 @@
 		margin: 0px 0 60px;
 	}
 	@media (max-width: $maxMobile){
-		margin: 0 0 40px;
+		margin: 0 0 43px;
 	}
 }
 .comment{
@@ -107,6 +107,10 @@
 		width: 24px;
 		top: 0;
 		transform: translateY(0);
+	}
+	@media (max-width: $maxMobile){
+		top: unset;
+		bottom: 18px;
 	}
 }
 .btn svg{
