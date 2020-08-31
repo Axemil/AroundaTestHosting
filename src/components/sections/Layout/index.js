@@ -55,7 +55,7 @@ const Layout = ({ children, isMobile }) => {
 	const {pathname} = useRouter();
 	
 	Router.events.on('routeChangeComplete', () => { {
-		window.scrollTo(0, 0);
+		window.scrollY != 0 && window.scrollTo(0, 0);
 	} })
 
 	return (
