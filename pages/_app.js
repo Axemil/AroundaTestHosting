@@ -20,8 +20,9 @@ class MyApp extends App {
 			pageProps = await Component.getInitialProps(ctx)
 		}
 		
-		const md = ctx.req && new mobileDetect(ctx.req.headers['user-agent']) || false
-
+		const md = !process.browser ? 
+			ctx.req && new mobileDetect(ctx.req.headers['user-agent']) || false : new mobileDetect(navigator.userAgent)
+		
 		return { isMobile: md && md.mobile() ? true : false }
 	};
 	
