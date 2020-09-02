@@ -109,6 +109,9 @@
 	border-radius: 0;
 	
 
+	&:focus::placeholder {
+		opacity: 0;
+	}
 	&:focus {
 		outline: none;
 		border-color: var(--primary);
@@ -121,6 +124,7 @@
 	&::placeholder {
 		color: var(--black);
 		font-weight: 500;
+		transition: all 0.3s $cubic;
 	}
 
 	&.active {
