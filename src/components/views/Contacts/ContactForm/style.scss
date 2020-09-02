@@ -402,7 +402,7 @@
 			height: 2px;
 			position: absolute;
 			left: 0;
-			bottom: -1px;
+			bottom: 0px;
 			background: var(--primary);
 		}
 
@@ -420,7 +420,7 @@
 		}
 
 		label {
-			padding: 2px 0 4px;
+			padding: 2px 0 5px;
 			font-size: inherit;
 			position: static;
 			font-size: 16px;
