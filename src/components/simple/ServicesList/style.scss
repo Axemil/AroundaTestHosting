@@ -42,3 +42,12 @@
 		margin: 0 0 10px;
 	}
 }
+.itemTitle {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 30px;
+	letter-spacing: 1px;
+	@media (max-width: $minTablet){
+		font-size: 18px;
+	}
+}

@@ -16,7 +16,9 @@ const ServicesList = () => {
 						<div className={s.itemIcon}>
 							{item.icon}
 						</div>
-						<TitleH size="h6">{item.title}</TitleH>
+						<div className={s.itemTitle}>
+							{item.title}
+						</div>
 					</li>
 				))
 			}

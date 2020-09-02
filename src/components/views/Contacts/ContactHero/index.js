@@ -5,7 +5,9 @@ import s from "./style.scss";
 
 const ContactHero = () => (
 	<section className={s.contactHero}>
-		<TitleH size="hero">Hello, Let’s talk!</TitleH>
+		<div className={s.titleWrapper}>
+			<TitleH size="hero">Hello, Let’s talk!</TitleH>
+		</div>
 		<p>Fill the form below or write to <a className='stopCursor' href="mailto:info@arounda.agency">info@arounda.agency</a></p>
 	</section>
 );

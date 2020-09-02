@@ -7,9 +7,9 @@
 	letter-spacing: 1.5px;
 }
 .hero{
-	font-size: 70px;
-	line-height: 105px;
-	letter-spacing: 3px;
+	font-size: 71px;
+	line-height: 106px;
+	letter-spacing: 2px;
 	@media (max-width: $maxTablet){
 		font-size: 56px;
 		line-height: 84px;
@@ -38,6 +38,7 @@
 }
 .h2{
 	font-size: 42px;
+	letter-spacing: 1.4px;
 	@media (max-width: $maxTablet){
 		font-size: 38px;
 	}

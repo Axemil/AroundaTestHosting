@@ -98,7 +98,7 @@
 			}
 			@media (max-width: $minTablet) {
 				margin: 0 0 30px;
-				padding: 7px 15px 0 0;
+				padding: 7px 0 0 6px;
 			}
 			@media (max-width: $maxMobile) {
 				margin: 0 0 23px;
@@ -179,12 +179,13 @@
 	line-height: 1;
 	color: inherit;
 	font-weight: 500;
-
+	letter-spacing: 1px;
 	@media (max-width: $maxTablet) {
 		font-size: 42px;
 	}
 	@media (max-width: $minTablet) {
 		font-size: 38px;
+		letter-spacing: 1.4px;
 	}
 	@media (max-width: $maxMobile) {
 		font-size: 28px;

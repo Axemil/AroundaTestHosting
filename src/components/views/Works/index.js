@@ -30,7 +30,7 @@ const Works = () => {
 	const [selectedItem, setSelectedItem] = React.useState('project type');
 	const [showDropdown, setShowDropdown] = React.useState(false);
 	const [categories, setCategories] = React.useState(categoriesList);
-	const [selectedCategory, setSelectedCategory] = React.useState('all projects');
+	const [selectedCategory, setSelectedCategory] = React.useState('all project type');
 	const [worksData, setWorksData] = React.useState(data);
 
 	const handleFind = (id) => {
@@ -51,7 +51,7 @@ const Works = () => {
 
 		setSelectedCategory(value)
 
-		if (value === 'all projects') {
+		if (value === 'all project type') {
 			setWorksData(data)
 		} else {
 			const filteredData = data.reduce((arr, el) => {
