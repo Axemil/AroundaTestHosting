@@ -1,13 +1,14 @@
-import React, { Component, Fragment } from 'react';
 import Select, { components } from 'react-select';
 
 import Textarea from 'react-textarea-autosize';
 import ButtonSecondary from '@simple/ButtonSecondary';
-import TitleSecondary from '@simple/TitleSecondary';
+import TitleH from '@simple/TitleH';
 import Description from '@simple/Description';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import axios from 'axios';
 import utmcookie from '@/functions/utmcookie';
+import CloseIcon from "@svg/close.svg";
+import Button from "@simple/Button";
 
 import style from './style.scss';
 
@@ -47,7 +48,7 @@ const customStyles = {
 	})
 }
 
-export default class ContactForm extends Component {
+export default class ContactForm extends React.Component {
 	state = {
 		name: '',
 		email: '',
@@ -139,6 +140,18 @@ export default class ContactForm extends Component {
 			parent.classList.remove(style.active);
 		}
 	};
+	
+	toggleModal = (pld = !this.state.successSend) => {
+		this.setState({
+			successSend: pld,
+		})
+	}
+	
+	toggleDisable = (pld = !this.state.disable) => {
+		this.setState({
+			disable: pld,
+		})
+	}
 
 	handlerSubmit = e => {
 		const { name, email, budget, project, idea, includeList } = this.state;
@@ -191,7 +204,7 @@ export default class ContactForm extends Component {
 	render() {
 		const { name, email, project, include, budget, disable, emptyValue, successSend } = this.state;
 		return (
-			<Fragment>
+			<>
 				<form className={style.grid} onSubmit={(e) => e.preventDefault()}>
 					<div className={style.inputWrapper}>
 						<input className={style.input} value={name} type='text' placeholder='Your name' onChange={this.handleInput} name='name' required />
@@ -275,16 +288,21 @@ export default class ContactForm extends Component {
 				{
 					successSend ?
 						<div className={style.success}>
-							<TitleSecondary text={'Thank you!'} />
-							<div className={style.descWrapper}>
-								<Description light text={'We will contact you as soon as possible.'} />
-							</div>
-							<div className={style.linkWrapper}>
-								<Link className={style.btn} to={'/'}>Go to Home page</Link>
+							<div className={style.successInner}>
+								<CloseIcon className={`${style.successClose} stopCursor`} onClick={() => {this.toggleModal(false);this.toggleDisable(false)}} />
+								<TitleH size={'h3'}>
+									Thank you!
+								</TitleH>
+								<div className={style.descWrapper}>
+									<Description light text={'We will contact you as soon as possible.'} />
+								</div>
+								<div className={style.successLinkWrapper}>
+									<Button href="/" size="sm">Okay!</Button>
+								</div>
 							</div>
 						</div> : null
 				}
-			</Fragment>
+			</>
 		);
 	}
 }

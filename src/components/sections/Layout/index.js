@@ -14,7 +14,7 @@ const Layout = ({ children, isMobile }) => {
 
 	const tl = () => {
 		if(!header) return;
-		const mainTl = new TimelineMax()
+		const mainTl = new TimelineMax()	
 		const headerTl = new TimelineMax()
 		const mainSection = new TimelineMax()
 
@@ -55,7 +55,7 @@ const Layout = ({ children, isMobile }) => {
 	const {pathname} = useRouter();
 	
 	Router.events.on('routeChangeComplete', () => { {
-		window.scrollY != 0 && window.scrollTo(0, 0);
+		window.scrollTo(0, 0);
 	} })
 
 	return (

@@ -156,6 +156,7 @@
 		left: 0;
 		letter-spacing: 0.43px;
 		font-size: 14px;
+		font-weight: 500;
 		opacity: 0;
 		transition: all 0.3s $cubic;
 
@@ -192,6 +193,7 @@
 		left: 0;
 		letter-spacing: 0.43px;
 		font-size: 14px;
+		font-weight: 500;
 		transition: all 0.3s $cubic;
 		opacity: 0;
 
@@ -348,8 +350,8 @@
 		left: 0;
 		letter-spacing: 0.43px;
 		font-size: 14px;
+		font-weight: 500;
 		transition: all 0.3s $cubic;
-		font-family: 'PT Sans', sans-serif;
 
 		@media (max-width: $maxTablet) {
 			top: -26px;
@@ -397,10 +399,10 @@
 		&:after {
 			content: '';
 			width: 100%;
-			height: 1px;
+			height: 2px;
 			position: absolute;
 			left: 0;
-			bottom: 3px;
+			bottom: -1px;
 			background: var(--primary);
 		}
 
@@ -443,8 +445,8 @@
 }
 
 .success {
-	position: absolute;
-	background-color: #fff;
+	position: fixed;
+	background-color: #14151520;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -452,8 +454,25 @@
 	width: 100%;
 	height: 100%;
 	flex-direction: column;
-
+	text-align: center;
 	.descWrapper {
-		margin: 16px 0 48px;
+		margin: 4px 0 34px;
 	}
+}
+.successLinkWrapper {
+	display: flex;
+    justify-content: center;
+}
+.successInner {
+	background: #fff;
+	padding: 70px 90px;
+	position: relative;
+}
+.successClose {
+	position: absolute;
+	top: 12px;
+	right: 11px;
+	box-sizing: content-box;
+	padding: 10px;
+	z-index: 21;
 }
