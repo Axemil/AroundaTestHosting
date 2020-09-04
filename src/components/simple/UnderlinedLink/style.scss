@@ -41,14 +41,26 @@
         position: relative;
         transition: all 0.3s $cubic;
         pointer-events: none;
-        background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), var(--gray400) calc(50% - 9px), var(--gray400) 100%);
+        background-image: linear-gradient(transparent 0%, transparent calc(50% - 11px), var(--gray400) calc(50% - 11px), var(--gray400) 100%);
         background-size: 100% 240%;
         background-position: 0px 0px;
         transition: all .3s ease-in-out;
+        @media (max-width: $maxTablet){
+            background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), var(--gray400) calc(50% - 9px), var(--gray400) 100%);
+        }
+        @media (max-width: $maxMobile){
+            background-image: linear-gradient(transparent 0%, transparent calc(50% - 7px), var(--gray400) calc(50% - 7px), var(--gray400) 100%);
+        }
     }
     &:hover span{
         background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), var(--primary) calc(50% - 9px), var(--primary) 100%);
         background-position: 0px 30%;
+        @media (max-width: $maxTablet){
+            background-position: 0px 25%;
+        }
+        @media (max-width: $maxMobile){
+            background-position: 0px 15%;
+        }
     }
     
 }
