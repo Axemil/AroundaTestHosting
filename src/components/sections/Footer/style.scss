@@ -9,7 +9,12 @@
 		padding-top: 70px;
 	}
 }
-
+.mail {
+	&:after {
+		height: 2px;
+		bottom: -2px;
+	}
+}
 .footerTop {
 	display: flex;
 	flex-wrap: wrap;
