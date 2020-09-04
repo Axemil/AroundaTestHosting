@@ -11,21 +11,14 @@ import s from "./style.scss";
 const Layout = ({ children, isMobile }) => {
 	let [openMenu, setOpenMenu] = React.useState(false)
 	let [header, setHeader] = React.useState(false)
+	let [animationDone, setAanimationDone] = React.useState(false)
+	
+	const startTimeLine = () => {
+		if(animationDone || !header) return;
 
-	const tl = () => {
-		if(!header) return;
-		const mainTl = new TimelineMax()	
-		const headerTl = new TimelineMax()
-		const mainSection = new TimelineMax()
+		header.tl
 
-		headerTl.add(header.tl)
-
-		// this.main && mainSection.add(this.main.tl)
-
-		mainTl
-			.add(mainSection, "start")
-			.add(headerTl, "-=3")
-			.call(noScrollOff)
+		setAanimationDone(true)
 	}
 
 	const noScrollOff = () => {
@@ -47,8 +40,8 @@ const Layout = ({ children, isMobile }) => {
 
 	// animation execution
 	setTimeout(() => {
-		tl()
-	}, 100)
+		startTimeLine()
+	}, 0)
 
 	// noScroll.on()
 

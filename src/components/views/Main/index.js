@@ -26,8 +26,6 @@ class Main extends React.Component {
 		bgTl.add(this.bg.tween);
 
 		tl.add(bgTl, 'start');
-
-		return tl;
 	}
 	render() {
 		return (

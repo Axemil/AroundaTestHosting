@@ -27,6 +27,9 @@
 		max-width: 575px;
 	}
 	@media (max-width: $maxMobile){
+		font-size: 16px;
+	}
+	@media (max-width: $maxMobile){
 		max-width: 336px;
 	}
 }	
@@ -39,4 +42,9 @@
     line-height: 38px;
     letter-spacing: 1px;
 	max-width: 700px;
+	@media (max-width: $maxMobile){
+		font-size: 16px;
+		line-height: 28px;
+	}
+
 }

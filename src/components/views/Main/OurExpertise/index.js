@@ -1,7 +1,6 @@
-import Link from 'next/link';
-
 import TitleH from "@simple/TitleH";
 import ButtonSecondary from "@simple/ButtonSecondary";
+import UnderlinedLink from "@simple/UnderlinedLink";
 
 import {expertiseBlock} from "@/data/expertise";
 
@@ -14,7 +13,7 @@ const OurExpertise = () => (
 				<div className={s.contentTitle}>
 					<TitleH size="h1"> Our expertise for your product </TitleH>
 				</div>
-				<p className={s.contentDesc}>Working with dozens of digital products, we have got invaluable experience that helps our partners achieve quantifiable goals, save time and money.</p>
+			<p className={s.contentDesc}>Working with dozens of digital products, we have got invaluable experience that helps our partners achieve quantifiable goals, save time and money.</p>
 			</div>
 			<div className={s.contentBtn}>
 				<ButtonSecondary href={'/services'}> Our expertise </ButtonSecondary>
@@ -26,11 +25,9 @@ const OurExpertise = () => (
 				<ul className={s.listItems}>
 					{
 						expertiseBlock.map(link => <li key={link.title}>
-							<Link href={link.link} passHref>
-								<a className={`${s.listItem} ${link.disable ? s.listItemDisabled : 'stopCursor'}`}>
-									{link.title}
-								</a>
-							</Link>
+							<UnderlinedLink href={link.link} passHref disabled={link.disable} className={`${s.listItem}`}>
+								{link.title}
+							</UnderlinedLink>
 						</li>)
 					}
 				</ul>

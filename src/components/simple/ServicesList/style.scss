@@ -40,6 +40,7 @@
 	}
 	@media (max-width: $maxMobile){
 		margin: 0 0 10px;
+		transform: scale(0.8) translateX(-10%)
 	}
 }
 .itemTitle {

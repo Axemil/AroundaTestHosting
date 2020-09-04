@@ -1,13 +1,10 @@
 import style from './style.scss';
 import TimelineMax from 'gsap/TimelineMax';
 import TweenMax from 'gsap/TweenMax';
-import ScrollToPlugin from 'gsap/ScrollToPlugin';
 
 import _debounce from 'lodash/debounce';
 
 
-
-const scrollPlugin = ScrollToPlugin;
 
 
 export default class ServiceSlideSection extends React.Component {

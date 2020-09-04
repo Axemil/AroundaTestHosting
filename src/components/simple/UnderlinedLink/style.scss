@@ -1,0 +1,68 @@
+@import '@/scss/variables.scss'; 
+
+.link {
+    cursor: pointer;
+    margin-bottom: 3px;
+	font-size: inherit;
+    transition: all .3s ease-in-out;
+    position: relative;
+    &:not(.linkGrowingHover) {
+        &:before {
+            content: '';
+            z-index: -1;
+            width: 100%;
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            height: 3px;
+            background: var(--gray400);
+        }
+        &:after {
+            content: '';
+            z-index: -1;
+            width: 0%;
+            transition: all .3s ease-in-out;
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            height: 3px;
+            background: var(--black);
+        }
+        &:hover{
+            &:after {
+                width: 100%;
+            }
+        }
+    }
+}
+.linkGrowingHover {
+    span {
+        z-index: 2;
+        position: relative;
+        transition: all 0.3s $cubic;
+        pointer-events: none;
+        background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), var(--gray400) calc(50% - 9px), var(--gray400) 100%);
+        background-size: 100% 240%;
+        background-position: 0px 0px;
+        transition: all .3s ease-in-out;
+    }
+    &:hover span{
+        background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), var(--primary) calc(50% - 9px), var(--primary) 100%);
+        background-position: 0px 30%;
+    }
+    
+}
+
+.linkDisabled {
+    // pointer-events: none;
+    &:after, &:before {
+        display: none;
+    }
+    color: var(--gray700);
+    border: none;
+    &:before {
+        display: none;
+    }	
+	filter: grayscale(.5);
+	cursor: not-allowed;
+}

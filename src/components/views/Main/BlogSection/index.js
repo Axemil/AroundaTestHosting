@@ -1,6 +1,7 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import TitleH from "@simple/TitleH";
+import UnderlinedLink from "@simple/UnderlinedLink";
 
 import s from './style.scss';
 
@@ -46,9 +47,9 @@ const BlogSection = props => {
 									<div className={s.date}>
 										<span>{post.date}</span>
 									</div>
-									<a href={post.link} target="_blank" className={`${s.title} stopCursor`}>
-										<span>{post.title}</span>
-									</a>
+									<UnderlinedLink growingHover native target="_blank" href={post.link} className={`${s.title}`}>
+										{post.title}
+									</UnderlinedLink>
 									<div className={s.image}>
 										<LazyLoadImage
 											src={post.image}

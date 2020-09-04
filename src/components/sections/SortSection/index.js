@@ -35,7 +35,7 @@ const SortSection = (
 					{
 						categories[selectedItem].map((category, i) => {
 							return (
-								<li key={i} className={selectedCategory === category.toLowerCase() ? s.active : i == 0}>
+								<li key={i} className={selectedCategory === category.toLowerCase() ? s.active : ''}>
 									<label htmlFor={category}>{category}</label>
 									<input
 										type="radio"

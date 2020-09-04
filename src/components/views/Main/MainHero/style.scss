@@ -5,6 +5,7 @@
 	grid-template-columns: inherit;
 	grid-column: 1 / -1;
 	padding: 260px 0 100px;
+	opacity: 0;
 	@media (max-width: $maxTablet){
 		padding: 229px 0 160px;
 	}
@@ -36,6 +37,9 @@
 .heroDesc{
 	font-size: var(--fsL);
 	line-height: 40px;
+	span {
+		display: inline-block;
+	}
 	@media (max-width: $minTablet){
 		line-height: 28px;
 	}

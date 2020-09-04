@@ -101,13 +101,8 @@
 		width: 50%;
 	}
 }
-.listItems a{
-	border-bottom: 3px solid var(--gray400);
+.listItems{
 	font-size: var(--fsL);
-	transition: all .3s ease-in-out;
-	&:hover{
-		border-color: var(--black);
-	}
 }
 
 .contentBtn{
@@ -117,14 +112,4 @@
 		grid-column: 1 / 3;
 		grid-row: 3 / 4;
 	}
-}
-
-
-.listItem:hover{
-	border-color: inherit;
-}
-.listItemDisabled {
-	// pointer-events: none;	
-	filter: grayscale(.5);
-	cursor: not-allowed;
 }

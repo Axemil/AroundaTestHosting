@@ -3,6 +3,7 @@ import Link from 'next/link';
 import nav from "@/data/nav";
 import expertise from "@/data/expertise";
 import socials from "@/data/socials";
+import UnderlinedLink from "@simple/UnderlinedLink";
 
 import s from './style.scss';
 
@@ -43,11 +44,9 @@ const Footer = () => {
 								nav.map(link => (
 									!link.button &&
 									<li key={link.id}>
-										<Link href={link.href}>
-											<a className={`${s.listItem} stopCursor`}>
+										<UnderlinedLink href={link.href} disabled={link.disable} className={`${s.listItem}`}>									
 											{link.name}
-											</a>
-										</Link>
+										</UnderlinedLink>
 									</li>
 								))
 							}
@@ -58,11 +57,9 @@ const Footer = () => {
 						<ul className={s.footerList}>
 							{
 								expertise.map(link => <li key={link.title}>
-										<Link href={link.link}>
-											<a className={`${s.listItem} ${link.disable ? s.listItemDisabled : 'stopCursor'}`}>
-												{link.title}
-											</a>
-										</Link>
+										<UnderlinedLink href={link.link} disabled={link.disable} className={`${s.listItem}`}>									
+											{link.title}
+										</UnderlinedLink>
 									</li>
 								)
 							}

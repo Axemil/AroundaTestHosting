@@ -2,6 +2,8 @@ import Slider from "react-slick";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Context as MobileContext } from '@/functions/MobileProvider';
 
+import UnderlinedLink from "@simple/UnderlinedLink";
+
 import TitleH from "@simple/TitleH";
 
 import Arrow from "@svg/slider-arrow.svg";
@@ -50,7 +52,7 @@ const SliderSection = () => {
 									<div className={s.author}>
 										<TitleH size="h6">{slide.name}</TitleH>
 										<p className={s.position}>
-											{`${slide.position} at  `}  <a className="stopCursor" href={slide.companyLink}> {slide.company} </a>
+											{`${slide.position} at  `} <UnderlinedLink native target="_blank" href={slide.companyLink}>{slide.company}</UnderlinedLink>
 										</p>
 										<button 
 											className={`${s.btn}  ${s.prev}`} 

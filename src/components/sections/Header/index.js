@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import Button from "@simple/Button";
 import nav from "@/data/nav";
+import { Context as MobileContext } from '@/functions/MobileProvider';
 
 import s from "./style.scss";
 
@@ -15,22 +16,22 @@ export default class Header extends React.Component {
 		burgerWrap: false,
 		burger: false,
 	}
-	
+	static contextType = MobileContext;
 	get tl() {
 		const t = new TimelineMax()
-
+		const { isMobile } = this.context;
 		t.fromTo(
-			this.logo,
-			0.4,
-			{ y: 10, autoAlpha: 0, ease: Power4.easeInOut },
-			{ autoAlpha: 1, y: 0, ease: Power4.easeInOut }
-		)
+				this.logo,
+				1,
+				{ y: 10, autoAlpha: 0, ease: Power4.easeInOut },
+				{ autoAlpha: 1, y: 0, ease: Power4.easeInOut }
+			)
 			.staggerFromTo(
 				this.menu.childNodes,
-				0.4,
+				isMobile ? 0 : 0.4,
 				{ autoAlpha: 0, y: 10, ease: Power4.easeInOut },
 				{ autoAlpha: 1, y: 0, ease: Power4.easeInOut },
-				0.1
+				isMobile ? 0 : 0.1
 			)
 			.fromTo(
 				this.burgerWrap,
@@ -60,7 +61,6 @@ export default class Header extends React.Component {
 				{ y: 0, ease: Power0.easeNone },
 				"-=.2"
 			)
-
 		return t
 	}
 
