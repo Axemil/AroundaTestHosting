@@ -8,7 +8,7 @@ const ContentServiceTablet = ({ title, desc, id, list, image }) => {
 	return (
 		<div className={componentStyle.serviceContentWrapper} key={id}>
 			<div className={componentStyle.image}>
-				<img src={image} alt={title} />
+				<LazyLoadImage src={image} alt={title} />
 			</div>
 			<div className={componentStyle.content}>
 				<TitleH size="h2">{ title }</TitleH>

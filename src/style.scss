@@ -463,4 +463,22 @@ button, a, input {
 		width: 1px;
 		overflow: hidden;
 	}
+	.email-hover {
+		position: relative;
+		&:after {
+			content: '';
+			width: 0%;
+			transition: all .3s ease-in-out;
+			position: absolute;
+			bottom: -3px;
+			left: 0;
+			height: 3px;
+			background: var(--black);
+		}
+		&:hover{
+			&:after {
+				width: 100%;
+			}
+		}
+	}
 }

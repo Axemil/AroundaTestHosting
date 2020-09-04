@@ -8,13 +8,6 @@ const UndelinedLink = (initialProps) => {
         onClick,
         ...(native && target ? {target, href} : {})
     }
-    const LinkBody = React.forwardRef((p, ref) => (
-        <a ref={ref} {...dynamicProps} className={`${props.className} ${s.link} stopCursor ${props.growingHover && s.linkGrowingHover}`}>
-            <span>
-                {props.children}
-            </span>
-        </a>
-    ))
     
     const DisabledBody = () => (
         <span className={`${s.linkDisabled} ${s.link}`}>
@@ -27,12 +20,23 @@ const UndelinedLink = (initialProps) => {
     }
     
     if(native) {
-        return <LinkBody />;
+        return (
+        <a {...dynamicProps} className={`${props.className} ${s.link} stopCursor ${props.growingHover && s.linkGrowingHover}`}>
+            <span>
+                {props.children}
+            </span>
+        </a>)
+
     }
 
     return (
         <Link href={href} passHref={passHref}>
-            <LinkBody />
+            <a {...dynamicProps} className={`${props.className} ${s.link} stopCursor ${props.growingHover && s.linkGrowingHover}`}>
+                <span>
+                 {props.children}
+                </span>
+            </a>
+
         </Link>
     );
 };

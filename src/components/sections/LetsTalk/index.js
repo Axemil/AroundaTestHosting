@@ -10,7 +10,7 @@ const LetsTalk = () => (
 				Got a project? Let’s talk
 			</p>
 			<div className={s.email}>
-				<a href="mailto:info@arounda.agency" className="stopCursor">info@arounda.agency</a>		
+				<a href="mailto:info@arounda.agency" className="stopCursor email-hover">info@arounda.agency</a>		
 			</div>
 			<div className={s.btnWrapper}>
 				<Button href="/contact" size="md">Contact us</Button>

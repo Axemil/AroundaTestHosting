@@ -30,7 +30,10 @@
 		position: relative;
 		border-bottom: 2px solid var(--gray400);
 		transition: all .3s ease-in-out;
-
+		&:after {
+			height: 2px;
+			bottom: -2px;
+		}
 		&:hover {
 			border-color: var(--black);
 		}

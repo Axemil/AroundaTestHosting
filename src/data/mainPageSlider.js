@@ -37,7 +37,7 @@ const slides = [
 		name: "Tim O’Dwyer",
 		position: "Co-Founder",
 		company: "Lustery",
-		companyLink: "https://www.metricly.com/",
+		companyLink: "https://lustery.com/",
 	},
 	{
 		id: "4",

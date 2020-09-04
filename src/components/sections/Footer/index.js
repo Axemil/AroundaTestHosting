@@ -33,9 +33,9 @@ const Footer = () => {
 					</div>
 					<div className={s.contact}>
 						<div className={s.title}>Contact us</div>
-						<a href="mailto:info@arounda.agency" className={`${s.mail} stopCursor `}>
+						<a href="mailto:info@arounda.agency" className={`${s.mail} stopCursor email-hover`}>
 							info@arounda.agency
-							</a>
+						</a>
 					</div>
 					<div>
 						<div className={s.title}>Company</div>

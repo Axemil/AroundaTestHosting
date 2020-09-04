@@ -8,6 +8,7 @@ import TitleSecondary from '@simple/TitleSecondary';
 import Description from '@simple/Description';
 import CustomLink from '@simple/CustomLink';
 import WorksSection from '@sections/WorksSection';
+import { LazyLoadImage } from "react-lazy-load-image-component"
 
 
 export default class BoldCase extends Component {
@@ -32,7 +33,7 @@ export default class BoldCase extends Component {
                     </div>
                 </section>
                 <section className={s.sectionBg}>
-                    <img src="/assets/images/bold/bold-hero.jpg" alt="bold image" />
+                    <LazyLoadImage src="/assets/images/bold/bold-hero.jpg" alt="bold image" />
                 </section>
                 <section className={s.sectionServices}>
                     <div className={s.contentWrapper}>
@@ -65,7 +66,7 @@ export default class BoldCase extends Component {
                     </div>
                 </section>
                 <section className={s.sectionBgSecond}>
-                    <img src="/assets/images/bold/boldLogo-bg.jpg" alt="bold" />
+                    <LazyLoadImage src="/assets/images/bold/boldLogo-bg.jpg" alt="bold" />
                 </section>
                 <section className={s.sectionWhat}>
                     <div className={s.infoWrapper}>
@@ -102,7 +103,7 @@ export default class BoldCase extends Component {
                             <q>These guys from Arounda are really awesome! <br /> My advice - don’t think, hire them</q>
                             <div className={s.author}>
                                 <div className={s.image}>
-                                    <img src="/assets/images/bold/bold_avatar.jpg" alt="Mikhail Nikonorov" />
+                                    <LazyLoadImage src="/assets/images/bold/bold_avatar.jpg" alt="Mikhail Nikonorov" />
                                 </div>
                                 <div className={s.name}>
                                     Mikhail Nikonorov
@@ -188,13 +189,13 @@ export default class BoldCase extends Component {
                         <Description light text={'Once the UX audit was made we found major issues and several missing screens in the UX-flow that ended up making it difficult to interact with the initial app. Our senior development team rethought the app UX and came up with a new unique interface.'} />
                     </div>
                     <div className={`${s.image} ${s.image1}`}>
-                        <img src={'/assets/images/bold/boldMobile-1.jpg'} alt={'velonto image'} />
+                        <LazyLoadImage src={'/assets/images/bold/boldMobile-1.jpg'} alt={'velonto image'} />
                     </div>
                     <div className={`${s.image} ${s.image2}`}>
-                        <img src={'/assets/images/bold/boldMobile-3.jpg'} alt={'velonto image'} />
+                        <LazyLoadImage src={'/assets/images/bold/boldMobile-3.jpg'} alt={'velonto image'} />
                     </div>
                     <div className={`${s.image} ${s.image3}`}>
-                        <img src={'/assets/images/bold/boldMobile-2.jpg'} alt={'velonto image'} />
+                        <LazyLoadImage src={'/assets/images/bold/boldMobile-2.jpg'} alt={'velonto image'} />
                     </div>
                 </section>
                 <section className={s.sectionLanding}>
@@ -205,7 +206,7 @@ export default class BoldCase extends Component {
                             <Description text="The custom landing page that was created by our professional team. The landing page delivers the product's core message — stay bold — and it is clear just like the app with all the distinctive graphics and animations. The easy-to-use design helps users get exactly what they are looking for." />
                         </div>
                         <div className={s.imageWrapper}>
-                            <img src="/assets/images/bold/bold_landing.jpg" alt="bold landing" />
+                            <LazyLoadImage src="/assets/images/bold/bold_landing.jpg" alt="bold landing" />
                         </div>
                 </section>
                 <section className={s.sectionHelped}>

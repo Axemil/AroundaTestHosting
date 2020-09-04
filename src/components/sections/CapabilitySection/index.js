@@ -2,6 +2,7 @@ import TitleSecondary from '@simple/TitleSecondary';
 import Description from '@simple/Description';
 import style from './style.scss';
 import Link from 'next/link';
+import { LazyLoadImage } from "react-lazy-load-image-component"
 
 import data from '@/data/ServiceSlide';
 
@@ -38,7 +39,7 @@ class CapabilitySection extends PureComponent {
           {
               data.map(el => {
                 return (
-                  <img src={el.hoverImage} key={el.title} className={`${current === el.id ? style.active : ''}`} alt={el.title} />
+                  <LazyLoadImage src={el.hoverImage} key={el.title} className={`${current === el.id ? style.active : ''}`} alt={el.title} />
                 )
               })
             }

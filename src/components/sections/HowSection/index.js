@@ -2,6 +2,7 @@ import Link from 'next/link';
 import style from './style.scss';
 import TitleSecondary from '@simple/TitleSecondary';
 import Description from '@simple/Description';
+import { LazyLoadImage } from "react-lazy-load-image-component"
 
 const services = [
     {
@@ -94,7 +95,7 @@ class HowSection extends PureComponent {
                                 return (
                                     <picture className={style.picture} key={el.id} >
                                         <source srcSet={el.image[1]} type="image/webp"/>
-                                        <img 
+                                        <LazyLoadImage 
                                             className={`${currentItem === el.id ? style.active : ''}`}
                                             src={el.image[0]}  
                                             alt={el.title}/>

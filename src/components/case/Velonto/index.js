@@ -5,6 +5,7 @@ import Title from '@simple/Title';
 import TitleSecondary from '@simple/TitleSecondary';
 import Description from '@simple/Description';
 import CustomLink from '@simple/CustomLink';
+import { LazyLoadImage } from "react-lazy-load-image-component"
 
 const VelontoCase = (props) => {
     return (
@@ -25,7 +26,7 @@ const VelontoCase = (props) => {
                 </div>
             </section>
             <section className={s.sectionBg}>
-                <img src="assets/images/mainVideo.jpg" alt="velonto image" />
+                <LazyLoadImage src="assets/images/mainVideo.jpg" alt="velonto image" />
             </section>
             <section className={s.sectionServices}>
                 <div className={s.contentWrapper}>
@@ -58,7 +59,7 @@ const VelontoCase = (props) => {
                 </div>
             </section>
             <section className={s.sectionBgSecond}>
-                <img src="assets/images/velontoCase-bg2.jpg" alt="velonto" />
+                <LazyLoadImage src="assets/images/velontoCase-bg2.jpg" alt="velonto" />
             </section>
             <section className={s.sectionWhat}>
                 <div className={s.infoWrapper}>
@@ -95,7 +96,7 @@ const VelontoCase = (props) => {
                         <q> Arounda was a great partner for this project. The team is highly skilled at giving clear explaining and producing exceptional</q>
                         <div className={s.author}>
                             <div className={s.image}>
-                                <img src="assets/images/josefMob.jpg" alt="Josef Chen" />
+                                <LazyLoadImage src="assets/images/josefMob.jpg" alt="Josef Chen" />
                             </div>
                             <div className={s.name}>
                                 Jozef Chen, CEO at Velonto
@@ -170,16 +171,16 @@ const VelontoCase = (props) => {
                 </div>
                 <div className={s.images}>
                     <div>
-                        <img src={'assets/images/velonto/velontoBranding1.jpg'}  alt='branding image'/> 
+                        <LazyLoadImage src={'assets/images/velonto/velontoBranding1.jpg'}  alt='branding image'/> 
                     </div>
                     <div>
-                        <img src={'assets/images/velonto/velontoBranding2.jpg'}  alt='branding image'/> 
+                        <LazyLoadImage src={'assets/images/velonto/velontoBranding2.jpg'}  alt='branding image'/> 
                     </div>
                     <div>
-                        <img src={'assets/images/velonto/velontoBranding3.jpg'}  alt='branding image'/> 
+                        <LazyLoadImage src={'assets/images/velonto/velontoBranding3.jpg'}  alt='branding image'/> 
                     </div>
                     <div>
-                        <img src={'assets/images/velonto/velontoBranding4.jpg'}  alt='branding image'/> 
+                        <LazyLoadImage src={'assets/images/velonto/velontoBranding4.jpg'}  alt='branding image'/> 
                     </div>
                 </div>
             </section> 

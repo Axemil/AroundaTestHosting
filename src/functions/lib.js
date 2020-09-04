@@ -1,23 +1,45 @@
-const composeDate = (date) => {
-  const monthNames = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-  ]
+const monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+]
+const monthNamesShort = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "Ma",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec"
+]
 
+const composeDate = (date, options = {}) => {
+  const { short } = options
   let d = new Date(date)
-  const formattedDate = `${d.getDate()} ${
-    monthNames[d.getMonth()]
-  }, ${d.getFullYear()}`
+  let formattedDate;
+  if(short) {
+    formattedDate = `${
+      monthNamesShort[d.getMonth()]
+    } ${d.getDate()}`
+  } else {
+    formattedDate = `${d.getDate()} ${
+      monthNames[d.getMonth()]
+    }, ${d.getFullYear()}`
+  }
   return formattedDate
 }
 

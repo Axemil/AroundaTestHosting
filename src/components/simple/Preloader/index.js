@@ -1,11 +1,12 @@
 
 import style from './style.scss';
+import { LazyLoadImage } from "react-lazy-load-image-component"
 
 const Preloader = (props) => {
     return (
         <div className={style.preloaderWrapper}>
             <div className={style.preloader}>
-                <img src="assets/images/preloader.gif"/>
+                <LazyLoadImage src="assets/images/preloader.gif"/>
             </div>
         </div>
     )

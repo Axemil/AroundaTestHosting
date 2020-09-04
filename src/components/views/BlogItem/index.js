@@ -12,12 +12,13 @@ import slugify from "slugify"
 import { composeDate } from "@/functions/lib"
 // import { Link as LocalLink } from "react-scroll"
 import ScrollSpy from "react-scrollspy"
+import { LazyLoadImage } from "react-lazy-load-image-component"
 
 const localLinkName = (name) => slugify(name).toLocaleLowerCase()
 
 const Paragraph = (props) => <p className={style.regularText}>{props.children}</p>
 
-const ContentImage = ({ url }) => <img className={style.contentImage} src={url} />
+const ContentImage = ({ url }) => <LazyLoadImage className={style.contentImage} src={url} />
 
 const UnorderedList = (props) => {
   return <ul className={style.list}>{props.children}</ul>
@@ -147,7 +148,7 @@ const BlogItem = (props) => {
     <section className={style.BlogItem}>
       <div className={style.content}>
         <div className={style.top}>
-          <img src={post.imageUrl} alt={post.category} className={style.img} />
+          <LazyLoadImage src={post.imageUrl} alt={post.category} className={style.img} />
           <div className={style.wrapTitle}>
             <Link href="/blog/">
               <a>
@@ -156,7 +157,7 @@ const BlogItem = (props) => {
             </Link>
             <h1>{post.title}</h1>
             <div className={style.author}>
-              <img className={style.authorImage} src={post.author.imgUrl} />
+              <LazyLoadImage className={style.authorImage} src={post.author.imgUrl} />
               <p className={style.authorName}>{post.author.name}</p>
               <p className={style.authorDescription}>{post.author.description}</p>
             </div>
@@ -174,7 +175,7 @@ const BlogItem = (props) => {
         blog.id == props.match.params.id ? (
           <div key={blog.id} className={style.content}>
             <div className={style.top}>
-              <img src={blog.img} alt={blog.tag} className={style.img} />
+              <LazyLoadImage src={blog.img} alt={blog.tag} className={style.img} />
               <div className={style.wrapTitle}>
                 <Link href="/blog/">Back to blog</Link>
                 <h1>{blog.title}</h1>
@@ -201,7 +202,7 @@ const BlogItem = (props) => {
               <p className={style.whatText3}>{blog.what.text3}</p>
               <p className={style.whatText4}>{blog.what.text4}</p>
               <p className={style.whatText5}>{blog.what.text5}</p>
-              <img
+              <LazyLoadImage
                 className={style.whatImg}
                 src={blog.what.img}
                 alt={blog.what.imgDescription}

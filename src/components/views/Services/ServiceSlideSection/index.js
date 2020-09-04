@@ -3,6 +3,7 @@ import TimelineMax from 'gsap/TimelineMax';
 import TweenMax from 'gsap/TweenMax';
 
 import _debounce from 'lodash/debounce';
+import { LazyLoadImage } from "react-lazy-load-image-component"
 
 
 
@@ -189,7 +190,7 @@ export default class ServiceSlideSection extends React.Component {
                 }}
                 background={item.props.background}
                 >
-                    <img src={item.props.image} alt={this.props.title} />
+                    <LazyLoadImage src={item.props.image} alt={this.props.title} />
             </div>
         </div>
     );
