@@ -3,6 +3,7 @@
 import componentStyle from './style.scss';
 import TitleH from "@simple/TitleH";
 import ButtonSecondary from "@simple/ButtonSecondary";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ContentServiceTablet = ({ title, desc, id, list, image }) => {
 	return (
