@@ -31,7 +31,7 @@ const Layout = ({ children, isMobile }) => {
 		noScroll.toggle()
 	}
 	const handleCloseMenu = (e) => {
-		if (e.target.matches(".menu-link")) {
+		if (e.target.matches(".menu-link") || (e.target.parentElement && e.target.parentElement.classList.value.includes(".menu-link"))) {
 			setOpenMenu(!openMenu)
 
 			noScroll.off()
