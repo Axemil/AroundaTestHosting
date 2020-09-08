@@ -30,8 +30,14 @@
 }	
 .heroTitle{
 	margin: 0 0 20px;
+	position: relative;
 	@media (max-width: $maxMobile){
 		margin: 0 0 15px;
+		h2 {
+			box-sizing: border-box;
+			display: block;
+			max-width: 352px;
+		}
 	}
 }
 .heroDesc{

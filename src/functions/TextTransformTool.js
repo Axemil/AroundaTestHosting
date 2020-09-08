@@ -1,15 +1,3 @@
-/*!
- * VERSION: 0.5.6
- * DATE: 2017-01-16
- * UPDATES AND DOCS AT: http://greensock.com
- *
- * @license Copyright (c) 2008-2017, GreenSock. All rights reserved.
- * SplitText is a Club GreenSock membership benefit; You must have a valid membership to use
- * this code without violating the terms of use. Visit http://greensock.com/club/ to sign up or get more details.
- * This work is subject to the software agreement that was issued with your membership.
- *
- * @author: Jack Doyle, jack@greensock.com
- */
 var _gsScope = "undefined" != typeof module && module.exports && "undefined" != typeof global ? global : this || window;
 ! function (t) {
     if(!process.browser) return null;
@@ -21,8 +9,7 @@ var _gsScope = "undefined" != typeof module && module.exports && "undefined" != 
             for (i = 0; i < n.length; i++) r[n[i]] = r = r[n[i]] || {};
             return r
         },
-        n = i("com.greensock.utils"),
-        o = "SplitText",
+        o = "TextTransformTool",
         s = String.fromCharCode(103, 114, 101, 101, 110, 115, 111, 99, 107, 46, 99, 111, 109),
         a = String.fromCharCode(47, 114, 101, 113, 117, 105, 114, 101, 115, 45, 109, 101, 109, 98, 101, 114, 115, 104, 105, 112, 47),
         l = function (t) {
@@ -66,7 +53,7 @@ var _gsScope = "undefined" != typeof module && module.exports && "undefined" != 
             return (t.charCodeAt(0) - C << 10) + (t.charCodeAt(1) - S) + 65536
         },
         A = c.all && !c.addEventListener,
-        P = " style='position:relative;display:inline-block;" + (A ? "*display:inline;*zoom:1;'" : "'"),
+        P = " style='white-space: nowrap;position:relative;display:inline-block;" + (A ? "*display:inline;*zoom:1;'" : "'"),
         k = function (t, e) {
             t = t || "";
             var i = -1 !== t.indexOf("++"),
@@ -76,7 +63,7 @@ var _gsScope = "undefined" != typeof module && module.exports && "undefined" != 
                     return "<" + e + P + (t ? " class='" + t + (i ? n++ : "") + "'>" : ">")
                 }
         },
-        T = n.SplitText = e.SplitText = function (e, i) {
+        T = e.TextTransformTool = function (e, i) {
             if ("string" == typeof e && (e = T.selector(e)), !e) throw "cannot split a null element.";
             return (this.elements = g(e) ? p(e) : [e], this.chars = [], this.words = [], this.lines = [], this._originals = [], this.vars = i || {}, void this.split(i))
         },
@@ -138,9 +125,10 @@ var _gsScope = "undefined" != typeof module && module.exports && "undefined" != 
             if (I) {
                 for (j && (v = c.createElement(z), t.appendChild(v), S = v.offsetWidth + "px", y = v.offsetParent === t ? 0 : t.offsetLeft, t.removeChild(v)), C = t.style.cssText, t.style.cssText = "display:none;"; t.firstChild;) t.removeChild(t.firstChild);
                 for (m = " " === V && (!j || !X && !B), a = 0; a < I.length; a++) {
-                    for (_ = I[a], v = c.createElement(z), v.style.cssText = "display:block;text-align:" + E + ";position:" + (j ? "absolute;" : "relative;"), F && (v.className = F + (Y ? a + 1 : "")), q.push(v), l = _.length, h = 0; l > h; h++) "BR" !== _[h].nodeName && (f = _[h], v.appendChild(f), m && f._wordEnd && v.appendChild(c.createTextNode(" ")), j && (0 === h && (v.style.top = f._y + "px", v.style.left = w + y + "px"), f.style.top = "0px", y && (f.style.left = f._x - y + "px")));
+                    for (_ = I[a], v = c.createElement(z), v.style.cssText = "white-space: nowrap;display:block;text-align:" + E + ";position:" + (j ? "absolute;" : "relative;"), F && (v.className = F + (Y ? a + 1 : "")), q.push(v), l = _.length, h = 0; l > h; h++) "BR" !== _[h].nodeName && (f = _[h], v.appendChild(f), m && f._wordEnd && v.appendChild(c.createTextNode(" ")), j && (0 === h && (v.style.top = f._y + "px", v.style.left = w + y + "px"), f.style.top = "0px", y && (f.style.left = f._x - y + "px")));
                     0 === l ? v.innerHTML = "&nbsp;" : X || B || (L(v), D(v, String.fromCharCode(160), " ")), j && (v.style.width = S, v.style.height = f._h + "px"), t.appendChild(v)
                 }
+                console.log(v)
                 t.style.cssText = C
             }
             j && (s > t.clientHeight && (t.style.height = s - P + "px", t.clientHeight < s && (t.style.height = s + M + "px")), o > t.clientWidth && (t.style.width = o - k + "px", t.clientWidth < o && (t.style.width = o + A + "px"))), N(i, O), N(n, H), N(r, q)
@@ -193,4 +181,4 @@ function (t) {
         return (_gsScope.GreenSockGlobals || _gsScope)[t]
     };
     "function" == typeof define && define.amd ? define([], e) : "undefined" != typeof module && module.exports && (module.exports = e())
-}("SplitText");
+}("TextTransformTool");

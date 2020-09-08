@@ -2,7 +2,7 @@
 import TitleH from "@simple/TitleH";
 import { TimelineMax, Power1 } from "gsap";
 import { Context as MobileContext } from '@/functions/MobileProvider';
-import SplitText from './splitText';
+import TextTransformTool from '@/functions/TextTransformTool';
 import s from "./style.scss";
 
 const MainHero = () => {
@@ -11,11 +11,18 @@ const MainHero = () => {
 	const hero = React.useRef(null);
 	const { isMobile } = React.useContext(MobileContext)
 
-	const startTimeLine = () => {
+	const startTimeLine = async () => {
 		if(!subtitle.current || !title.current) return;
-		
-		const titleBlocks = new SplitText(title.current, {type: 'lines'}).lines;
-		const descBlocks = new SplitText(subtitle.current, {type: 'lines'}).lines;
+
+		// КОСТЫЛЬ ДЛЯ ПРАВИЛЬНОЙ ОТРИСОВКИ СТРОК
+		const getSplittedText = () => new Promise((resolve) => {
+			setTimeout(() => {
+				resolve([new TextTransformTool(title.current, {type: 'lines', span: true }).lines,
+				new TextTransformTool(subtitle.current, {type: 'lines', span: true }).lines])
+			}, 110)
+		})
+
+		const [titleBlocks, descBlocks] = await getSplittedText();
 
 		const tl = () => {
 			const t = new TimelineMax()
