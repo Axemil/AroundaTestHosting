@@ -1,8 +1,8 @@
 
 import TitleH from "@simple/TitleH";
-import { TimelineMax, Power4, SplitText } from "gsap";
+import { TimelineMax, Power1 } from "gsap";
 import { Context as MobileContext } from '@/functions/MobileProvider';
-
+import SplitText from './splitText';
 import s from "./style.scss";
 
 const MainHero = () => {
@@ -14,11 +14,8 @@ const MainHero = () => {
 	const startTimeLine = () => {
 		if(!subtitle.current || !title.current) return;
 		
-		title.current.innerHTML = title.current.innerText.split(' ').map(elm => `<span>${elm}</span>`).join(' ')
-		subtitle.current.innerHTML = subtitle.current.innerText.split(' ').map(elm => `<span>${elm}</span>`).join(' ')
-
-		const titleBlocks = [...title.current.childNodes].filter(el => el instanceof HTMLElement)
-		const descBlocks = [...subtitle.current.childNodes].filter(el => el instanceof HTMLElement)
+		const titleBlocks = new SplitText(title.current, {type: 'lines'}).lines;
+		const descBlocks = new SplitText(subtitle.current, {type: 'lines'}).lines;
 
 		const tl = () => {
 			const t = new TimelineMax()
@@ -26,19 +23,19 @@ const MainHero = () => {
 				[hero.current],
 				.1,
 				{ autoAlpha: 0 },
-				{ autoAlpha: 1, delay: isMobile ? 1.3 : 2 },
+				{ autoAlpha: 1, delay: isMobile ? 1.3 : 1.5 },
 			).staggerFromTo(
 				titleBlocks, 
-				0.4,
-				{ autoAlpha: 0, y: 10, ease: Power4.easeInOut },
-				{ autoAlpha: 1, y: 0, ease: Power4.easeInOut },
-				0.1
+				.6,
+				{ autoAlpha: 0, y: 10, ease: Power1.easeInOut },
+				{ autoAlpha: 1, y: 0, ease: Power1.easeInOut },
+				0.2
 			).staggerFromTo(
 				descBlocks, 
-				0.4,
-				{ autoAlpha: 0, y: 10, ease: Power4.easeInOut },
-				{ autoAlpha: 1, y: 0, ease: Power4.easeInOut },
-				0.1
+				.6,
+				{ autoAlpha: 0, y: 10, ease: Power1.easeInOut },
+				{ autoAlpha: 1, y: 0, ease: Power1.easeInOut },
+				0.2
 			);
 
 

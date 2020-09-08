@@ -40,7 +40,15 @@
 	span {
 		display: inline-block;
 	}
+	max-width: 814px;
+	@media (max-width: $maxTablet){
+		max-width: 640px;
+	}
+	@media (max-width: $minTablet){
+		max-width: 535px;
+	}
 	@media (max-width: $minTablet){
 		line-height: 28px;
+		max-width: 100%;
 	}
 }
