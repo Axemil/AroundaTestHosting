@@ -9,7 +9,7 @@ const isDev = NODE_ENV === "development"
 
 console.log(`CURRENTLY RUNNING IN: ${NODE_ENV} MODE`)
 module.exports = withTM(withStyles({
-    trailingSlash: true,
+    trailingSlash: false,
     sass: true,
     modules: true,
     cssLoaderOptions: {
