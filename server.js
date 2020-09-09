@@ -1,7 +1,6 @@
 const express = require('express');
 const next = require('next');
 const axios = require('axios');
-
 const generateSitemap = require('./sitemap');  
 
 const dev = process.env.NODE_ENV !== "production";
@@ -42,6 +41,10 @@ if(!dev) {
     })
 
     server.all("*", (req, res) => {
+      if(req.url.includes('fonts/Gordita')) {
+          res.setHeader('Cache-Control', 'public,max-age=31536000');
+      }
+
       return handle(req, res);
     });
     server.listen(port, (err) => {
