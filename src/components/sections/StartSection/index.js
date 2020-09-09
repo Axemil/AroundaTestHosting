@@ -9,7 +9,7 @@ const StartSection = (props) => {
 				Got a project?
 				<br />
 				<Link href={"/contact/"}>
-					<a className="stopCursor">
+					<a className="stopCursor" title="Let's start.">
 						Let's start.
 					</a>
 				</Link>

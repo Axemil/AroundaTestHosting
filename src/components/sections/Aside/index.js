@@ -90,7 +90,7 @@ const Aside = ({ openMenu, handleCloseMenu }) => {
 										<Link
 											href={el.link}
 										>
-											<a className={`${s.link} menu-link stopCursor`} onClick={handleCloseMenu}>
+											<a className={`${s.link} menu-link stopCursor`} onClick={handleCloseMenu} title={el.title}>
 												{el.title}
 											</a>
 										</Link>

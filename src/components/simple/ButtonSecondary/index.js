@@ -13,7 +13,7 @@ const ButtonSecondary = ({ children, href, icon="arrow" }) => (
 			<a className={`
 				stopCursor
 				${s.button}
-			`}> 
+			`} title={children}> 
 				<span>
 					{ children } 
 					<i className={s.icon}>

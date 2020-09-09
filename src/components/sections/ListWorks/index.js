@@ -12,7 +12,7 @@ const ListWorks = ({ posts }) => {
           return (
             <div key={id}>
               <Link href={`/blog/${slug}/`}>
-                <a className={style.item}>
+                <a className={style.item} title={title}>
                   <div
                     className={style.thumbnailContainer}
                     // style={{

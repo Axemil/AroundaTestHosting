@@ -3,10 +3,10 @@ import s from './style.scss';
 import Link from 'next/link';
 
 const UndelinedLink = (initialProps) => {
-    const {href, passHref, native = false, target, onClick, ...props} = initialProps;
+    const {href, passHref, native = false, target, rel, onClick, ...props} = initialProps;
     const dynamicProps = {
         onClick,
-        ...(native && target ? {target, href} : {})
+        ...(native && target ? {target, href, rel} : {})
     }
     
     const DisabledBody = () => (
@@ -21,7 +21,7 @@ const UndelinedLink = (initialProps) => {
     
     if(native) {
         return (
-        <a {...dynamicProps} className={`${props.className} ${s.link} stopCursor ${props.growingHover && s.linkGrowingHover}`}>
+        <a title={props.children} {...dynamicProps} className={`${props.className} ${s.link} stopCursor ${props.growingHover && s.linkGrowingHover}`}>
             <span>
                 {props.children}
             </span>
@@ -31,7 +31,7 @@ const UndelinedLink = (initialProps) => {
 
     return (
         <Link href={href} passHref={passHref}>
-            <a {...dynamicProps} className={`${props.className} ${s.link} stopCursor ${props.growingHover && s.linkGrowingHover}`}>
+            <a title={props.children} {...dynamicProps} className={`${props.className} ${s.link} stopCursor ${props.growingHover && s.linkGrowingHover}`}>
                 <span>
                  {props.children}
                 </span>

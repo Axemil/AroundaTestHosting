@@ -151,7 +151,7 @@ const BlogItem = (props) => {
           <LazyLoadImage src={post.imageUrl} alt={post.category} className={style.img} />
           <div className={style.wrapTitle}>
             <Link href="/blog/">
-              <a>
+              <a title="Back to blog">
                 Back to blog
               </a>
             </Link>
