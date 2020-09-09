@@ -12,7 +12,7 @@ const Button = ({ children, href, size="md" }) => (
 				${s.button}
 				${size === "sm" ? s.sm : ""}
 				${size === "md" ? s.md : ""}
-			`}> { children } </a>
+			`} title={children}> { children } </a>
 		</Link>
 	) : (
 		<button 

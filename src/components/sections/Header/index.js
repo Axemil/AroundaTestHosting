@@ -101,7 +101,7 @@ export default class Header extends React.Component {
 												<Link 
 													href={link.href}
 												>
-													<a className={`stopCursor ${s.link}`}>
+													<a className={`stopCursor ${s.link}`} title={link.name}>
 														{ link.name}
 													</a>
 												</Link>
@@ -117,7 +117,7 @@ export default class Header extends React.Component {
 					<div className={s.row}>
 						<div className={s.logoWrapper} ref={(el) => (this.logo = el)}>
 							<Link href={"/"}>
-								<a className={`${s.fixedLogo} stopCursor`}>									
+								<a className={`${s.fixedLogo} stopCursor`} title="logo">									
 									<svg className={s.logo} viewBox="0 0 111 48">
 										<g fill="none" fillRule="evenodd">
 											<path d="m0 0h111v48h-111z" />
@@ -135,7 +135,7 @@ export default class Header extends React.Component {
 								</a>
 							</Link>
 							<Link href={"/"}>
-								<a className={`${s.scrollLogo} stopCursor`}>
+								<a className={`${s.scrollLogo} stopCursor`} title="icon">
 									<svg viewBox="0 0 100 100">
 										<path
 											d="m96.1 76c3.2 6.4.6 14.3-5.8 17.5-1.8.9-3.8 1.4-5.9 1.4-2.4 0-4.7-.6-6.7-1.8-17.2-9.9-38.3-9.9-55.5 0-2 1.2-4.3 1.8-6.6 1.8-7.2 0-13.1-5.9-13.1-13.1 0-2 .5-4 1.4-5.8l30.7-61.4c4.3-8.5 14.6-11.9 23.1-7.7 3.3 1.7 6 4.4 7.7 7.7z"

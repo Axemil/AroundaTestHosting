@@ -52,7 +52,7 @@ const SliderSection = () => {
 									<div className={s.author}>
 										<TitleH size="h6">{slide.name}</TitleH>
 										<p className={s.position}>
-											{`${slide.position} at  `} <UnderlinedLink native target="_blank" href={slide.companyLink}>{slide.company}</UnderlinedLink>
+											{`${slide.position} at  `} <UnderlinedLink native target="_blank" rel="nofollow" href={slide.companyLink}>{slide.company}</UnderlinedLink>
 										</p>
 										<button 
 											className={`${s.btn}  ${s.prev}`} 

@@ -55,7 +55,9 @@ class CapabilitySection extends PureComponent {
                   className={`${style.link} stopCursor`}
                   onMouseEnter={this.handleChange}
                 >
-                  <a className={style.item} tabIndex='-1'>{el.title}</a>
+                  <a className={style.item} tabIndex='-1' title={el.title}>
+                    {el.title}
+                  </a>
                 </Link>
               )
             })
