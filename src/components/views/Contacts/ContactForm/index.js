@@ -59,7 +59,7 @@ export default class ContactForm extends React.Component {
 			'services': [
 				{
 					name: 'Strategy & Discovery',
-					value: 'Strategy'
+					value: 'Strategy & Discovery'
 				},
 				{
 					name: 'UX/UI Design',
@@ -67,7 +67,7 @@ export default class ContactForm extends React.Component {
 				},
 				{
 					name: 'App development',
-					value: 'Development'
+					value: 'App Development'
 				},
 				{
 					name: 'Branding',
@@ -75,7 +75,7 @@ export default class ContactForm extends React.Component {
 				},
 				{
 					name: 'Web design',
-					value: 'Graphic design'
+					value: 'Web design'
 				}
 			]
 		},
