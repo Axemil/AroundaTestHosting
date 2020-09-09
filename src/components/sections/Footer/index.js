@@ -78,7 +78,7 @@ const Footer = () => {
 								{socials.map((social, i) => {
 									return (
 										<li key={i}>
-											<a href={social.link} target='_blank' className={`${s.social} stopCursor`}>
+											<a href={social.link} rel="nofollow" title={social.name} target='_blank' className={`${s.social} stopCursor`}>
 												{social.name}
 												{social.icon}
 											</a>

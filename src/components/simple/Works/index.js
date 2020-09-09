@@ -12,7 +12,7 @@ const Works = ({ worksData, tight }) => {
 		{
 			worksData.map(work => (
 				<div key={work.id} className={`${s.item} ${tight && s.itemTight}`}>
-					<a href={`${work.link}`} rel="nofollow" className={`${s.link} stopCursor`} target='_blank'>
+					<a href={`${work.link}`} rel="nofollow" title={work.title} className={`${s.link} stopCursor`} target='_blank'>
 						<div className={s.image}>
 							<LazyLoadImage
 								alt={work.title}
