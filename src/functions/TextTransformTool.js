@@ -128,7 +128,6 @@ var _gsScope = "undefined" != typeof module && module.exports && "undefined" != 
                     for (_ = I[a], v = c.createElement(z), v.style.cssText = "white-space: nowrap;display:block;text-align:" + E + ";position:" + (j ? "absolute;" : "relative;"), F && (v.className = F + (Y ? a + 1 : "")), q.push(v), l = _.length, h = 0; l > h; h++) "BR" !== _[h].nodeName && (f = _[h], v.appendChild(f), m && f._wordEnd && v.appendChild(c.createTextNode(" ")), j && (0 === h && (v.style.top = f._y + "px", v.style.left = w + y + "px"), f.style.top = "0px", y && (f.style.left = f._x - y + "px")));
                     0 === l ? v.innerHTML = "&nbsp;" : X || B || (L(v), D(v, String.fromCharCode(160), " ")), j && (v.style.width = S, v.style.height = f._h + "px"), t.appendChild(v)
                 }
-                console.log(v)
                 t.style.cssText = C
             }
             j && (s > t.clientHeight && (t.style.height = s - P + "px", t.clientHeight < s && (t.style.height = s + M + "px")), o > t.clientWidth && (t.style.width = o - k + "px", t.clientWidth < o && (t.style.width = o + A + "px"))), N(i, O), N(n, H), N(r, q)
