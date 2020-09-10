@@ -157,7 +157,7 @@ const BlogItem = (props) => {
             </Link>
             <h1>{post.title}</h1>
             <div className={style.author}>
-              <LazyLoadImage className={style.authorImage} src={post.author.imgUrl} />
+              <LazyLoadImage alt={post.author.name} className={style.authorImage} src={post.author.imgUrl} />
               <p className={style.authorName}>{post.author.name}</p>
               <p className={style.authorDescription}>{post.author.description}</p>
             </div>

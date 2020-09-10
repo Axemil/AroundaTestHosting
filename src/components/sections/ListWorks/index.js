@@ -21,7 +21,7 @@ const ListWorks = ({ posts }) => {
                     //   backgroundColor: "gray"
                     // }}
                   >
-                    <LazyLoadImage className={style.thumbnail} src={imageUrl} />
+                    <LazyLoadImage alt={title} className={style.thumbnail} src={imageUrl} />
                   </div>
 
                   {/* <div

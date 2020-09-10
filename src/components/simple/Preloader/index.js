@@ -6,7 +6,7 @@ const Preloader = (props) => {
     return (
         <div className={style.preloaderWrapper}>
             <div className={style.preloader}>
-                <LazyLoadImage src="assets/images/preloader.gif"/>
+                <LazyLoadImage alt="preloader" src="assets/images/preloader.gif"/>
             </div>
         </div>
     )

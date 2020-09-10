@@ -172,6 +172,7 @@ const BlogPost = ({ post: postData }) => {
                 {/* <img className={style.authorImage} src={post.author.imgUrl} /> */}
                 <LazyLoadImage
                   className={style.authorImage}
+                  alt={post.author.name}
                   src={post.author.imgUrl}
                 />
                 <p className={style.authorName}>{post.author.name}</p>
