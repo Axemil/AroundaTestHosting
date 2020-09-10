@@ -17,8 +17,8 @@ export default ({ h1, title, description, link }) => (
                 property="twitter:image"
                 content="https://arounda.agency/assets/images/socialBg.jpg"
             />
-            <meta name="og:title" content={title} />
-            <meta name="og:description" content={description} />
+            <meta property="og:title" content={title} />
+            <meta property="og:description" content={description} />
             <meta
                 property="og:image"
                 content="https://arounda.agency/assets/images/socialBg.jpg"
