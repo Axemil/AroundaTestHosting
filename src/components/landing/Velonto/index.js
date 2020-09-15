@@ -17,7 +17,7 @@ import { dataSlider } from '@/data/velontoLandingSlider';
 import { validateEmail } from "@/functions/validateEmail";
 import utmcookie from '@/functions/utmcookie';
 import s from './style.scss';
-import ThankYou from "@/components/views/Contacts/ContactForm/ThankYou";
+import ThankYou from "@/components/views/Contacts/ContactForm/thankyou";
 
 
 

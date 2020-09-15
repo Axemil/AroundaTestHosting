@@ -4,7 +4,7 @@ import Textarea from 'react-textarea-autosize';
 import ButtonSecondary from '@simple/ButtonSecondary';
 import axios from 'axios';
 import utmcookie from '@/functions/utmcookie';
-import ThankYou from "./ThankYou";
+import ThankYou from "./thankyou";
 
 import style from './style.scss';
 
