@@ -17,6 +17,7 @@ import { dataSlider } from '@/data/velontoLandingSlider';
 import { validateEmail } from "@/functions/validateEmail";
 import utmcookie from '@/functions/utmcookie';
 import s from './style.scss';
+import ThankYou from "@/components/views/Contacts/ContactForm/ThankYou";
 
 
 
@@ -24,7 +25,8 @@ export default class Velonto extends React.Component {
 	state = {
 		slider: dataSlider,
 		name: "",
-		email: "",
+        email: "",
+		successSend: false
 	};
     next = () => {
 		this.slider1.slickNext();
@@ -79,38 +81,52 @@ export default class Velonto extends React.Component {
 			});
 		}
 	};
-	
+    toggleModal = (pld = !this.state.successSend) => {
+		this.setState({
+			successSend: pld,
+		})
+    }
+    
 	clearValues = () => {
 		this.setState({
 			name: "",
 			email: ""
 		})
 		document.querySelectorAll("input").value = "";
-	}
-	
-	sendToAmo = (e) => {
+    }
+    
+    handlerSubmit = e => {
 		const { name, email } = this.state;
-
 		if (name && email){
-			axios.post("/contact/add", {
-				name,
-				email,
-				...utmcookie.getUtmData()
-			}).then((res) => {
-				console.log(res)
-				this.clearValues()
-			}).catch((error) => {
-				console.log(error);
+
+			this.setState({
+				emptyValue: false
+			})
+			this.sendToAmo(this.state).finally((data) => {
 				this.clearValues();
+				this.setState({
+					successSend: true,
+					disable: false
+				})
 			});
-		}else{
-			console.log("empty")
-		}
-		
+
+		} else {
+            console.log("empty")
+        }
+    }
+    
+	sendToAmo = (data) => {
+		const { name, email } = data;
+
+        return axios.post("/contact/add", {
+            name,
+            email,
+            ...utmcookie.getUtmData()
+        })		
 	}
 
     render() {
-		const { slider, name, email } = this.state;
+		const { slider, successSend, name, email } = this.state;
         return (
             <>
                 <section className={s.sectionHead}>
@@ -414,7 +430,7 @@ export default class Velonto extends React.Component {
 									/>
                                 </div>
                                 <div className={s.btnWrapper}>
-                                    <button className={`${s.btn} stopCursor`} onClick={this.sendToAmo}>
+                                    <button className={`${s.btn} stopCursor`} onClick={this.handlerSubmit}>
                                         Get in touch
                                 </button>
                                 </div>
@@ -662,11 +678,12 @@ export default class Velonto extends React.Component {
                                 <label>Your email</label>
                             </div>
                             <div className={s.btnWrapper}>
-                                <button className={`${s.btn} stopCursor`} onClick={this.sendToAmo}>Get in touch</button>
+                                <button className={`${s.btn} stopCursor`} onClick={this.handlerSubmit}>Get in touch</button>
                             </div>
                         </form>
                     </div>
                 </section>
+                <ThankYou shown={successSend} btnLink="/" onClose={() => {this.toggleModal(false)}} />
             </>
         )
     }

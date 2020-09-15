@@ -2,13 +2,9 @@ import Select, { components } from 'react-select';
 
 import Textarea from 'react-textarea-autosize';
 import ButtonSecondary from '@simple/ButtonSecondary';
-import TitleH from '@simple/TitleH';
-import Description from '@simple/Description';
-import Link from 'next/link';
 import axios from 'axios';
 import utmcookie from '@/functions/utmcookie';
-import CloseIcon from "@svg/close.svg";
-import Button from "@simple/Button";
+import ThankYou from "./ThankYou";
 
 import style from './style.scss';
 
@@ -285,23 +281,7 @@ export default class ContactForm extends React.Component {
 						</div>
 					</div>
 				</form>
-				{
-					successSend ?
-						<div className={style.success}>
-							<div className={style.successInner}>
-								<CloseIcon className={`${style.successClose} stopCursor`} onClick={() => {this.toggleModal(false);this.toggleDisable(false)}} />
-								<TitleH size={'h3'}>
-									Thank you!
-								</TitleH>
-								<div className={style.descWrapper}>
-									<Description light text={'We will contact you as soon as possible.'} />
-								</div>
-								<div className={style.successLinkWrapper}>
-									<Button href="/" size="sm">Okay!</Button>
-								</div>
-							</div>
-						</div> : null
-				}
+				<ThankYou shown={successSend} btnLink="/" onClose={() => {this.toggleModal(false);this.toggleDisable(false)}} />
 			</>
 		);
 	}
