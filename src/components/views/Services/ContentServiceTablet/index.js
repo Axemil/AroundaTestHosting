@@ -21,9 +21,9 @@ const ContentServiceTablet = ({ title, desc, id, list, image }) => {
 						})
 					}
 				</ul>
-				<div className={componentStyle.btn}>
+				{/* <div className={componentStyle.btn}>
 					<ButtonSecondary href="/works">Show Cases</ButtonSecondary>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	)
