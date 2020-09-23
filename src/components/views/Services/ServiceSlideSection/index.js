@@ -93,7 +93,7 @@ export default class ServiceSlideSection extends React.Component {
 
         this.isScrolling = true;
 
-        const t = new TimelineMax();
+        const t = new TweenMax();
 
         // Positioning the item content with gsap scroll to plugin
         t.to(window, 0.6, {

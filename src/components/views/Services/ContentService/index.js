@@ -26,7 +26,7 @@ const ContentService = ({id, description, onChange, title, list}) => {
                 <ul className={s.list}>
                     {list.map((el, i) => <li tabIndex='-1' key={i}><span>{el}</span></li>)}
                 </ul>
-				<ButtonSecondary>Show Cases</ButtonSecondary>
+				{/* <ButtonSecondary>Show Cases</ButtonSecondary> */}
             </Observer>
         </div>
     )
