@@ -867,6 +867,7 @@
     grid-template-columns: inherit;
     display: inherit;
     background: rgba(164,169,182,0.1);
+    overflow-x: hidden;
 
     @media (max-width: $maxTablet) {
         padding: 180px 0;
