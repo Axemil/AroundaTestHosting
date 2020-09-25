@@ -179,7 +179,7 @@
 
         .panelTitle {
             color: #141515;
-            font-size: 30px;
+            font-size: 28px;
             margin: 0 0 26px;
             font-weight: 500;
 
@@ -204,8 +204,8 @@
 
             li {
                 margin: 0 0 18px;
-                font-size: 22px;
-                color: #141515;
+                font-size: 21px;
+                color: #393939;
                 font-family: "PT Sans", sans-serif;
 
                 @media (max-width: $maxTablet) {
@@ -307,7 +307,7 @@
 
             .infoLabel {
                 color: #212121;
-                
+                // text-transform: upperCase;
                 font-size: 18px;
                 letter-spacing: 1.5px;
                 margin: 0 0 16px;
@@ -350,8 +350,8 @@
         }
 
         .descWrapper {
+            padding: 0 50px 0 0;
             margin: 0 0 90px;
-
             @media (max-width: $maxTablet) {
                 margin: 0 0 65px;
             }
@@ -384,7 +384,7 @@
     grid-template-columns: inherit;
     grid-column: 1 / -1;
     padding: 160px 0;
-    background-color: #4562C9;
+    background-color: #081A27;
     color: #fff;
 
     @media (max-width: $maxMobile) {
@@ -446,7 +446,7 @@
             line-height: 1.7;
 
             div {
-                color: rgba(255, 255, 255, 0.8);
+                color: #fff;
                 font-weight: 400;
                 a{
                     padding: 0 0 3px 0;
@@ -524,7 +524,7 @@
         }
 
         &:hover {
-            background-color: #4562C9;
+            background-color: #0694F7;
             color: #fff;
         }
     }
@@ -543,7 +543,7 @@
     }
 
     .itemTitle {
-        font-size: 24px;
+        font-size: 21px;
         font-weight: 500;
         margin: 0 0 18px;
         color: inherit;
@@ -573,7 +573,8 @@
 
 .sectionCheck {
     padding: 170px 0;
-    background-image: url(/assets/images/bold/boldCheck-bg.jpg);
+    font-weight: 500;
+    background-image: url(/assets/images/gigzi/gigzi_bg2.jpg);
     background-size: cover;
     display: inherit;
     grid-template-columns: inherit;
@@ -608,7 +609,6 @@
         font-size: 50px;
         color: #fff;
         line-height: 1.6;
-        font-weight: 500;
 
         span {
             font-weight: 500;
@@ -620,6 +620,137 @@
 
         @media (max-width: $maxMobile) {
             font-size: 30px;
+        }
+    }
+}
+
+.sectionMobileApp {
+    padding: 180px 0 240px;
+    grid-column: 1 / -1;
+    grid-template-columns: inherit;
+    display: inherit;
+    background: rgba(164,169,182,0.1);
+    @media (max-width: $maxTablet) {
+        padding: 180px 0;
+    }
+
+    .contentWrapper {
+        grid-column: 26 / 8;
+        margin: 0 0 90px;
+        padding-left: 20px;
+        .titleWrapper {
+            margin: 0 0 20px;
+
+            @media (max-width: $maxMobile) {
+                margin: 0 0 12px;
+            }
+        }
+
+        @media (max-width: $maxLaptop) {
+            grid-column: 25 / -5;
+        }
+
+        @media (max-width: $maxTablet) {
+            grid-column: 4 / -4;
+            max-width: 540px;
+            margin: 0 0 80px;
+        }
+    }
+
+    .image {
+        height: 715px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .image1 {
+        margin: calc(var(--cellSize) * 3) 0 calc(var(--cellSize) * 2);
+        grid-column: 1 / 21;
+
+        @media (max-width: $maxLaptop) {
+            grid-column: 1 / 22;
+            margin: calc(var(--cellSize) * 2) 0 calc(var(--cellSize) * 1);
+            height: 577px;
+        }
+
+        @media (max-width: $maxTablet) {
+            margin: calc(var(--cellSize) * 1) 0 calc(var(--cellSize) * 1);
+            height: 336px;
+            grid-column: 6 / 26;
+        }
+
+        @media (max-width: $maxMobile) {
+            margin: 0;
+            height: 180px;
+            grid-column: 6 / 26;
+        }
+    }
+
+    .image4 {
+        grid-column: 22 / -7;
+
+        @media (max-width: $maxLaptop) {
+            grid-column: 24 / -7;
+            height: 577px;
+        }
+
+        @media (max-width: $maxTablet) {
+            grid-column: 30 / -1;
+            height: 336px;
+        }
+
+        @media (max-width: $maxMobile) {
+            height: 180px;
+            margin: calc(var(--cellSize) * 3) 0 0 0;
+            grid-column: 28 / -1;
+        }
+
+    }
+
+    .image2 {
+        grid-column: 1 / 21;
+        margin: calc(var(--cellSize) * 2) 0 0;
+        
+        @media (max-width: $maxLaptop) {
+            grid-column: 1 / 22;
+            margin: calc(var(--cellSize) * 1) 0 0;
+            height: 577px;
+        }
+
+        @media (max-width: $maxTablet) {
+            height: 336px;
+            grid-column: 6 / 26;
+        }
+
+        @media (max-width: $maxMobile) {
+            height: 180px;
+            margin: calc(var(--cellSize) * -1) 0 0 0;
+            grid-column: 6 / 26;
+        }
+    }
+
+    .image3 {
+        grid-column: 22 / -7;
+        margin: calc(var(--cellSize) * -1) 0 0 0;
+        @media (max-width: $maxLaptop) {
+            grid-column: 24 / -5;
+            height: 577px;
+        }
+
+        @media (max-width: $maxTablet) {
+            grid-column: 30 / -1;
+            margin: calc(var(--cellSize) * 0) 0 0 0;
+            height: 336px;
+        }
+
+        @media (max-width: $maxMobile) {
+            height: 180px;
+            grid-column: 28 / -1;
+            margin: calc(var(--cellSize) * 2) 0 0 0;
         }
     }
 }
@@ -728,7 +859,7 @@
     grid-template-columns: inherit;
     grid-column: 1 / -1;
     padding: 114px 0 0;
-    background-color: #F99F5F;
+    background-color: #081A27;
 
     @media (max-width: $maxLaptop) {
         padding: 124px 0 0;
@@ -743,13 +874,14 @@
     }
 
     .contentWrapper {
-        padding: 120px 0 0;
+        padding: 120px 120px 0;
         color: #fff;
-        grid-column: 8 / 23;
-        max-width: 440px;
+        grid-column: 23 / -1;
+        // max-width: 440px;
 
         @media (max-width: $maxLaptop) {
-            grid-column: 5 / 23;
+            order: 1;
+            grid-column: 23 / -1;
         }
         @media (max-width: $maxTablet) {
             padding: 0 0 80px;
@@ -771,9 +903,10 @@
     }
 
     .imageWrapper {
-        grid-column: 24 / -8;
+        grid-column: 8 / 23;
         @media (max-width: $maxLaptop) {
-            grid-column: 25 / -5;
+            order: 2;
+            grid-column: 8 / 23;
         }
         @media (max-width: $maxTablet) {
             grid-column: 4 / -4;
@@ -845,7 +978,7 @@
         }
 
         &:hover:not(:last-child) {
-            background-color: #F99F5F;
+            background-color: #081A27;
 
             .itemNumber,
             .itemTitle,
@@ -916,18 +1049,18 @@
 
     @media (max-width: $maxLaptop) {
         grid-column: 1 / -1;
-        background: url(/assets/images/bold/bold-mask--1296.jpg) no-repeat;
+        background: url(/assets/images/gigzi/gigzi_quote.jpg) no-repeat;
         background-position: left top;
         background-size: cover;
     }
     @media (max-width: $minTablet){
-        background: url(/assets/images/bold/bold-mask--768.jpg) no-repeat;
+        background: url(/assets/images/gigzi/gigzi_quote.jpg) no-repeat;
         background-position: left top;
         background-size: cover;
     }
 
     @media (max-width: 620px) {
-        background: url(/assets/images/bold/bold-mask--384.jpg) no-repeat;
+        background: url(/assets/images/gigzi/gigzi_quote.jpg) no-repeat;
         background-position: left top;
         background-size: cover;
     }
@@ -935,7 +1068,7 @@
     .container {
         display: inherit;
         grid-column: 3 / -3;
-        background: url(/assets/images/velontoLanding/velonto-mask.jpg) no-repeat;
+        background: url(/assets/images/gigzi/gigzi_quote.jpg) no-repeat;
         background-position: left top;
         background-size: cover;
         justify-items: end;
@@ -960,7 +1093,8 @@
     .quoteWrapper {
         font-weight: 500;
         font-size: 29px;
-        color: #181919;
+        color: #fff;
+        padding: 0 0 0 30px;
         position: relative;
         max-width: 600px;
         grid-column: 2 / -1;
@@ -975,7 +1109,7 @@
     .quote {
         position: absolute;
         top: -70px;
-        left: 0;
+        left: 30px;
 
         @media (max-width: $maxTablet) {
             top: -62px;
@@ -991,7 +1125,7 @@
 
     @media (max-width: $maxTablet) {
         padding: 100px 0 120px;
-        background: #4562C9;
+        background: #0694F7;
         color: #fff;
     }
 
@@ -1054,7 +1188,7 @@
         }
 
         &:hover {
-            background-color: #4562C9;
+            background-color: #0694F7;
 
             .itemTitle,
             .itemText,
@@ -1065,7 +1199,7 @@
     }
 
     .itemTitle {
-        font-size: 30px;
+        font-size: 28px;
         margin: 0 0 30px;
         line-height: 1.6;
         max-width: 240px;
@@ -1087,8 +1221,8 @@
     .itemText {
         color: #313233;
         transition: all .3s $cubic;
-        font-size: 18px;
         max-width: 280px;
+        font-size: 18px;
         line-height: 1.8;
 
         @media (max-width: $maxTablet) {
@@ -1158,7 +1292,6 @@
     }
 
     .descWrapper {
-        padding: 0 70px 0 0;
         margin: 0 0 112px;
 
         @media (max-width: $maxMobile) {
@@ -1189,7 +1322,6 @@
         letter-spacing: 1.5px;
         font-size: 18px;
         margin: 0 0 16px;
-        font-weight: 400;
 
         @media (max-width: $maxMobile) {
             margin: 0 0 12px;
@@ -1278,11 +1410,9 @@
     }
 
     .itemTitle {
-        color: #141515;
         font-size: 30px;
-        font-weight: 500;
         margin: 0 0 24px;
-
+        font-weight: 500;
         @media (max-width: $maxMobile) {
             font-size: 21px;
             margin: 0 0 10px;
@@ -1301,8 +1431,7 @@
             }
 
             a {
-                padding: 0 0 3px 0;
-                border-bottom: 3px solid #A4A9B6;
+                text-decoration: underline;
             }
         }
     }
@@ -1310,7 +1439,7 @@
 
 .sectionGetIn {
     padding: 108px 0 106px;
-    background-color: #4562C9;
+    background-color: #081A27;
     display: inherit;
     grid-template-columns: inherit;
     grid-column: 1 / -1;
