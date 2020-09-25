@@ -220,6 +220,9 @@ export default class BoldCase extends Component {
                         </div>
                         <Description light text={"The new tech documentation pages for the client's product were prepared thoroughly. As it was intended for DevOps specialists, we made sure that special attention was paid there in order to sound accurate and trustful for the target audience. We also developed a front-end side for one of the client's tools. An excellent UI/UX design increased viewability and improved click-through rates."} />
                     </div>
+                    <div className={`${s.image} ${s.image5}`}>
+                        <img src={'/assets/images/metricly/metricly_slider1.jpg'} alt={'metricly image'} />
+                    </div>
                     {/* <DragSlider pictures={['/assets/images/metricly/metricly_slider1.jpg','/assets/images/metricly/metricly_slider1.jpg']}/> */}
                 </section>
                 <section className={s.sectionHelped}>

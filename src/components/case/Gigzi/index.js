@@ -237,6 +237,9 @@ export default class BoldCase extends Component {
                         </div>
                         <Description light text={"We created an ICO cabinet and provided promo materials in that regard. We also designed the web app so that users could access their cabinets from any device. Our developers underwent dozens of brainstorming activities to enhance the cabinet with useful functionality."} />
                     </div>
+                    <div className={`${s.image} ${s.image5}`}>
+                        <img src={'/assets/images/gigzi/gigzi_slider1.jpg'} alt={'gigzi image'} />
+                    </div>
                     {/* <DragSlider pictures={['/assets/images/gigzi/gigzi_slider1.jpg','/assets/images/gigzi/gigzi_slider1.jpg']}/> */}
                 </section>
                 <section className={s.sectionMobile}>

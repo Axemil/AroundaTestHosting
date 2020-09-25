@@ -765,6 +765,9 @@
             margin: calc(var(--cellSize) * 2) 0 0 0;
         }
     }
+    .image5{
+        grid-column: -8 / 8;
+    }
 }
 
 .sectionMobile {
