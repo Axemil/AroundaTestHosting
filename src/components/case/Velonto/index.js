@@ -213,7 +213,7 @@ const VelontoCase = (props) => {
                         </div>
                         <Description light text={'Want to place an order from your laptop? No problem! Velonto web client — developed by our team — lets you find your favorite food and place an order in a few clicks. We made sure the platform is intuitive and easy to use to help customers become confident and more engaged with a service on all stages of delivery.'} />
                     </div>
-                    <DragSlider pictures={['/assets/images/velonto/velonto_slider1.jpg','/assets/images/velonto/velonto_slider2.jpg']}/>
+                    {/* <DragSlider pictures={['/assets/images/velonto/velonto_slider1.jpg','/assets/images/velonto/velonto_slider2.jpg']}/> */}
             </section>
             <section className={s.sectionLanding}>
                         <div className={s.imageWrapper}>
