@@ -55,11 +55,11 @@ const VelontoCase = (props) => {
                         Services
                     </div>
                     <ul className={s.panelList}>
-                        <li>Strategy</li>
+                        <li>Discovery & Strategy</li>
+                        <li>UX/UI Design</li>
+                        <li>App Development</li>
                         <li>Branding</li>
-                        <li>UX Design</li>
-                        <li>UI Design</li>
-                        <li>Development</li>
+                        <li>Web Design</li>
                     </ul>
                 </div>
             </section>
@@ -71,7 +71,7 @@ const VelontoCase = (props) => {
                     <ul className={s.infoList}>
                         <li>
                             <div className={s.infoLabel}>Team size</div>
-                            <div className={s.infoText}>21+</div>
+                            <div className={s.infoText}>5+</div>
                         </li>
                         <li>
                             <div className={s.infoLabel}>Time</div>
@@ -98,7 +98,7 @@ const VelontoCase = (props) => {
             <section className={s.sectionComment}>
                 <div className={s.container}>
                     <blockquote>
-                        <q> Arounda was a great partner for this project. The team is highly skilled at giving clear explaining and producing exceptional</q>
+                        <q>Arounda’s work and mindset represents the pinnacle of perfection while still being highly efficient and communicative</q>
                         <div className={s.author}>
                             <div className={s.image}>
                                 <img src="/assets/images/velonto/face.jpg" alt="Josef Chen" />
@@ -194,7 +194,7 @@ const VelontoCase = (props) => {
                         <div className={s.titleWrapper}>
                             <Title text={'Mobile app'} />
                         </div>
-                        <Description light text={'Once the UX audit was made we found major issues and several missing screens in the UX-flow that ended up making it difficult to interact with the initial app. Our senior development team rethought the app UX and came up with a new unique interface.'} />
+                        <Description light text={"To get the most out of your product you'll need an all-in-one delivery management tool. We designed dedicated mobile applications both for clients and bike riders. Place orders wherever you are, track delivery time and status. For riders, we added a set of essential delivery guidelines to completely reduce the number of human errors."} />
                     </div>
                     <div className={`${s.image} ${s.image1}`}>
                         <img src={'/assets/images/velonto/velontoMobile1.jpg'} alt={'velonto image'} />
@@ -233,7 +233,7 @@ const VelontoCase = (props) => {
                     <div className={s.container}>
                         <div className={s.titleWrapper}>
                             <Title text="How Velonto Helped" />
-                            <Description text="TOur main challenge was to keep up with the technical aspects of the platform and provide new UX/UI solutions for landing pages, blog, and tech documentation interfaces." />
+                            <Description text="Our main challenge was to keep up with the technical aspects of the platform and provide new UX/UI solutions for landing pages, blog, and tech documentation interfaces." />
                         </div>
                         <div className={s.item}>
                             <div className={s.itemNumber}>
@@ -374,26 +374,26 @@ const VelontoCase = (props) => {
                             <div className={s.list}>
                                 <div className={s.item}>
                                     <div className={s.itemLabel}>
-                                        Team size
+                                        Acquired by
                                     </div>
                                     <div className={s.itemNumber}>
-                                        21+
+                                        Foodninjas
                                     </div>
                                 </div>
                                 <div className={s.item}>
                                     <div className={s.itemLabel}>
-                                        Products
+                                        Location
                                     </div>
                                     <div className={s.itemNumber}>
-                                        89+
+                                        European <br/> Union (EU)
                                     </div>
                                 </div>
                                 <div className={s.item}>
                                     <div className={s.itemLabel}>
-                                        Clients
+                                        Users
                                     </div>
                                     <div className={s.itemNumber}>
-                                        987+
+                                        10 000+
                                     </div>
                                 </div>
                             </div>
@@ -411,11 +411,11 @@ const VelontoCase = (props) => {
                                     Strategy
                                 </div>
                                 <ul className={s.list}>
-                                    <li>Define idea or company value </li>
-                                    <li>Research </li>
-                                    <li>Workshop & idea validation for startup</li>
-                                    <li>Strategic session for company </li>
-                                    <li>Product planning </li>
+                                    <li>Define idea value</li>
+                                    <li>Market & competitors research</li>
+                                    <li>VP & BM workshop</li>
+                                    <li>Idea validation, PoC</li>
+                                    <li>Product roadmap</li>
                                 </ul>
                             </div>
                             <div className={s.item}>
@@ -423,23 +423,22 @@ const VelontoCase = (props) => {
                                     UX design
                                 </div>
                                 <ul className={s.list}>
-                                    <li>UX research</li>
-                                    <li>User and product flow </li>
+                                    <li>UI Style guide & Assets</li>
+                                    <li>App flow</li>
                                     <li>Wireframes</li>
-                                    <li>Prototyping</li>
-                                    <li>Real user testing</li>
+                                    <li>UI Layouts & Graphics</li>
+                                    <li>UI Style guide & Assets</li>
                                 </ul>
                             </div>
                             <div className={s.item}>
                                 <div className={s.itemTitle}>
-                                    UI design
+                                    Development
                                 </div>
                                 <ul className={s.list}>
-                                    <li>Concept design</li>
-                                    <li>Layouts design </li>
-                                    <li>Graphics</li>
-                                    <li>Assets</li>
-                                    <li>UI style guide</li>
+                                    <li>Front-End Development</li>
+                                    <li>Back-End Development</li>
+                                    <li>iOS App Development</li>
+                                    <li>Android App Development</li>
                                 </ul>
                             </div>
                             <div className={s.item}>
@@ -448,19 +447,21 @@ const VelontoCase = (props) => {
                                 </div>
                                 <ul className={s.list}>
                                     <li>Brand identity</li>
-                                    <li>Marketing materials </li>
-                                    <li>Graphic design</li>
-                                    <li>Motion design</li>
+                                    <li>Brand guidelines</li>
+                                    <li>Brand attributes</li>
+                                    <li>Marketing materials</li>
                                 </ul>
                             </div>
                             <div className={s.item}>
                                 <div className={s.itemTitle}>
-                                    Development
+                                    Web Design
                                 </div>
                                 <ul className={s.list}>
-                                    <li>Landing page </li>
-                                    <li>Admin panel </li>
-                                    <li>Wallet </li>
+                                    <li>UX research</li>
+                                    <li>Information Architecture</li>
+                                    <li>Layouts design</li>
+                                    <li>Responsive & adaptive design</li>
+                                    <li>Animations</li>
                                 </ul>
                             </div>
                             <div className={s.item}>
@@ -468,9 +469,9 @@ const VelontoCase = (props) => {
                                     Output
                                 </div>
                                 <ul className={s.list}>
-                                    <li><a href="#">Landing page</a></li>
-                                    <li><a href="#">Ico Cabinet</a></li>
-                                    <li><a href="#">Ico Wallet</a></li>
+                                    <li><a href="#">Website</a></li>
+                                    <li><a href="#">Web Application</a></li>
+                                    <li><a href="#">iOS Application</a></li>
                                 </ul>
                             </div>
                         </div>
