@@ -310,7 +310,7 @@
                 
                 font-size: 18px;
                 letter-spacing: 1.5px;
-                margin: 0 0 16px;
+                margin: 0 0 6px;
 
                 @media (max-width: $maxMobile) {
                     margin: 0 0 12px;
@@ -894,7 +894,8 @@
         opacity: .9;
         letter-spacing: -0.4px;
         transition: all .3s $cubic;
-        line-height: 24px;
+        font-size: 16px;
+        line-height: 28px;
         max-width: 290px;
     }
 
@@ -935,7 +936,7 @@
     .container {
         display: inherit;
         grid-column: 3 / -3;
-        background: url(/assets/images/velontoLanding/velonto-mask.jpg) no-repeat;
+        background: url(/assets/images/bold/bold-mask.jpg) no-repeat;
         background-position: left top;
         background-size: cover;
         justify-items: end;
@@ -1164,6 +1165,9 @@
         @media (max-width: $maxMobile) {
             margin: 0 0 60px;
         }
+        &>*:first-child{
+            line-height: 33px;
+        }
     }
 
     .list {
@@ -1188,7 +1192,7 @@
         color: #212121;
         letter-spacing: 1.5px;
         font-size: 18px;
-        margin: 0 0 16px;
+        margin: 0 0 6px;
         font-weight: 400;
 
         @media (max-width: $maxMobile) {
@@ -1232,6 +1236,7 @@
 
     .titleWrapper {
         margin: 0 0 26px;
+        font-weight: 500;
 
         @media (max-width: $maxTablet) {
             margin: 0 0 30px;
@@ -1278,7 +1283,6 @@
     }
 
     .itemTitle {
-        color: #141515;
         font-size: 30px;
         font-weight: 500;
         margin: 0 0 24px;
@@ -1291,8 +1295,8 @@
 
     .list {
         li {
-            margin: 0 0 16px;
-            color: #141515;
+            margin: 0 0 6px;
+            color: #313233;
             font-size: 22px;
 
             @media (max-width: $maxMobile) {
@@ -1301,8 +1305,8 @@
             }
 
             a {
-                padding: 0 0 3px 0;
-                border-bottom: 3px solid #A4A9B6;
+                padding: 0 0 5px 0;
+                border-bottom: 3px solid rgba(164, 169, 182, 0.4);
             }
         }
     }

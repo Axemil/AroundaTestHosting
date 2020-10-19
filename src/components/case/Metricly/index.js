@@ -55,13 +55,12 @@ export default class BoldCase extends Component {
                     <div className={s.panel}>
                         <div className={s.panelTitle}>
                             Services
-                    </div>
+                        </div>
                         <ul className={s.panelList}>
-                            <li>Strategy</li>
-                            <li>Branding</li>
-                            <li>UX Design</li>
-                            <li>UI Design</li>
-                            <li>Development</li>
+                            <li>Discovery & Strategy</li>
+                            <li>UX/UI Design</li>
+                            <li>App Development</li>
+                            <li>Web Design</li>
                         </ul>
                     </div>
                 </section>
@@ -81,7 +80,7 @@ export default class BoldCase extends Component {
                             </li>
                             <li>
                                 <div className={s.infoLabel}>Industry</div>
-                                <div className={s.infoText}>IT Infrastructure</div>
+                                <div className={s.infoText}>SaaS Cloud<br/> Services</div>
                             </li>
                         </ul>
                     </div>
@@ -188,9 +187,9 @@ export default class BoldCase extends Component {
                 <section className={s.sectionMobile}>
                     <div className={s.contentWrapper}>
                         <div className={s.titleWrapper}>
-                            <Title text={'Mobile apps'} />
+                            <Title text={'Blog'} />
                         </div>
-                        <Description light text={'Once the UX audit was made we found major issues and several missing screens in the UX-flow that ended up making it difficult to interact with the initial app. Our senior development team rethought the app UX and came up with a new unique interface.'} />
+                        <Description light text={'Our team reinvented the blog section for Metricly. With its new design approach, the blog does a great job of keeping its users updated about all the AWS cost management practices and Metricly product features. It has a brilliant design that portrays the technical details with engaging UI graphics. Increased conversion rates and higher turnovers are the results of this simple yet catchy blog redesign.'} />
                     </div>
                     <div className={`${s.image} ${s.image1}`}>
                         <img src={'/assets/images/metricly/metricly_mobile1.jpg'} alt={'metricly image'} />
@@ -205,9 +204,9 @@ export default class BoldCase extends Component {
                 <section className={s.sectionLanding}>
                         <div className={s.contentWrapper}>
                             <div className={s.titleWrapper}>
-                                <Title text="Website" />
+                                <Title text="Landing page" />
                             </div>
-                            <Description text="The landing page of the platform now has relevant graphic materials, consistent UX, helpful information to surf through, and also a calming design. The touch of green brings a sense of trust. " />
+                            <Description text="The landing page of the platform now has relevant graphic materials, consistent UX, helpful information to surf through, and also a calming design. The touch of green brings a sense of trust." />
                         </div>
                         <div className={s.imageWrapper}>
                             <img src="/assets/images/metricly/metricly_landing.jpg" alt="metricly landing" />
@@ -216,7 +215,7 @@ export default class BoldCase extends Component {
                 <section className={s.sectionMobileApp}>
                     <div className={s.contentWrapper}>
                         <div className={s.titleWrapper}>
-                            <Title text={'Documentation tool'} />
+                            <Title text={'Monitoring Tool'} />
                         </div>
                         <Description light text={"The new tech documentation pages for the client's product were prepared thoroughly. As it was intended for DevOps specialists, we made sure that special attention was paid there in order to sound accurate and trustful for the target audience. We also developed a front-end side for one of the client's tools. An excellent UI/UX design increased viewability and improved click-through rates."} />
                     </div>
@@ -228,7 +227,7 @@ export default class BoldCase extends Component {
                 <section className={s.sectionHelped}>
                     <div className={s.container}>
                         <div className={s.titleWrapper}>
-                            <Title text="How Metricly Helped" />
+                            <Title text="How We Helped" />
                         </div>
                         <div className={s.item}>
                             <div className={s.itemNumber}>
@@ -290,7 +289,7 @@ export default class BoldCase extends Component {
                                 <svg height="60" viewBox="0 0 60 60" width="60"><g fill="none" fillRule="evenodd"><path d="m.5.5h59v59h-59z" fill="#d8d8d8" opacity="0" stroke="#979797" /><path d="m2 39h42l-15.333204-15" stroke="#393939" strokeWidth="2" /></g></svg>
                             </div>
                             <div className={s.itemTitle}>
-                                View Metricly landing <br />page
+                                View Metricly <br />Landing page
                         </div>
                             {/* <div className={s.itemSecondIcon}>
                                 <svg height="83" viewBox="0 0 75 83" width="75"><g fill="none" fillRule="evenodd"><path d="m.5.5h74v82h-74z" fill="#d8d8d8" opacity="0" stroke="#979797" /><path d="m38.75 16.1573333v-5.0906666c0-2.56817971-.9218724-5.03117343-2.5628157-6.8471507-1.6409433-1.81597726-3.86654-2.83618267-6.1871843-2.83618267h-20c-4.83249156 0-8.75 4.33537601-8.75 9.68333337v41.5c0 5.3479573 3.91750844 9.6833333 8.75 9.6833333h14.125" stroke="#393939" strokeWidth="2" /><path d="m53.2249999 15.3550005h-20c-4.8324916 0-8.75 4.335376-8.75 9.6833334v41.5c0 5.3479573 3.9175084 9.6833333 8.75 9.6833333h20c4.8324916 0 8.75-4.335376 8.75-9.6833333v-41.5c0-5.3479574-3.9175084-9.6833334-8.75-9.6833334z" stroke="#393939" strokeWidth="2" /><g fill="#393939" fillRule="nonzero"><ellipse cx="34.475" cy="31.955001" rx="2.5" ry="2.766667" /><ellipse cx="34.475" cy="45.788334" rx="2.5" ry="2.766667" /><ellipse cx="34.475" cy="59.621665" rx="2.5" ry="2.766667" /></g></g></svg>
