@@ -985,6 +985,10 @@
         transition: all .3s $cubic;
         position: relative;
 
+        .itemTitle{
+            line-height: 28px;
+        }
+
         &:last-child {
             padding: 64px 24px 70px 44px;
             background-color: #FAFAFA;

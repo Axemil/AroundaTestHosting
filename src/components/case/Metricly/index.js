@@ -10,6 +10,7 @@ import CustomLink from '@simple/CustomLink';
 import WorksSection from '@sections/WorksSection';
 import ButtonSecondary from '@simple/ButtonSecondary'
 import { LazyLoadImage } from "react-lazy-load-image-component"
+import UnderlinedLink from '@simple/UnderlinedLink'
 import DragSlider from '@simple/DragSlider';
 
 
@@ -93,7 +94,7 @@ export default class BoldCase extends Component {
                         </div>
                     </div>
                     <div className={s.linkWrapper}>
-                        <ButtonSecondary>Go visit site</ButtonSecondary>
+                        <a href="https://www.metricly.com/"><ButtonSecondary>Go visit site</ButtonSecondary></a>
                         {/* <CustomLink text={'Visit website'} href={'bold.app'} /> */}
                     </div>
                 </section>
@@ -107,7 +108,7 @@ export default class BoldCase extends Component {
                                 </div>
                                 <div className={s.name}>
                                     Trent Waskey
-                                <div>Founder at <a href="">Metricly</a></div> 
+                                <div>Founder at <UnderlinedLink href="https://www.metricly.com/">Metricly</UnderlinedLink></div> 
                                 </div>
                             </div>
                         </blockquote>
@@ -367,26 +368,26 @@ export default class BoldCase extends Component {
                             <div className={s.list}>
                                 <div className={s.item}>
                                     <div className={s.itemLabel}>
-                                        Team size
+                                        Acquired by
                                     </div>
                                     <div className={s.itemNumber}>
-                                        21+
+                                        Virtana
                                     </div>
                                 </div>
                                 <div className={s.item}>
                                     <div className={s.itemLabel}>
-                                        Products
+                                        Funding Amount 
                                     </div>
                                     <div className={s.itemNumber}>
-                                        89
+                                        $11M+
                                     </div>
                                 </div>
                                 <div className={s.item}>
                                     <div className={s.itemLabel}>
-                                        Clients
+                                        Partnership
                                     </div>
                                     <div className={s.itemNumber}>
-                                        987+
+                                        3+ years
                                     </div>
                                 </div>
                             </div>
@@ -401,70 +402,58 @@ export default class BoldCase extends Component {
                         <div className={s.row}>
                             <div className={s.item}>
                                 <div className={s.itemTitle}>
-                                    Strategy
+                                    Discovery & Strategy
                                 </div>
                                 <ul className={s.list}>
-                                    <li>Define idea or company value </li>
-                                    <li>Research </li>
+                                    <li>Define idea or company value</li>
+                                    <li>Research</li>
                                     <li>Workshop & idea validation for startup</li>
-                                    <li>Strategic session for company </li>
-                                    <li>Product planning </li>
+                                    <li>Product planning</li>
                                 </ul>
                             </div>
                             <div className={s.item}>
                                 <div className={s.itemTitle}>
-                                    UX design
+                                    UX/UI design
                                 </div>
                                 <ul className={s.list}>
                                     <li>UX research</li>
-                                    <li>User and product flow </li>
+                                    <li>App flow</li>
                                     <li>Wireframes</li>
-                                    <li>Prototyping</li>
-                                    <li>Real user testing</li>
+                                    <li>UI Layouts & Graphics</li>
+                                    <li>UI Style guide & Assets</li>
                                 </ul>
                             </div>
                             <div className={s.item}>
                                 <div className={s.itemTitle}>
-                                    UI design
+                                    Web Design
                                 </div>
                                 <ul className={s.list}>
-                                    <li>Concept design</li>
-                                    <li>Layouts design </li>
-                                    <li>Graphics</li>
-                                    <li>/assets</li>
-                                    <li>UI style guide</li>
+                                    <li>UX research</li>
+                                    <li>Information Architecture</li>
+                                    <li>Layouts design</li>
+                                    <li>Responsive & adaptive design</li>
+                                    <li>Animations</li>
                                 </ul>
                             </div>
                             <div className={s.item}>
                                 <div className={s.itemTitle}>
-                                    Branding
+                                    App Development
                                 </div>
                                 <ul className={s.list}>
-                                    <li>Brand identity</li>
-                                    <li>Marketing materials </li>
-                                    <li>Graphic design</li>
-                                    <li>Motion design</li>
+                                    <li>Front-End Development</li>
                                 </ul>
                             </div>
                             <div className={s.item}>
-                                <div className={s.itemTitle}>
-                                    Development
-                                </div>
-                                <ul className={s.list}>
-                                    <li>Landing page </li>
-                                    <li>Ico Cabinet </li>
-                                    <li>Ico Wallet </li>
-                                </ul>
                             </div>
                             <div className={s.item}>
                                 <div className={s.itemTitle}>
                                     Output
                                 </div>
                                 <ul className={s.list}>
-                                    <li><a href="#">Landing page</a></li>
-                                    <li><a href="#">Ico Cabinet</a></li>
-                                    <li><a href="#">Ico Wallet</a></li>
+                                    <li><UnderlinedLink href="https://www.metricly.com/">Website</UnderlinedLink></li>
+                                    <li><UnderlinedLink href="https://tools.metricly.com/?utm_source=www">AWS Tool Web Application</UnderlinedLink></li>
                                 </ul>
+                                {/* https://tools.metricly.com/?utm_source=www */}
                             </div>
                         </div>
                     </div>

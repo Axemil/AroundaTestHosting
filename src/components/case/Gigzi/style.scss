@@ -969,6 +969,11 @@
             margin: 0 0 60px;
             padding-left: calc(var(--cellSize) * 3);
         }
+        
+        & p{
+            max-width: 630px;
+            margin: 20px 0 0 0;
+        }
     }
 
     .item {
@@ -1326,7 +1331,7 @@
         color: #212121;
         letter-spacing: 1.5px;
         font-size: 18px;
-        margin: 0 0 16px;
+        margin: 0 0 6px;
 
         @media (max-width: $maxMobile) {
             margin: 0 0 12px;
@@ -1369,6 +1374,7 @@
 
     .titleWrapper {
         margin: 0 0 26px;
+        font-weight: 500;
 
         @media (max-width: $maxTablet) {
             margin: 0 0 30px;
@@ -1416,8 +1422,9 @@
 
     .itemTitle {
         font-size: 30px;
-        margin: 0 0 24px;
         font-weight: 500;
+        margin: 0 0 24px;
+
         @media (max-width: $maxMobile) {
             font-size: 21px;
             margin: 0 0 10px;
@@ -1426,8 +1433,8 @@
 
     .list {
         li {
-            margin: 0 0 16px;
-            color: #141515;
+            margin: 0 0 6px;
+            color: #313233;
             font-size: 22px;
 
             @media (max-width: $maxMobile) {
@@ -1436,7 +1443,8 @@
             }
 
             a {
-                text-decoration: underline;
+                padding: 0 0 5px 0;
+                border-bottom: 3px solid rgba(164, 169, 182, 0.4);
             }
         }
     }

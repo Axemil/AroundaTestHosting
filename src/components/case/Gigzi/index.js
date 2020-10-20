@@ -2,6 +2,7 @@ import React, { Fragment, Component } from 'react';
 import s from './style.scss';
 import data from '@/data/Works';
 
+import Link from 'next/link';
 import Title from '@simple/Title';
 import TitleH from '@simple/TitleH';
 import TitleSecondary from '@simple/TitleSecondary';
@@ -9,6 +10,7 @@ import Description from '@simple/Description';
 import CustomLink from '@simple/CustomLink';
 import WorksSection from '@sections/WorksSection';
 import ButtonSecondary from '@simple/ButtonSecondary'
+import UnderlinedLink from '@simple/UnderlinedLink'
 import { LazyLoadImage } from "react-lazy-load-image-component"
 import DragSlider from '@simple/DragSlider';
 
@@ -56,11 +58,11 @@ export default class BoldCase extends Component {
                             Services
                     </div>
                         <ul className={s.panelList}>
-                            <li>Strategy</li>
+                            <li>Discovery & Strategy</li>
+                            <li>UX/UI Design</li>
+                            <li>App Development</li>
                             <li>Branding</li>
-                            <li>UX Design</li>
-                            <li>UI Design</li>
-                            <li>Development</li>
+                            <li>Web design</li>
                         </ul>
                     </div>
                 </section>
@@ -72,15 +74,15 @@ export default class BoldCase extends Component {
                         <ul className={s.infoList}>
                             <li>
                                 <div className={s.infoLabel}>Team size</div>
-                                <div className={s.infoText}>3+</div>
+                                <div className={s.infoText}>5+</div>
                             </li>
                             <li>
                                 <div className={s.infoLabel}>Time</div>
-                                <div className={s.infoText}>11 months</div>
+                                <div className={s.infoText}>1 year</div>
                             </li>
                             <li>
                                 <div className={s.infoLabel}>Industry</div>
-                                <div className={s.infoText}>Finance</div>
+                                <div className={s.infoText}>Fintech</div>
                             </li>
                         </ul>
                     </div>
@@ -93,7 +95,11 @@ export default class BoldCase extends Component {
                         </div>
                     </div>
                     <div className={s.linkWrapper}>
-                        <ButtonSecondary>Go visit site</ButtonSecondary>
+                        <a href="https://gigzi.com/">
+                            <ButtonSecondary>
+                                Go visit site
+                            </ButtonSecondary>
+                        </a>
                         {/* <CustomLink text={'Visit website'} href={'bold.app'} /> */}
                     </div>
                 </section>
@@ -107,7 +113,7 @@ export default class BoldCase extends Component {
                                 </div>
                                 <div className={s.name}>
                                     El Asmar
-                                <div>Founder at <a href="">Gigzi</a></div>
+                                <div>Founder at <UnderlinedLink href={'https://gigzi.com/'}><a>Gigzi</a></UnderlinedLink></div>
                                 </div>
                             </div>
                         </blockquote>
@@ -263,13 +269,14 @@ export default class BoldCase extends Component {
                     <div className={s.container}>
                         <div className={s.titleWrapper}>
                             <Title text="How Gigzi Helped" />
+                            <Description light text={'Our main challenge was to keep up with the technical aspects of the platform and provide new UX/UI solutions for landing pages, blog, and tech documentation interfaces.'} />
                         </div>
                         <div className={s.item}>
                             <div className={s.itemNumber}>
                                 1
                         </div>
                             <div className={s.itemTitle}>
-                                A unique value proposition
+                                Developing Brand Identity
                         </div>
                             <p className={s.itemText}>
                                 Our team provided promo materials and worked on brand identity. We presented a great alternative vision to how traditional financial system should be handled and added up-to-the-minute branding elements.
@@ -280,7 +287,7 @@ export default class BoldCase extends Component {
                                 2
                         </div>
                             <div className={s.itemTitle}>
-                                Ecological sustainability
+                                Creating a Landing Page
                         </div>
                             <p className={s.itemText}>
                                 We worked on a new unique design for the landing page. Our experts delivered the main message of the financial system platform with exceptional design and animations.
@@ -291,10 +298,10 @@ export default class BoldCase extends Component {
                                 3
                         </div>
                             <div className={s.itemTitle}>
-                                Experience accumulation
+                                Adding the ICO Cabinet
                         </div>
                             <p className={s.itemText}>
-                            One of the newest types of financial technology elements, we aimed to help the world's first financial institution meet the demand in a cryptocurrency world.
+                                One of the newest types of financial technology elements, we aimed to help the world's first financial institution meet the demand in a cryptocurrency world.
                         </p>
                         </div>
                         <div className={s.item}>
@@ -302,7 +309,7 @@ export default class BoldCase extends Component {
                                 4
                             </div>
                             <div className={s.itemTitle}>
-                                Landing pages
+                                Making Wallet
                             </div>
                             <p className={s.itemText}>
                                 Working on the wallet from scratch, we came up with a product that had advanced functionality that, at its core, combined the banking system and cryptocurrencies.
@@ -313,19 +320,21 @@ export default class BoldCase extends Component {
                                 5
                         </div>
                             <div className={s.itemTitle}>
-                                Marketing websites
+                                IriTech Security
                         </div>
                             <p className={s.itemText}>
                                 Our team introduced an innovative IriTech biometric security system that gives users the convenience of accessing the Gigzi platform. Advanced Iris recognition technology had also been added.
                         </p>
                         </div>
                         <div className={s.item}>
-                            <div className={s.itemIcon}>
-                                <svg height="60" viewBox="0 0 60 60" width="60"><g fill="none" fillRule="evenodd"><path d="m.5.5h59v59h-59z" fill="#d8d8d8" opacity="0" stroke="#979797" /><path d="m2 39h42l-15.333204-15" stroke="#393939" strokeWidth="2" /></g></svg>
-                            </div>
-                            <div className={s.itemTitle}>
-                                View Gigzi landing <br />page
-                        </div>
+                            <a href="https://gigzi.com/">
+                                <div className={s.itemIcon}>
+                                    <svg height="60" viewBox="0 0 60 60" width="60"><g fill="none" fillRule="evenodd"><path d="m.5.5h59v59h-59z" fill="#d8d8d8" opacity="0" stroke="#979797" /><path d="m2 39h42l-15.333204-15" stroke="#393939" strokeWidth="2" /></g></svg>
+                                </div>
+                                <div className={s.itemTitle}>
+                                    View Gigzi <br />Landing page
+                                </div>
+                            </a>
                             {/* <div className={s.itemSecondIcon}>
                                 <svg height="83" viewBox="0 0 75 83" width="75"><g fill="none" fillRule="evenodd"><path d="m.5.5h74v82h-74z" fill="#d8d8d8" opacity="0" stroke="#979797" /><path d="m38.75 16.1573333v-5.0906666c0-2.56817971-.9218724-5.03117343-2.5628157-6.8471507-1.6409433-1.81597726-3.86654-2.83618267-6.1871843-2.83618267h-20c-4.83249156 0-8.75 4.33537601-8.75 9.68333337v41.5c0 5.3479573 3.91750844 9.6833333 8.75 9.6833333h14.125" stroke="#393939" strokeWidth="2" /><path d="m53.2249999 15.3550005h-20c-4.8324916 0-8.75 4.335376-8.75 9.6833334v41.5c0 5.3479573 3.9175084 9.6833333 8.75 9.6833333h20c4.8324916 0 8.75-4.335376 8.75-9.6833333v-41.5c0-5.3479574-3.9175084-9.6833334-8.75-9.6833334z" stroke="#393939" strokeWidth="2" /><g fill="#393939" fillRule="nonzero"><ellipse cx="34.475" cy="31.955001" rx="2.5" ry="2.766667" /><ellipse cx="34.475" cy="45.788334" rx="2.5" ry="2.766667" /><ellipse cx="34.475" cy="59.621665" rx="2.5" ry="2.766667" /></g></g></svg>
                             </div> */}
@@ -402,26 +411,26 @@ export default class BoldCase extends Component {
                             <div className={s.list}>
                                 <div className={s.item}>
                                     <div className={s.itemLabel}>
-                                        Team size
+                                        Partnership
                                     </div>
                                     <div className={s.itemNumber}>
-                                        21+
+                                        3+ years
                                     </div>
                                 </div>
                                 <div className={s.item}>
                                     <div className={s.itemLabel}>
-                                        Products
+                                        Earned
                                     </div>
                                     <div className={s.itemNumber}>
-                                        89
+                                        $1M+
                                     </div>
                                 </div>
                                 <div className={s.item}>
                                     <div className={s.itemLabel}>
-                                        Clients
+                                        Users
                                     </div>
                                     <div className={s.itemNumber}>
-                                        987+
+                                        1000+
                                     </div>
                                 </div>
                             </div>
@@ -436,14 +445,14 @@ export default class BoldCase extends Component {
                         <div className={s.row}>
                             <div className={s.item}>
                                 <div className={s.itemTitle}>
-                                    Strategy
+                                    Discovery & Strategy
                                 </div>
                                 <ul className={s.list}>
-                                    <li>Define idea or company value </li>
-                                    <li>Research </li>
-                                    <li>Workshop & idea validation for startup</li>
-                                    <li>Strategic session for company </li>
-                                    <li>Product planning </li>
+                                    <li>Define idea value</li>
+                                    <li>Market & competitors research</li>
+                                    <li>VP & BM workshop</li>
+                                    <li>Idea validation, PoC</li>
+                                    <li>Product roadmap</li>
                                 </ul>
                             </div>
                             <div className={s.item}>
@@ -452,22 +461,19 @@ export default class BoldCase extends Component {
                                 </div>
                                 <ul className={s.list}>
                                     <li>UX research</li>
-                                    <li>User and product flow </li>
+                                    <li>App flow</li>
                                     <li>Wireframes</li>
-                                    <li>Prototyping</li>
-                                    <li>Real user testing</li>
+                                    <li>UI Layouts & Graphics</li>
+                                    <li>UI Style guide & Assets</li>
                                 </ul>
                             </div>
                             <div className={s.item}>
                                 <div className={s.itemTitle}>
-                                    UI design
+                                    App Development
                                 </div>
                                 <ul className={s.list}>
-                                    <li>Concept design</li>
-                                    <li>Layouts design </li>
-                                    <li>Graphics</li>
-                                    <li>/assets</li>
-                                    <li>UI style guide</li>
+                                    <li>Front-End Development</li>
+                                    <li>Back-End Development</li>
                                 </ul>
                             </div>
                             <div className={s.item}>
@@ -476,19 +482,21 @@ export default class BoldCase extends Component {
                                 </div>
                                 <ul className={s.list}>
                                     <li>Brand identity</li>
-                                    <li>Marketing materials </li>
-                                    <li>Graphic design</li>
-                                    <li>Motion design</li>
+                                    <li>Brand guidelines</li>
+                                    <li>Brand attributes</li>
+                                    <li>Marketing materials</li>
                                 </ul>
                             </div>
                             <div className={s.item}>
                                 <div className={s.itemTitle}>
-                                    Development
+                                    Web Design
                                 </div>
                                 <ul className={s.list}>
-                                    <li>Landing page </li>
-                                    <li>Ico Cabinet </li>
-                                    <li>Ico Wallet </li>
+                                    <li>UX research</li>
+                                    <li>Information Architecture</li>
+                                    <li>Layouts design</li>
+                                    <li>Responsive & adaptive design</li>
+                                    <li>Animations</li>
                                 </ul>
                             </div>
                             <div className={s.item}>
@@ -496,9 +504,9 @@ export default class BoldCase extends Component {
                                     Output
                                 </div>
                                 <ul className={s.list}>
-                                    <li><a href="#">Landing page</a></li>
-                                    <li><a href="#">Ico Cabinet</a></li>
-                                    <li><a href="#">Ico Wallet</a></li>
+                                    <li><UnderlinedLink href="https://gigzi.com/">Landing page</UnderlinedLink></li>
+                                    <li><UnderlinedLink href="https://gigzi.com/crowdsale/#/">Ico Cabinet</UnderlinedLink></li>
+                                    <li><UnderlinedLink href="https://gigzi-wallet.firebaseapp.com/#/">Wallet Web App</UnderlinedLink></li>
                                 </ul>
                             </div>
                         </div>
@@ -540,14 +548,14 @@ export default class BoldCase extends Component {
                 <section className={s.sectionWorks}>
                     <WorksSection worksData={data}  />
                 </section>
-                <section className={s.sectionGotProject}>
+                {/* <section className={s.sectionGotProject}>
                     <div className={s.container}>
                         <div className={s.thin}>Got a project?</div>
                         <div className={s.linkWrapper}>
                             <a className={s.link} href="#"><span>Let’s start </span></a>
                         </div>
                     </div>
-                </section>
+                </section> */}
             </Fragment>
         )
     }

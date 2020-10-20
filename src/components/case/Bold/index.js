@@ -2,15 +2,16 @@ import React, { Fragment, Component } from 'react';
 import s from './style.scss';
 import data from '@/data/Works';
 
+
 import Title from '@simple/Title';
 import TitleH from '@simple/TitleH';
 import TitleSecondary from '@simple/TitleSecondary';
 import Description from '@simple/Description';
 import CustomLink from '@simple/CustomLink';
 import WorksSection from '@sections/WorksSection';
-import ButtonSecondary from '@simple/ButtonSecondary'
-import { LazyLoadImage } from "react-lazy-load-image-component"
-
+import ButtonSecondary from '@simple/ButtonSecondary';
+import UnderlinedLink from "@simple/UnderlinedLink";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default class BoldCase extends Component {
     render() {
@@ -90,7 +91,9 @@ export default class BoldCase extends Component {
                         </div>
                     </div>
                     <div className={s.linkWrapper}>
-                        <ButtonSecondary>Go visit site</ButtonSecondary>
+                        <a href="https://thebold.app/">
+                            <ButtonSecondary>Go visit site</ButtonSecondary>
+                        </a>
                         {/* <CustomLink text={'Visit website'} href={'bold.app'} /> */}
                     </div>
                 </section>
@@ -105,7 +108,7 @@ export default class BoldCase extends Component {
                                 </div>
                                 <div className={s.name}>
                                     Mikhail Nikonorov
-                                <div>Founder & Ceo at <a href="">Bold</a></div>
+                                <div>Founder & Ceo at <UnderlinedLink href="https://thebold.app/">Bold</UnderlinedLink></div>
                                 </div>
                             </div>
                         </blockquote>
@@ -268,12 +271,14 @@ export default class BoldCase extends Component {
                         </p>
                         </div>
                         <div className={s.item}>
-                            <div className={s.itemIcon}>
-                                <svg height="60" viewBox="0 0 60 60" width="60"><g fill="none" fillRule="evenodd"><path d="m.5.5h59v59h-59z" fill="#d8d8d8" opacity="0" stroke="#979797" /><path d="m2 39h42l-15.333204-15" stroke="#393939" strokeWidth="2" /></g></svg>
-                            </div>
-                            <div className={s.itemTitle}>
-                            View Bold<br/> iOS Application
-                        </div>
+                            <a href="https://apps.apple.com/be/app/bold-strong-smart-mind/id1491187912">
+                                <div className={s.itemIcon}>
+                                    <svg height="60" viewBox="0 0 60 60" width="60"><g fill="none" fillRule="evenodd"><path d="m.5.5h59v59h-59z" fill="#d8d8d8" opacity="0" stroke="#979797" /><path d="m2 39h42l-15.333204-15" stroke="#393939" strokeWidth="2" /></g></svg>
+                                </div>
+                                <div className={s.itemTitle}>
+                                    View Bold<br/> iOS Application
+                                </div>
+                            </a>
                             {/* <div className={s.itemSecondIcon}>
                                 <svg height="83" viewBox="0 0 75 83" width="75"><g fill="none" fillRule="evenodd"><path d="m.5.5h74v82h-74z" fill="#d8d8d8" opacity="0" stroke="#979797" /><path d="m38.75 16.1573333v-5.0906666c0-2.56817971-.9218724-5.03117343-2.5628157-6.8471507-1.6409433-1.81597726-3.86654-2.83618267-6.1871843-2.83618267h-20c-4.83249156 0-8.75 4.33537601-8.75 9.68333337v41.5c0 5.3479573 3.91750844 9.6833333 8.75 9.6833333h14.125" stroke="#393939" strokeWidth="2" /><path d="m53.2249999 15.3550005h-20c-4.8324916 0-8.75 4.335376-8.75 9.6833334v41.5c0 5.3479573 3.9175084 9.6833333 8.75 9.6833333h20c4.8324916 0 8.75-4.335376 8.75-9.6833333v-41.5c0-5.3479574-3.9175084-9.6833334-8.75-9.6833334z" stroke="#393939" strokeWidth="2" /><g fill="#393939" fillRule="nonzero"><ellipse cx="34.475" cy="31.955001" rx="2.5" ry="2.766667" /><ellipse cx="34.475" cy="45.788334" rx="2.5" ry="2.766667" /><ellipse cx="34.475" cy="59.621665" rx="2.5" ry="2.766667" /></g></g></svg>
                             </div> */}
@@ -443,8 +448,8 @@ export default class BoldCase extends Component {
                                     Output
                                 </div>
                                 <ul className={s.list}>
-                                    <li><a href="#">Landing page</a></li>
-                                    <li><a href="#">iOS Application</a></li>
+                                    <li><UnderlinedLink href="https://thebold.app/">Landing page</UnderlinedLink></li>
+                                    <li><UnderlinedLink href="https://apps.apple.com/be/app/bold-strong-smart-mind/id1491187912">iOS Application</UnderlinedLink></li>
                                 </ul>
                             </div>
                         </div>
