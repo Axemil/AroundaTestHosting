@@ -34,7 +34,7 @@
     }
 
     .contentWrapper {
-        max-width: 670px;
+        max-width: 870px;
 
         @media (max-width: $maxTablet) {
             max-width: 540px;
@@ -43,12 +43,16 @@
 
     .titleWrapper {
         margin: 0 0 24px;
-        max-width: 500px;
+        max-width: 450px;
 
         @media (max-width: $minTablet) {
             margin: 0 0 20px;
             max-width: 330px;
         }
+    }
+
+    .titleWrapper p{
+        width: 450px;
     }
 
     .linkWrapper {
@@ -117,7 +121,7 @@
 
     .contentWrapper {
         grid-column: 8 / 30;
-        padding-top: 48px;
+        padding-top: 70px;
 
         @media (max-width: $maxLaptop) {
             grid-column: 4 / 29;
@@ -150,22 +154,25 @@
 
     .list {
         li {
+            p{
+                padding: 0 0 0 20px;
+            }
             padding-left: 54px;
             position: relative;
             max-width: 770px;
             &:not(:last-child){
-                margin: 0 0 96px;
+                margin: 0 0 70px;
             }
             @media (max-width: $maxTablet) {
                 max-width: 630px;
-                margin: 0 0 86px;
+                margin: 0 0 66px;
             }
         }
     }
 
     .panel {
         grid-column: 33 / -1;
-        background-color: #FBFBFB;
+        background: rgba(167, 167, 183, 0.2);
         padding: 202px 105px;
 
         @media (max-width: $maxTablet) {
@@ -178,10 +185,11 @@
         }
 
         .panelTitle {
-            color: #141515;
             font-size: 30px;
-            margin: 0 0 26px;
             font-weight: 500;
+            line-height: 45px;
+            color: #141515;
+            margin: 0 0 16px;
 
             @media (max-width: $maxTablet) {
                 margin: 0 0 2px;
@@ -203,10 +211,10 @@
             }
 
             li {
-                margin: 0 0 18px;
+                margin: 0 0 6px;
                 font-size: 22px;
+                font-weight: 400;
                 color: #141515;
-                font-family: "PT Sans", sans-serif;
 
                 @media (max-width: $maxTablet) {
                     margin: 0;
@@ -225,6 +233,7 @@
         }
     }
 }
+
 
 .sectionBgSecond {
     grid-column: 1 / -8;
@@ -278,7 +287,7 @@
         }
 
         .infoList {
-            padding: 20px 0 0;
+            padding: 0;
 
             @media (max-width: $maxTablet) {
                 display: flex;
@@ -290,7 +299,7 @@
             }
 
             li {
-                margin: 0 0 53px;
+                margin: 0 0 50px;
 
                 @media (max-width: $maxTablet) {
                     margin: 0;
@@ -307,10 +316,10 @@
 
             .infoLabel {
                 color: #212121;
-                
                 font-size: 18px;
-                letter-spacing: 1.5px;
+                font-weight: 400;
                 margin: 0 0 6px;
+                text-transform: none!important;
 
                 @media (max-width: $maxMobile) {
                     margin: 0 0 12px;
@@ -318,9 +327,10 @@
             }
 
             .infoText {
-                letter-spacing: 0.8px;
-                font-weight: 500;
-                font-size: 28px;
+                line-height: 45px;
+                font-weight: 700;
+                font-size: 30px;
+                color: #141515;
 
                 @media (max-width: $maxMobile) {
                     font-size: 21px;
@@ -343,14 +353,13 @@
 
         .titleWrapper {
             margin: 0 0 18px;
-
             @media (max-width: $maxMobile) {
                 margin: 0 0 12px;
             }
         }
 
         .descWrapper {
-            margin: 0 0 90px;
+            margin: 20px 0 100px;
 
             @media (max-width: $maxTablet) {
                 margin: 0 0 65px;
@@ -401,12 +410,13 @@
 
     blockquote {
         max-width: 770px;
-        font-weight: 500;
         margin: auto;
     }
 
     q {
-        font-size: 28px;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 45px;
         color: inherit;
 
         @media (max-width: $maxMobile) {
@@ -423,7 +433,7 @@
     }
 
     .author {
-        margin-top: 45px;
+        margin-top: 50px;
         display: flex;
         align-items: center;
         color: inherit;
@@ -442,15 +452,21 @@
         }
 
         .name {
+            font-size: 20px;
             font-weight: 500;
             line-height: 1.7;
 
             div {
                 color: rgba(255, 255, 255, 0.8);
                 font-weight: 400;
-                a{
+            }
+            &>span {
+                font-size: 18px;
+                display: block;
+                font-weight: 400;
+                & a{
                     padding: 0 0 3px 0;
-                    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+                    border-bottom: 2px solid rgba(255,255,255,0.4);
                 }
             }
         }

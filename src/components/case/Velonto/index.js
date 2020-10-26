@@ -20,7 +20,9 @@ const VelontoCase = (props) => {
                 <div className={s.container}>
                     <div className={s.contentWrapper}>
                         <div className={s.titleWrapper}>
-                            <Title text={'Food you love, delivered to you by Velonto'} />
+                            <TitleH size="hero">
+                                Food you love, delivered to you by Velonto
+                            </TitleH>
                         </div>
                         <div className={s.descWrapper}>
                             <Description text={'An idea that was shaped and evolved into the full-service product to connect customers, freelance cyclists, restaurants and other local businesses in Austria. From strategy, market research, and branding to full-cycle product development carried out by our team'} />
@@ -225,9 +227,9 @@ const VelontoCase = (props) => {
                         </div>
                         <div className={s.contentWrapper}>
                             <div className={s.titleWrapper}>
-                                <Title text="Landing pages" />
+                                <Title text="Landing page" />
                             </div>
-                            <Description text="The custom landing page that was created by our professional team. The landing page delivers the product's core message — stay bold — and it is clear just like the app with all the distinctive graphics and animations. The easy-to-use design helps users get exactly what they are looking for." />
+                            <Description text="Custom landing pages were created to help Velonto spread the word about their eco-friendly delivery service, market their core message and increase brand awareness amongst customers and partners. Thanks to the intuitive design and thought-through UI website visitors get answers to all questions in one place, without having to call or email the support service." />
                         </div>
             </section>
             <section className={s.sectionHelped}>
