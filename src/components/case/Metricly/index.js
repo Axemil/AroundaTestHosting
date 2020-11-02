@@ -22,7 +22,9 @@ export default class BoldCase extends Component {
                     <div className={s.container}>
                         <div className={s.contentWrapper}>
                             <div className={s.titleWrapper}>
-                                <Title text={'Your Cloud Efficiency Expert'} />
+                                <TitleH size="hero">
+                                    Your Cloud Efficiency Expert
+                                </TitleH>
                             </div>
                             <div className={s.descWrapper}>
                                 <Description text={'The UX/UI redesign for a cloud cost management platform that offers various instruments to help with the management, analysis, and optimization of Amazon Web Services (AWS) costs.'} />

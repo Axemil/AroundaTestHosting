@@ -43,12 +43,26 @@
 
     .titleWrapper {
         margin: 0 0 24px;
-        max-width: 450px;
+        max-width: 874px;
 
         @media (max-width: $minTablet) {
             margin: 0 0 20px;
             max-width: 330px;
         }
+    }
+
+    .descWrapper p{
+        font-size: 22px;
+        line-height: 40px;
+        font-weight: 400;
+        @media (max-width: $maxTablet){
+		    font-size: 18px;
+		    line-height: 33px;
+	    }
+	    @media (max-width: $minTablet){
+		    font-size: 16px;
+		    line-height: 28px;
+	    }
     }
 
     .titleWrapper p{
@@ -93,6 +107,7 @@
     }
 }
 
+
 .sectionBg {
     grid-column: 1 / -1;
     height: 100vh;
@@ -113,19 +128,23 @@
     grid-column: 1 / -1;
     display: inherit;
     grid-template-columns: inherit;
-    padding: 113px 0 200px;
+    padding: 160px 0;
 
     @media (max-width: $maxTablet) {
-        padding: 82px 0 120px;
+        padding: 140px 0;
+    }
+
+    @media (max-width: $maxMobile) {
+        padding: 80px 0;
     }
 
     .contentWrapper {
-        grid-column: 8 / 30;
+        grid-column: 6 / 30;
         padding-top: 70px;
 
         @media (max-width: $maxLaptop) {
             grid-column: 4 / 29;
-
+            padding-top: 0;
         }
 
         @media (max-width: $maxTablet) {
@@ -156,6 +175,9 @@
         li {
             p{
                 padding: 0 0 0 20px;
+                @media (max-width: $maxLaptop) {
+                    padding: 0;
+                }
             }
             padding-left: 54px;
             position: relative;
@@ -203,6 +225,7 @@
         .panelList {
             @media (max-width: $maxTablet) {
                 display: flex;
+                flex-wrap: wrap;
                 margin: 0;
             }
 
@@ -262,15 +285,18 @@
     display: inherit;
     grid-template-columns: inherit;
     grid-column: 1 / -1;
-    padding: 260px 0 215px;
+    padding: 200px 0;
 
     @media (max-width: $maxLaptop) {
-        padding: 260px 0;
+        padding: 140px 0;
     }
 
     @media (max-width: $maxTablet) {
-        padding: 120px 0;
+        padding: 140px 0;
+    }
 
+    @media (max-width: $maxMobile) {
+        margin: 0 0 80px;
     }
 
     .infoWrapper {
@@ -287,14 +313,10 @@
 
         .infoList {
             padding: 0;
-
             @media (max-width: $maxTablet) {
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: space-between;
-            }
-
-            @media (max-width: $maxMobile) {
-                flex-direction: column;
             }
 
             li {
@@ -331,15 +353,17 @@
                 font-size: 30px;
                 color: #141515;
 
-                @media (max-width: $maxMobile) {
-                    font-size: 21px;
-                }
+                // @media (max-width: $maxMobile) {
+                //     font-size: 21px;
+                // }
             }
         }
     }
 
     .contentWrapper {
         grid-column: 23 / -7;
+        max-width: 758px;
+        width: 100%;
 
         @media (max-width: $maxLaptop) {
             grid-column: 20 / -5;
@@ -382,6 +406,7 @@
 
         @media (max-width: $maxMobile) {
             margin: 25px 0 0;
+            transform: translateY(0);
         }
 
     }
@@ -392,7 +417,7 @@
     grid-template-columns: inherit;
     grid-column: 1 / -1;
     padding: 160px 0;
-    background-color: #4562C9;
+    background-color: #081A27;
     color: #fff;
 
     @media (max-width: $maxMobile) {
@@ -473,13 +498,20 @@
 }
 
 .sectionChallenge {
-    padding: 156px 0 166px;
+    padding: 160px 0;
     display: inherit;
     grid-template-columns: inherit;
     grid-column: 1 / -1;
 
     @media (max-width: $maxTablet) {
-        padding: 180px 0;
+        padding: 140px 0;
+    }
+    @media (max-width: $maxTablet) {
+        padding: 130px 0;
+    }
+
+    @media (max-width: $maxMobile) {
+        padding: 80px 0;
     }
 
     .container {
@@ -501,9 +533,8 @@
     }
 
     .contentWrapper {
-        margin: 0 0 70px;
+        margin: 0 0 80px;
         max-width: 700px;
-        padding-left: 34px;
 
         @media (max-width: $maxMobile) {
             padding: 0 calc(var(--cellSize) * 3);
@@ -525,7 +556,7 @@
     }
 
     .item {
-        padding: 78px 15px 68px 49px;
+        padding: 70px 50px;
         transition: all .3s $cubic;
         cursor: pointer;
         color: $black;
@@ -539,7 +570,7 @@
         }
 
         &:hover {
-            background-color: #0694F7;
+            background-color: #0694F7;;
             color: #fff;
         }
     }
@@ -558,7 +589,7 @@
     }
 
     .itemTitle {
-        font-size: 21px;
+        font-size: 24px;
         font-weight: 500;
         margin: 0 0 18px;
         color: inherit;
@@ -640,22 +671,26 @@
 }
 
 .sectionMobileApp {
-    padding: 180px 0 240px;
+    padding: 160px 0;
     grid-column: 1 / -1;
     grid-template-columns: inherit;
     display: inherit;
     background: rgba(164,169,182,0.1);
-    overflow-x: hidden;
-    @media (max-width: $maxTablet) {
-        padding: 180px 0;
+    @media (max-width: $maxLaptop) {
+        padding: 140px 0;
+    }
+
+    @media (max-width: $maxMobile) {
+        padding: 80px 0;
     }
 
     .contentWrapper {
-        grid-column: 26 / 8;
-        margin: 0 0 90px;
-        padding-left: 20px;
+        grid-column: var(--desktopWidth);
+        max-width: 595px;
+        width: 100%;
+        margin: 0 auto 50px 0;
         .titleWrapper {
-            margin: 0 0 20px;
+            margin: 0 0 16px;
 
             @media (max-width: $maxMobile) {
                 margin: 0 0 12px;
@@ -769,28 +804,64 @@
             margin: calc(var(--cellSize) * 2) 0 0 0;
         }
     }
+    .image5 {
+        grid-column: 1 / -13;
+        margin: 0 0 calc(var(--cellSize) * 2);
 
-    .image5{
-        grid-column: -8 / 8;
+        @media (max-width: $maxLaptop) {
+            height: 748px;
+        }
+
+        @media (max-width: $maxTablet) {
+            height: 403px;
+        }
+
+        @media (max-width: $maxMobile) {
+            height: 202px;
+        }
+    }
+
+    .image6 {
+        grid-column: 40 / -1;
+
+        @media (max-width: $maxLaptop) {
+            height: 648px;
+        }
+
+        @media (max-width: $maxTablet) {
+            height: 403px;
+        }
+
+        @media (max-width: $maxMobile) {
+            height: 202px;
+        }
     }
 }
 
 .sectionMobile {
-    padding: 180px 0 240px;
+    padding: 180px 0;
     grid-column: 1 / -1;
     grid-template-columns: inherit;
     display: inherit;
 
     @media (max-width: $maxTablet) {
-        padding: 180px 0;
+        padding: 140px 0;
+    }
+
+    @media (max-width: $maxMobile) {
+        margin: 80px 0;
     }
 
     .contentWrapper {
-        grid-column: 26 / -8;
-        margin: 0 0 90px;
-        padding-left: 20px;
+        grid-column: 6 / -6;
+        margin: 0 0 80px;
+        &>*{
+            max-width: 595px;
+            width: 100%;
+            margin: 0 0 0 auto;
+        }
         .titleWrapper {
-            margin: 0 0 20px;
+            margin: 0 0 16px auto;
 
             @media (max-width: $maxMobile) {
                 margin: 0 0 12px;
@@ -798,7 +869,7 @@
         }
 
         @media (max-width: $maxLaptop) {
-            grid-column: 25 / -5;
+            grid-column: 5 / -5;
         }
 
         @media (max-width: $maxTablet) {
@@ -819,7 +890,7 @@
     }
 
     .image1 {
-        grid-column: 8 / -8;
+        grid-column: 6 / -6;
         margin: 0 0 calc(var(--cellSize) * 2);
 
         @media (max-width: $maxLaptop) {
@@ -838,7 +909,7 @@
     }
 
     .image2 {
-        grid-column: 8 / 26;
+        grid-column: 6 / 26;
 
         @media (max-width: $maxLaptop) {
             grid-column: 5 / 26;
@@ -878,19 +949,15 @@
     display: inherit;
     grid-template-columns: inherit;
     grid-column: 1 / -1;
-    padding: 114px 0 0;
+    padding: 160px 0 0;
     background-color: #081A27;
 
     @media (max-width: $maxLaptop) {
-        padding: 124px 0 0;
-    }
-
-    @media (max-width: $maxTablet) {
-        padding: 171px 0 0;
+        padding: 140px 0 0;
     }
 
     @media (max-width: $maxMobile) {
-        padding: 150px 0 0;
+        padding: 80px 0 0;
     }
 
     .contentWrapper {
@@ -923,13 +990,16 @@
     }
 
     .imageWrapper {
-        grid-column: 8 / 23;
+        grid-column: 6 / 23;
         @media (max-width: $maxLaptop) {
             order: 2;
-            grid-column: 8 / 23;
+            grid-column: 6 / 23;
         }
         @media (max-width: $maxTablet) {
             grid-column: 4 / -4;
+        }
+        @media (max-width: $maxMobile) {
+            grid-column: 1 / -1;
         }
         img {
             display: block;
@@ -940,6 +1010,9 @@
             }
             @media (max-width: $maxTablet) {
                 grid-column: 4 / -4;
+            }
+            @media (max-width: $maxMobile) {
+                grid-column: 1 / -1;
             }
         }
     }
@@ -977,33 +1050,35 @@
 
     .titleWrapper {
         margin: 0 0 90px;
-        font-weight: 500;
         grid-column: 1 / -1;
+        
+        & h2{
+            padding: 0 0 20px 0;
+        }
+
+        & p{
+            max-width: 630px;
+        }
 
         @media (max-width: $maxTablet) {
             margin: 0 0 60px;
             padding-left: calc(var(--cellSize) * 3);
         }
-        
-        & p{
-            max-width: 630px;
-            margin: 20px 0 0 0;
-        }
     }
 
     .item {
-        min-height: 455px;
-        padding: 86px 24px 60px 44px;
+        max-height: 443px;
+        padding: 70px 50px;
         transition: all .3s $cubic;
         position: relative;
 
         &:last-child {
-            padding: 64px 24px 70px 44px;
+            padding: 70px 50px;
             background-color: #FAFAFA;
         }
 
         &:hover:not(:last-child) {
-            background-color: #081A27;
+            background-color: #0694F7;
 
             .itemNumber,
             .itemTitle,
@@ -1035,25 +1110,30 @@
 
     .itemNumber {
         color: #797D7E;
-        margin: 0 0 32px;
-        font-weight: 500;
+        margin: 0 0 30px;
         transition: all .3s $cubic;
+        font-size: 16px;
+        font-family: Gordita;
+        font-weight: 500; 
+        line-height: 24px;
+        letter-spacing: -0.4000000059604645px;
     }
 
     .itemTitle {
         font-weight: 500;
-        font-size: 21px;
-        margin: 0 0 14px;
+        font-size: 24px;
+        line-height: 36px;
+        margin: 0 0 12px;
         transition: all .3s $cubic;
         letter-spacing: 0.39px;
     }
 
     .itemText {
-        opacity: .9;
-        letter-spacing: -0.4px;
+        font-size: 16px;
+        line-height: 28px;
         transition: all .3s $cubic;
         line-height: 24px;
-        max-width: 290px;
+        max-width: 343px;
     }
 
     .itemIcon {
@@ -1146,10 +1226,10 @@
     display: inherit;
     grid-template-columns: inherit;
     grid-column: 1 / -1;
-    padding: 188px 0;
+    padding: 200px 0;
 
     @media (max-width: $maxTablet) {
-        padding: 100px 0 120px;
+        padding: 140px 0;
         background: #0694F7;
         color: #fff;
     }
@@ -1158,7 +1238,7 @@
         grid-column: var(--desktopWidth);
 
         @media (max-width: $maxLaptop) {
-            grid-column: 5 / -5;
+            grid-column: 1 / -1;
         }
 
         @media (max-width: $maxMobile) {
@@ -1167,7 +1247,7 @@
     }
 
     .titleWrapper {
-        margin: 0 0 85px;
+        margin: 0 0 90px;
 
         @media (max-width: $maxTablet) {
             margin: 0 0 30px;
@@ -1189,11 +1269,12 @@
     }
 
     .item {
-        padding: 64px 10px 37px 54px;
+        padding: 90px 50px 40px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        min-height: 490px;
+        min-height: 431px;
+        max-width: 560px;
         transition: all .3s $cubic;
 
         @media (max-width: $maxLaptop) {
@@ -1205,7 +1286,7 @@
             min-height: 150px;
             justify-content: flex-start;
             flex-direction: row;
-            align-items: center;
+            align-items: flex-start;
         }
 
         @media (max-width: $maxMobile) {
@@ -1224,11 +1305,11 @@
     }
 
     .itemTitle {
-        font-size: 28px;
-        margin: 0 0 30px;
+        font-size: 30px;
+        margin: 0 0 14px;
         line-height: 1.6;
         max-width: 240px;
-        font-weight: 500;
+        font-weight: 600;
         letter-spacing: 0.52px;
         transition: all .3s $cubic;
         font-family: "PT Sans", sans-serif;
@@ -1244,11 +1325,12 @@
     }
 
     .itemText {
-        color: #313233;
-        transition: all .3s $cubic;
-        max-width: 280px;
+        color: #141515;
+        font-weight: 400;
         font-size: 18px;
-        line-height: 1.8;
+        transition: all .3s $cubic;
+        max-width: 343px;
+        line-height: 33px;
 
         @media (max-width: $maxTablet) {
             max-width: 540px;
@@ -1257,15 +1339,20 @@
     }
 
     .itemNumber {
-        color: #C3CACB;
+        color: #7F838D;
+        font-weight: 500;
         transition: all .3s $cubic;
-        font-size: 21px;
+        font-size: 18px;
+        max-height: 40px;
+
+        // margin: 40px 0 0 0;
 
         @media (max-width: $maxTablet) {
             order: -1;
-            padding: 0 50px 50px 0;
+            padding: 20px 50px 50px 0;
             margin: -10px 0 0 0;
             font-weight: 500;
+            color: rgba(255,255,255,0.7);
         }
     }
 }

@@ -21,7 +21,9 @@ export default class BoldCase extends Component {
                     <div className={s.container}>
                         <div className={s.contentWrapper}>
                             <div className={s.titleWrapper}>
-                                <Title text={'Move mountains, move waves'} />
+                                <TitleH size="hero">
+                                    Move mountains, move waves
+                                </TitleH>
                             </div>
                             <div className={s.descWrapper}>
                                 <Description text={'What was first a small design tweak request turned into a complete makeover of an existing app, leading us to replace poor usability and a crude UI with a fresh interface and intelligent app-flow. We took Bold from a UX audit and niche analysis to complex product development and go-to-market strategy.'} />

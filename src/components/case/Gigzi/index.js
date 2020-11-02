@@ -22,7 +22,9 @@ export default class BoldCase extends Component {
                     <div className={s.container}>
                         <div className={s.contentWrapper}>
                             <div className={s.titleWrapper}>
-                                <Title text={'Independent wealth management'} />
+                               <TitleH size="hero">
+                                    Independent wealth management
+                                </TitleH>
                             </div>
                             <div className={s.descWrapper}>
                                 <Description text={'The branding strategy and an ICO campaign for a financial platform that offers blockchain security and wealth protection. The platform protects its users from market inconsistencies and helps to manage their wealth independently.'} />
@@ -244,6 +246,9 @@ export default class BoldCase extends Component {
                         <Description light text={"We created an ICO cabinet and provided promo materials in that regard. We also designed the web app so that users could access their cabinets from any device. Our developers underwent dozens of brainstorming activities to enhance the cabinet with useful functionality."} />
                     </div>
                     <div className={`${s.image} ${s.image5}`}>
+                        <img src={'/assets/images/gigzi/gigzi_slider1.jpg'} alt={'gigzi image'} />
+                    </div>
+                    <div className={`${s.image} ${s.image6}`}>
                         <img src={'/assets/images/gigzi/gigzi_slider1.jpg'} alt={'gigzi image'} />
                     </div>
                     {/* <DragSlider pictures={['/assets/images/gigzi/gigzi_slider1.jpg','/assets/images/gigzi/gigzi_slider1.jpg']}/> */}

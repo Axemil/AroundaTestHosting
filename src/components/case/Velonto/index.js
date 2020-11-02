@@ -28,9 +28,6 @@ const VelontoCase = (props) => {
                             <Description text={'An idea that was shaped and evolved into the full-service product to connect customers, freelance cyclists, restaurants and other local businesses in Austria. From strategy, market research, and branding to full-cycle product development carried out by our team'} />
                         </div>
                     </div>
-                    {/* <div className={s.linkWrapper}>
-                        <CustomLink text={'Platform'} />
-                    </div> */}
                 </div>
             </section>
             <section className={s.sectionBg}>
@@ -217,7 +214,10 @@ const VelontoCase = (props) => {
                         <Description light text={'Want to place an order from your laptop? No problem! Velonto web client — developed by our team — lets you find your favorite food and place an order in a few clicks. We made sure the platform is intuitive and easy to use to help customers become confident and more engaged with a service on all stages of delivery.'} />
                     </div>
                     <div className={`${s.image} ${s.image1}`}>
-                        <img src={'/assets/images/velonto/velontoMobile3.jpg'} alt={'velonto image'} />
+                        <img src={'/assets/images/velonto/velonto_slider1.jpg'} alt={'velonto image'} />
+                    </div>
+                    <div className={`${s.image} ${s.image2}`}>
+                        <img src={'/assets/images/velonto/velonto_slider2.jpg'} alt={'velonto image'} />
                     </div>
                     {/* <DragSlider pictures={['/assets/images/velonto/velonto_slider1.jpg','/assets/images/velonto/velonto_slider2.jpg']}/> */}
             </section>
