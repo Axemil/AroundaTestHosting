@@ -225,6 +225,9 @@ export default class BoldCase extends Component {
                     <div className={`${s.image} ${s.image5}`}>
                         <img src={'/assets/images/metricly/metricly_slider1.jpg'} alt={'metricly image'} />
                     </div>
+                    <div className={`${s.image} ${s.image6}`}>
+                        <img src={'/assets/images/metricly/metricly_slider1.jpg'} alt={'metricly image'} />
+                    </div>
                     {/* <DragSlider pictures={['/assets/images/metricly/metricly_slider1.jpg','/assets/images/metricly/metricly_slider1.jpg']}/> */}
                 </section>
                 <section className={s.sectionHelped}>
