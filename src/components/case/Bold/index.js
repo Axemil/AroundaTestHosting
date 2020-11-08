@@ -93,7 +93,7 @@ export default class BoldCase extends Component {
                         </div>
                     </div>
                     <div className={s.linkWrapper}>
-                        <a href="https://thebold.app/">
+                        <a target="_blank" href="https://thebold.app/">
                             <ButtonSecondary>Go visit site</ButtonSecondary>
                         </a>
                         {/* <CustomLink text={'Visit website'} href={'bold.app'} /> */}
@@ -127,7 +127,7 @@ export default class BoldCase extends Component {
                         <div className={s.row}>
                             <div className={s.item}>
                                 <div className={s.itemIcon}>
-                                    <svg height="60" viewBox="0 0 51 60" width="51"><g fill="none" fillRule="evenodd"><path d="m.5.5h59v59h-59z" opacity="0" stroke="#979797"/><g transform=""><path d="m31 11.68v-3.68c0-1.85651543-.7374979-3.63699282-2.0502525-4.94974747-1.3127547-1.31275465-3.0932321-2.05025253-4.9497475-2.05025253h-16c-3.86599325 0-7 3.13400675-7 7v30c0 3.8659932 3.13400675 7 7 7h11.3" strokeWidth="2"/><path d="m42.58 11.1h-16c-3.8659932 0-7 3.1340068-7 7v30c0 3.8659932 3.1340068 7 7 7h16c3.8659932 0 7-3.1340068 7-7v-30c0-3.8659932-3.1340068-7-7-7z" strokeWidth="2"/><g fillRule="nonzero"><circle fill="none" cx="27.58" cy="23.1" r="2"/><circle fillRule="evenodd" cx="27.58" cy="33.1" r="2"/><circle fillRule="evenodd" cx="27.58" cy="43.1" r="2"/></g></g></g></svg>
+                                <svg height="60" viewBox="0 0 51 60" width="51"><g fill="none" fillRule="evenodd"><path d="m.5.5h59v59h-59z" opacity="0" stroke="#979797"/><g transform=""><path d="m31 11.68v-3.68c0-1.85651543-.7374979-3.63699282-2.0502525-4.94974747-1.3127547-1.31275465-3.0932321-2.05025253-4.9497475-2.05025253h-16c-3.86599325 0-7 3.13400675-7 7v30c0 3.8659932 3.13400675 7 7 7h11.3" strokeWidth="3.14"/><path d="m42.58 11.1h-16c-3.8659932 0-7 3.1340068-7 7v30c0 3.8659932 3.1340068 7 7 7h16c3.8659932 0 7-3.1340068 7-7v-30c0-3.8659932-3.1340068-7-7-7z" strokeWidth="3.14"/><g fillRule="nonzero"><circle fill="none" cx="27.58" cy="23.1" r="2"/><circle fillRule="evenodd" cx="27.58" cy="33.1" r="2"/><circle fillRule="evenodd" cx="27.58" cy="43.1" r="2"/></g></g></g></svg>
                                 </div>
                                 <div className={s.itemTitle}>
                                     Mobile app
@@ -143,7 +143,7 @@ export default class BoldCase extends Component {
                             </div>
                             <div className={s.item}>
                                 <div className={s.itemIcon}>
-                                    <svg height="60" viewBox="0 0 80 60" width="80"><g fill="none" fillRule="evenodd"><path d="m-2.5-3.5h89v59h-89z" opacity="0" stroke="#979797"/><g transform=""><path d="m72 11h-46c-3.8659932 0-7 3.1340068-7 7v30c0 3.8659932 3.1340068 7 7 7h46c3.8659932 0 7-3.1340068 7-7v-30c0-3.8659932-3.1340068-7-7-7z" strokeWidth="2"/><g fillRule="nonzero"><circle cx="31" cy="23" r="2"/><circle cx="41" cy="23" r="2"/><circle cx="51" cy="23" r="2"/></g></g></g></svg>
+                                <svg style={{marginLeft: '-20px'}} height="60" viewBox="0 0 80 60" width="80"><g fill="none" fillRule="evenodd"><path d="m-2.5-3.5h89v59h-89z" opacity="0" stroke="#979797"/><g transform=""><path d="m72 11h-46c-3.8659932 0-7 3.1340068-7 7v30c0 3.8659932 3.1340068 7 7 7h46c3.8659932 0 7-3.1340068 7-7v-30c0-3.8659932-3.1340068-7-7-7z" strokeWidth="3.14"/><g fillRule="nonzero"><circle cx="31" cy="23" r="2"/><circle cx="41" cy="23" r="2"/><circle cx="51" cy="23" r="2"/></g></g></g></svg>
                                 </div>
                                 <div className={s.itemTitle}>
                                     Landing page
@@ -159,7 +159,7 @@ export default class BoldCase extends Component {
                             </div>
                             <div className={s.item}>
                                 <div className={s.itemIcon}>
-                                    <svg height="60" viewBox="0 0 80 60" width="80"><g fill="none" fillRule="evenodd"><path d="m-2.5-3.5h89v59h-89z" opacity="0" stroke="#979797"/><g transform=""><path d="m31 11.47v-3.47c0-3.86599325-3.1340068-7-7-7h-16c-3.86599325 0-7 3.13400675-7 7v30c0 3.8659932 3.13400675 7 7 7h11.79" strokeWidth="2"/><path d="m72 11h-46c-3.8659932 0-7 3.1340068-7 7v30c0 3.8659932 3.1340068 7 7 7h46c3.8659932 0 7-3.1340068 7-7v-30c0-3.8659932-3.1340068-7-7-7z" strokeWidth="2"/><g fillRule="nonzero"><circle cx="31" cy="23" r="2"/><circle cx="31" cy="33" r="2"/><circle cx="31" cy="43" r="2"/></g></g></g></svg>
+                                <svg height="60" viewBox="0 0 80 60" width="80"><g fill="none" fillRule="evenodd"><path d="m-2.5-3.5h89v59h-89z" opacity="0" stroke="#979797"/><g transform=""><path d="m31 11.47v-3.47c0-3.86599325-3.1340068-7-7-7h-16c-3.86599325 0-7 3.13400675-7 7v30c0 3.8659932 3.13400675 7 7 7h11.79" strokeWidth="3.14"/><path d="m72 11h-46c-3.8659932 0-7 3.1340068-7 7v30c0 3.8659932 3.1340068 7 7 7h46c3.8659932 0 7-3.1340068 7-7v-30c0-3.8659932-3.1340068-7-7-7z" strokeWidth="3.14"/><g fillRule="nonzero"><circle cx="31" cy="23" r="2"/><circle cx="31" cy="33" r="2"/><circle cx="31" cy="43" r="2"/></g></g></g></svg>
                                 </div>
                                 <div className={s.itemTitle}>
                                     Go-to-market
@@ -273,7 +273,7 @@ export default class BoldCase extends Component {
                         </p>
                         </div>
                         <div className={s.item}>
-                            <a href="https://apps.apple.com/be/app/bold-strong-smart-mind/id1491187912">
+                            <a target="_blank" href="https://apps.apple.com/be/app/bold-strong-smart-mind/id1491187912">
                                 <div className={s.itemIcon}>
                                     <svg height="60" viewBox="0 0 60 60" width="60"><g fill="none" fillRule="evenodd"><path d="m.5.5h59v59h-59z" fill="#d8d8d8" opacity="0" stroke="#979797" /><path d="m2 39h42l-15.333204-15" stroke="#393939" strokeWidth="2" /></g></svg>
                                 </div>
@@ -497,7 +497,7 @@ export default class BoldCase extends Component {
                     <div className={s.container}>
                         <div className={s.thin}>Got a project?</div>
                         <div className={s.linkWrapper}>
-                            <a className={s.link} href="#"><span>Let’s start </span></a>
+                            <a target="_blank" className={s.link} href="#"><span>Let’s start </span></a>
                         </div>
                     </div>
                 </section> */}

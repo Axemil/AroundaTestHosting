@@ -91,7 +91,7 @@ const VelontoCase = (props) => {
                         <Description light text={'An Austrian based startup that promotes environmentally friendly delivery services. Velonto platform helps busy working people save time for important commitments by bringing meals and parcels in a fast and sustainable way with zero CO2 emissions.'} />
                     </div>
                     <div className={s.linkWrapper}>
-                        <a href="https://velonto.at/"><ButtonSecondary>Go to website</ButtonSecondary></a>
+                        <a target="_blank" href="https://velonto.at/"><ButtonSecondary>Go to website</ButtonSecondary></a>
                     </div>
                 </div>
             </section>
@@ -294,12 +294,12 @@ const VelontoCase = (props) => {
                         </p>
                         </div>
                         <div className={s.item}>
-                            <a href="https://velonto.at/">
+                            <a target="_blank" href="https://velonto.at/">
                                 <div className={s.itemIcon}>
                                     <svg height="60" viewBox="0 0 60 60" width="60"><g fill="none" fillRule="evenodd"><path d="m.5.5h59v59h-59z" fill="#d8d8d8" opacity="0" stroke="#979797" /><path d="m2 39h42l-15.333204-15" stroke="#393939" strokeWidth="2" /></g></svg>
                                 </div>
                                 <div className={s.itemTitle}>
-                                    View Velonto landing <br />page
+                                    View Velonto <br/> landing page
                                 </div>
                             </a>
                             {/* <div className={s.itemSecondIcon}>
@@ -544,7 +544,7 @@ const VelontoCase = (props) => {
                 <div className={s.container}>
                     <div className={s.thin}>Got a project?</div>
                     <div className={s.linkWrapper}>
-                        <a className={s.link} href="#"><span>Let’s start </span></a>
+                        <a target="_blank" target="_blank" className={s.link} href="#"><span>Let’s start </span></a>
                     </div>
                 </div>
             </section> */}
