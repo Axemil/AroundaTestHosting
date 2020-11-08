@@ -150,7 +150,7 @@ export default class BoldCase extends Component {
                             </div>
                                 <div className={s.itemList}>
                                     <ul>
-                                        <li>Landing page creation for a product</li>
+                                        <li>Easy usability for users of all age groups</li>
                                         <li>Easy-to-use and user-friendly design of the main offer page</li>
                                         <li>Attractive and interactive home-screen and other interfaces</li>
                                         <li>Insightful content and App Store optimization</li>
