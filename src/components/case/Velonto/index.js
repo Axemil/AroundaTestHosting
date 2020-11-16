@@ -165,7 +165,7 @@ const VelontoCase = (props) => {
                     <div className={s.container}>
                         <div className={s.title}>
                             <span>Let`s check</span><br />
-                            Velonta process
+                            Velonto process
                         </div>
                     </div>
             </section>
@@ -192,7 +192,7 @@ const VelontoCase = (props) => {
             <section className={s.sectionMobileApp}>
                     <div className={s.contentWrapper}>
                         <div className={s.titleWrapper}>
-                            <Title text={'Mobile app'} />
+                            <Title text={'Mobile App'} />
                         </div>
                         <Description light text={"To get the most out of your product you'll need an all-in-one delivery management tool. We designed dedicated mobile applications both for clients and bike riders. Place orders wherever you are, track delivery time and status. For riders, we added a set of essential delivery guidelines to completely reduce the number of human errors."} />
                     </div>
@@ -209,7 +209,7 @@ const VelontoCase = (props) => {
             <section className={s.sectionWebApp}>
                     <div className={s.contentWrapper}>
                         <div className={s.titleWrapper}>
-                            <Title text={'Web application'} />
+                            <Title text={'Web Application'} />
                         </div>
                         <Description light text={'Want to place an order from your laptop? No problem! Velonto web client — developed by our team — lets you find your favorite food and place an order in a few clicks. We made sure the platform is intuitive and easy to use to help customers become confident and more engaged with a service on all stages of delivery.'} />
                     </div>
@@ -413,7 +413,7 @@ const VelontoCase = (props) => {
                         <div className={s.row}>
                             <div className={s.item}>
                                 <div className={s.itemTitle}>
-                                    Strategy
+                                    Discovery & Strategy
                                 </div>
                                 <ul className={s.list}>
                                     <li>Define idea value</li>
