@@ -67,34 +67,39 @@ const VelontoCase = (props) => {
                 <img src="/assets/images/velontoCase-bg2.jpg" alt="velonto" />
             </section>
             <section className={s.sectionWhat}>
-                <div className={s.infoWrapper}>
-                    <ul className={s.infoList}>
-                        <li>
-                            <div className={s.infoLabel}>Team size</div>
-                            <div className={s.infoText}>5+</div>
-                        </li>
-                        <li>
-                            <div className={s.infoLabel}>Time</div>
-                            <div className={s.infoText}>1,5years</div>
-                        </li>
-                        <li>
-                            <div className={s.infoLabel}>Industry</div>
-                            <div className={s.infoText}>Food delivery</div>
-                        </li>
-                    </ul>
-                </div>
-                <div className={s.contentWrapper}>
-                    <div className={s.titleWrappe}>
-                        <TitleSecondary text={'What is Velonto?'} />
+                    <div className={s.infoWrapper}>
+                        <ul className={s.infoList}>
+                            <li>
+                                <div className={s.infoLabel}>Team size</div>
+                                <div className={s.infoText}>5+</div>
+                            </li>
+                            <li>
+                                <div className={s.infoLabel}>Time</div>
+                                <div className={s.infoText}>1.5 years</div>
+                            </li>
+                            <li>
+                                <div className={s.infoLabel}>Industry</div>
+                                <div className={s.infoText}>Food delivery</div>
+                            </li>
+                        </ul>
                     </div>
-                    <div className={s.descWrapper}>
-                        <Description light text={'An Austrian based startup that promotes environmentally friendly delivery services. Velonto platform helps busy working people save time for important commitments by bringing meals and parcels in a fast and sustainable way with zero CO2 emissions.'} />
+                    <div className={s.contentWrapper}>
+                        <div className={s.titleWrapper}>
+                            <TitleSecondary text={'What is Velonto?'} />
+                        </div>
+                        <div className={s.descWrapper}>
+                            <Description light text={'An Austrian based startup that promotes environmentally friendly delivery services. Velonto platform helps busy working people save time for important commitments by bringing meals and parcels in a fast and sustainable way with zero CO2 emissions.'} />
+                        </div>
                     </div>
                     <div className={s.linkWrapper}>
-                        <a target="_blank" href="https://velonto.at/"><ButtonSecondary>Go to website</ButtonSecondary></a>
+                        <a target="_blank" href="https://velonto.at/">
+                            <ButtonSecondary>
+                                Go visit site
+                            </ButtonSecondary>
+                        </a>
+                        {/* <CustomLink text={'Visit website'} href={'bold.app'} /> */}
                     </div>
-                </div>
-            </section>
+                </section>
             <section className={s.sectionComment}>
                 <div className={s.container}>
                     <blockquote>
