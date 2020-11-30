@@ -120,6 +120,14 @@
     height: 100vh;
     max-height: 900px;
 
+    @media (max-width: $maxLaptop) {
+        max-height: 565px;
+    }
+
+    @media (max-width: $maxTablet) {
+        max-height: 400px;
+    }
+
     @media (max-width: $maxMobile) {
         max-height: 290px;
     }
@@ -1325,20 +1333,22 @@
 
     @media (max-width: $maxLaptop) {
         grid-column: 1 / -1;
-        background: url(/assets/images/velonto/velonto_q.jpg) no-repeat;
+        background: url(/assets/images/velonto/velonto_q_laptop.jpg) no-repeat;
         background-position: left top;
         background-size: cover;
     }
     @media (max-width: $minTablet){
-        background: url(/assets/images/velonto/velonto_q.jpg) no-repeat;
+        background: url(/assets/images/velonto/velonto_q_tablet.jpg) no-repeat;
         background-position: left top;
         background-size: cover;
     }
 
     @media (max-width: 620px) {
-        background: url(/assets/images/velonto/velonto_q.jpg) no-repeat;
+        background-image: none;
+        background: rgba(215, 220, 234, 0.39);
         background-position: left top;
         background-size: cover;
+        display: block;
     }
 
     .container {
@@ -1348,45 +1358,68 @@
         background-position: left top;
         background-size: cover;
         justify-items: end;
-        padding: 268px 0 175px;
-        padding-right: calc(var(--cellSize) * 5);
+        padding: 220px 0;
+        padding-right: calc(var(--cellSize) * 2);
 
         @media (max-width: $maxLaptop) {
+            padding: 165px 0;
+            margin: 0 65px;
             grid-column: 5 / -5;
             background: none;
         }
 
         @media (max-width: $maxTablet) {
-            padding: 165px 0 102px;
+            padding: 130px 0;
             grid-column: 4 / -4;
         }
 
         @media (max-width: 620px) {
+            grid-column: none;
+            display: block;
             padding: 80px 0;
+            margin: 0 10px;
         }
     }
 
     .quoteWrapper {
-        font-size: 29px;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 45px;
+        letter-spacing: 0em;
+        text-align: left;
         color: #181919;
-        position: relative;
         max-width: 600px;
         grid-column: 2 / -1;
         line-height: 1.5;
 
         @media (max-width: $maxTablet) {
+            font-size: 24px;
+            line-height: 36px;
+            max-width: 340px;
+        }
+        @media (max-width: 620px) {
+            max-width: 270px;
+            font-family: Gordita;
             font-size: 20px;
-            max-width: 420px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 30px;
+            letter-spacing: 0em;
+            text-align: left;
         }
     }
 
     .quote {
-        position: absolute;
+        margin: 0 0 40px;
         top: -70px;
         left: 0;
 
         @media (max-width: $maxTablet) {
-            top: -62px;
+            margin: 0 0 30px;
+        }
+        @media (max-width: 620px) {
+            margin: 0 0 24px;
         }
     }
 }
@@ -1486,7 +1519,7 @@
         line-height: 45px;
         font-weight: 600;
         transition: all .3s $cubic;
-        font-family: "PT Sans", sans-serif;
+        font-family: Gordita;
 
         @media (max-width: $maxTablet) {
             max-width: 400px;
@@ -1956,7 +1989,7 @@
         border-radius: 999px;
         color: #393939;
         background-color: #fff;
-        font-family: "PT Sans", sans-serif;
+        font-family: Gordita;
 
         @media (max-width: $maxMobile) {
             width: 100%;
@@ -1970,7 +2003,7 @@
     display: inherit;
     grid-template-columns: inherit;
     grid-column: 1 / -1;
-    padding: 100px 0 115px;
+    padding: 180px 0 140px;
 }
 
 .sectionGotProject {

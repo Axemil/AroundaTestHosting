@@ -197,12 +197,12 @@ const VelontoCase = (props) => {
             <section className={s.sectionMobileApp}>
                     <div className={s.contentWrapper}>
                         <div className={s.titleWrapper}>
-                            <Title text={'Mobile App'} />
+                            <Title text={'Mobile Apps'} />
                         </div>
                         <Description light text={"To get the most out of your product you'll need an all-in-one delivery management tool. We designed dedicated mobile applications both for clients and bike riders. Place orders wherever you are, track delivery time and status. For riders, we added a set of essential delivery guidelines to completely reduce the number of human errors."} />
                     </div>
                     <div className={`${s.image} ${s.image1}`}>
-                        <img src={'/assets/images/velonto/velontoMobile1.jpg'} alt={'velonto image'} />
+                        <img src={'/assets/images/velonto/velontoMobile4.jpg'} alt={'velonto image'} />
                     </div>
                     <div className={`${s.image} ${s.image2}`}>
                         <img src={'/assets/images/velonto/velontoMobile2.jpg'} alt={'velonto image'} />
@@ -543,6 +543,9 @@ const VelontoCase = (props) => {
                 </div>
             </section> */}
             <section className={s.sectionWorks}>
+                <div className={s.titleWrapper}>
+                    <Title text={'More works'} />
+                </div>
                 <WorksSection worksData={data}  />
             </section>
             {/* <section className={s.sectionGotProject}>
