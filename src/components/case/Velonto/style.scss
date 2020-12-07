@@ -1215,7 +1215,6 @@
         transition: all .3s $cubic;
         position: relative;
 
-
         &:last-child {
             padding: 33px 64px 33px 24px!important;
             min-height: 0!important;
@@ -1223,6 +1222,12 @@
             background-color: rgba(164, 169, 182, 0.1);
             & br{
                 display: none;
+            }
+            @media (max-width: $maxLaptop) {
+                padding: 52px 51px!important;
+                & br{
+                    display: block;
+                }
             }
         }
 
@@ -1255,10 +1260,19 @@
                 }
             }
         }
+        @media (max-width: $maxLaptop) {
+            min-height: 356px;
+        }
 
         @media (max-width: $maxTablet) {
             min-height: 368px;
             padding: 50px calc(var(--cellSize) * 3);
+            &:nth-child(even){
+                margin-left: 68px;
+            }
+            &:nth-child(odd){
+                margin-right: 68px;
+            }
 
             &:last-child {
                 padding: 30px calc(var(--cellSize) * 3);
@@ -1269,6 +1283,13 @@
             min-height: 0;
             padding: 0;
             margin: 0 calc(var(--cellSize) * 3) 50px;
+
+            &:nth-child(even){
+                margin: 0 calc(var(--cellSize) * 3) 50px;
+            }
+            &:nth-child(odd){
+                margin: 0 calc(var(--cellSize) * 3) 50px;
+            }
 
             &:last-child {
                 padding: 0;
@@ -1336,11 +1357,13 @@
         background: url(/assets/images/velonto/velonto_q_laptop.jpg) no-repeat;
         background-position: left top;
         background-size: cover;
+        margin: 0 68px 140px;
     }
     @media (max-width: $minTablet){
         background: url(/assets/images/velonto/velonto_q_tablet.jpg) no-repeat;
         background-position: left top;
         background-size: cover;
+        margin: 0;
     }
 
     @media (max-width: 620px) {
@@ -1376,7 +1399,7 @@
         @media (max-width: 620px) {
             grid-column: none;
             display: block;
-            padding: 80px 0;
+            padding: 80px 0 70px;
             margin: 0 10px;
         }
     }
@@ -1728,16 +1751,16 @@
         padding: 80px 0 0 70px;
 
         @media (max-width: $maxLaptop) {
-            padding: 58px 27px 50px;
+            padding: 60px 51px 60px 45px;
         }
 
         @media (max-width: $maxTablet) {
-            padding: 50px 16px;
+            padding: 60px 0 60px 32px;
             min-height: 360px;
         }
 
         @media (max-width: $maxMobile) {
-            padding: 30px 24px;
+            padding: 40px 0 60px 24px;
             min-height: 180px;
 
             &:last-child {

@@ -20,7 +20,7 @@ export const expertise = [
 		disable: true
 	},
 	{
-		title: "Cryprocurrency",
+		title: "Cryptocurrency",
 		link: "",
 		disable: true
 	}

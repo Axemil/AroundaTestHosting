@@ -430,7 +430,7 @@ const VelontoCase = (props) => {
                             </div>
                             <div className={s.item}>
                                 <div className={s.itemTitle}>
-                                    UX design
+                                    UX/UI design
                                 </div>
                                 <ul className={s.list}>
                                     <li>UI Style guide & Assets</li>
