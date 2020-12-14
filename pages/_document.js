@@ -38,10 +38,11 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
           />
           <link
-            rel="preload"
+            rel="prefetch"
             href="/fonts/Gordita-Bold.woff2"
             as="font"
             crossOrigin="anonymous"
+            type="font/woff2"
           />
           <link
             rel="preload"
@@ -56,10 +57,11 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
           />
           <link
-            rel="preload"
+            rel="prefetch"
             href="/fonts/Gordita-Light.woff2"
             as="font"
             crossOrigin="anonymous"
+            type="font/woff2"
           />
           <link
             rel="preload"
@@ -74,10 +76,11 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
           />
           <link
-            rel="preload"
+            rel="prefetch"
             href="/fonts/Gordita-Medium.woff2"
             as="font"
             crossOrigin="anonymous"
+            type="font/woff2"
           />
           <link
             rel="preload"
@@ -92,10 +95,11 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
           />
           <link
-            rel="preload"
+            rel="prefetch"
             href="/fonts/Gordita-Regular.woff2"
             as="font"
             crossOrigin="anonymous"
+            type="font/woff2"
           />
 
           <link rel="icon" type="image/x-icon" href="/favicon_arounda.ico" />
