@@ -295,6 +295,12 @@ const VelontoCase = (props) => {
             alt="velonto landing"
           />
         </div>
+        <div className={s.imageWrapperMobile}>
+          <img
+            src="/assets/images/velonto/velonto_landing_mobile.jpg"
+            alt="velonto landing"
+          />
+        </div>
         <div className={s.contentWrapper}>
           <div className={s.titleWrapper}>
             <Title text="Landing page" />
@@ -606,11 +612,19 @@ const VelontoCase = (props) => {
                     </div>
                 </div>
             </section> */}
+
+      <section className={s.titleWrapperWorks}>
+        <Title text={"More works"} />
+      </section>
       <section className={s.sectionWorks}>
-        <div className={s.titleWrapper}>
-          <Title text={"More works"} />
-        </div>
         <WorksSection worksData={data} />
+      </section>
+      <section className={s.linkWrapperWorks}>
+        <div className={s.rightSideLink}>
+          <a target="_blank" href="https://velonto.at/">
+            <ButtonSecondary>Go visit site</ButtonSecondary>
+          </a>
+        </div>
       </section>
       {/* <section className={s.sectionGotProject}>
                 <div className={s.container}>
