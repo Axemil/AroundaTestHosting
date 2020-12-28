@@ -362,8 +362,8 @@
                 }
 
                 @media (max-width: $maxMobile) {
-                    &:last-child {
-                        margin: 40px 0 0 0;
+                    &:first-child {
+                        margin: 0 70px 40px 0;
                     }
                 }
 
@@ -1316,20 +1316,20 @@
             }
         }
 
-        &:hover:last-child {
-            background-color: #4562C9;
+        // &:hover:last-child {
+        //     background-color: #4562C9;
 
-            .itemIcon path:last-child {
-                stroke: #fff;
-            }
+        //     .itemIcon path:last-child {
+        //         stroke: #fff;
+        //     }
 
-            .itemNumber,
-            .itemTitle,
-            .itemText {
-                color: #fff;
-                opacity: 1;
-            }
-        }
+        //     .itemNumber,
+        //     .itemTitle,
+        //     .itemText {
+        //         color: #fff;
+        //         opacity: 1;
+        //     }
+        // }
 
         &:hover:not(:last-child) {
             background-color: #F99F5F;
