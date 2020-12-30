@@ -285,16 +285,16 @@ export default class BoldCase extends Component {
             />
           </div>
           <div className={`${s.image} ${s.image1}`}>
-            <img src={"/assets/images/gigzi/gigzi_brand1.jpg"} alt={"gigzi image"} />
+            <img src={"/assets/images/gigzi/gigzi_brand1.svg"} alt={"gigzi image"} />
           </div>
           <div className={`${s.image} ${s.image4}`}>
-            <img src={"/assets/images/gigzi/gigzi_brand3.jpg"} alt={"gigzi image"} />
+            <img src={"/assets/images/gigzi/gigzi_brand3.svg"} alt={"gigzi image"} />
           </div>
           <div className={`${s.image} ${s.image2}`}>
-            <img src={"/assets/images/gigzi/gigzi_brand2.jpg"} alt={"gigzi image"} />
+            <img src={"/assets/images/gigzi/gigzi_brand2.svg"} alt={"gigzi image"} />
           </div>
           <div className={`${s.image} ${s.image3}`}>
-            <img src={"/assets/images/gigzi/gigzi_brand4.jpg"} alt={"gigzi image"} />
+            <img src={"/assets/images/gigzi/gigzi_brand4.svg"} alt={"gigzi image"} />
           </div>
         </section>
         <section className={s.sectionLanding}>
@@ -366,19 +366,19 @@ export default class BoldCase extends Component {
           </div>
           <div className={`${s.image} ${s.image1}`}>
             <img
-              src={"/assets/images/gigzi/gigzi_wallet1.jpg"}
+              src={"/assets/images/gigzi/gigzi_wallet1.svg"}
               alt={"gigzi image"}
             />
           </div>
           <div className={`${s.image} ${s.image2}`}>
             <img
-              src={"/assets/images/gigzi/gigzi_wallet2.jpg"}
+              src={"/assets/images/gigzi/gigzi_wallet2.svg"}
               alt={"gigzi image"}
             />
           </div>
           <div className={`${s.image} ${s.image3}`}>
             <img
-              src={"/assets/images/gigzi/gigzi_wallet3.jpg"}
+              src={"/assets/images/gigzi/gigzi_wallet3.svg"}
               alt={"gigzi image"}
             />
           </div>
