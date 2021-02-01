@@ -23,11 +23,10 @@ let CustomForm = ({ status, subscribe, showMessage, showMessage2, blue }) => {
       </div>
       <div className={style.form}>
         <label className={style.email}>
-          <p>Your email</p>
           <input
             ref={(node) => (email = node)}
             type="email"
-            placeholder="What's Your email ?"
+            placeholder="Enter your email address"
           />
         </label>
         <button
@@ -41,7 +40,7 @@ let CustomForm = ({ status, subscribe, showMessage, showMessage2, blue }) => {
           type="submit"
           className={style.submit}
         >
-          {status === "sending" ? `${status}...` : "subscribe"}
+          {status === "Sending" ? `${status}...` : "Subscribe"}
         </button>
       </div>
     </>

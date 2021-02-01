@@ -162,11 +162,12 @@ const BlogPost = ({ post: postData }) => {
             />
             {/* <img src={post.imageUrl} alt={post.category} className={style.img} /> */}
             <div className={style.wrapTitle}>
-              <Link href="/blog/">
+              {/* <Link href="/blog/">
                 <a title="Back to blog">
                   Back to blog
                 </a>
-              </Link>
+              </Link> */}
+              <h4>Branding</h4>
               <h1>{post.title}</h1>
               <div className={style.author}>
                 {/* <img className={style.authorImage} src={post.author.imgUrl} /> */}
@@ -194,7 +195,8 @@ const BlogPost = ({ post: postData }) => {
             <SubscribeButton className={style.subscribeButton} text="Subscribe" />
           </div>
         </div>
-        <Hungry blue />
+        {/* <div className={style.lineFooter}></div> */}
+        <Hungry />
         <MoreInteresting currentPostId={post.id} />
         <StartSection />
       </section>

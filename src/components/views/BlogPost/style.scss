@@ -41,8 +41,9 @@
 }
 
 .top {
-	margin-bottom: 190px;
-	display: inherit;
+	margin-bottom: 90px;
+	display: flex;
+	flex-direction: column;
 	grid-template-columns: inherit;
 	grid-column: 1 / -1;
 
@@ -56,10 +57,19 @@
 	}
 }
 
+.lineFooter{
+	max-width: 810px;
+	height: 2px;
+	opacity: 0.2;
+	background: #A4A9B6;
+	margin: 0 auto;
+}
+
 .img {
 	grid-column: 1 / 22;
-	height: 100vh;
+	height: 600px;
 	object-fit: cover;
+	order: 2;
 	// object-position: 70%;
 	object-position: center;
 
@@ -82,6 +92,8 @@
 .wrapTitle {
 	grid-column: 25 / -6;
 	align-self: center;
+	order: 1;
+	padding: 236px 0 0 0;
 
 	@media (max-width: $maxTablet) {
 		grid-column: 25 / -7;
@@ -121,19 +133,35 @@
 	}
 
 	h1 {
-		margin-bottom: 31px;
-		color: #111212;
-		font-weight: normal;
-		font-size: 30px;
-		letter-spacing: 0.7px;
-		line-height: 45px;
-		max-width: 95%;
+		font-size: 50px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 75px;
+		letter-spacing: 0em;
+		text-align: center;
+		max-width: 872px;
+		width: 100%;
+		margin: 0 auto;
+		padding-bottom: 30px;
+
 
 		@media (max-width: $maxTablet) {
 			font-size: 30px;
 			letter-spacing: 0.39px;
 			line-height: 45px;
 		}
+	}
+
+	h4{
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 33px;
+		letter-spacing: 0em;
+		text-align: center;
+		padding: 0 0 20px;
+		text-transform: uppercase;
+		color: #7F838D;
 	}
 
 	// p {
@@ -361,11 +389,13 @@
 	display: grid;
 	grid-template-columns: 64px 1fr;
 	grid-column-gap: 20px;
-	grid-row-gap: 10px;
 	width: 100%;
 	font-size: 16px;
 	line-height: 20px;
 	color: #111212;
+	max-width: 250px;
+	margin: 0 auto;
+	padding-bottom: 90px;
 }
 
 .authorImage {
@@ -381,7 +411,12 @@
 	grid-row: 1;
 	grid-column: 2 / -1;
 	align-self: end;
+	font-size: 18px;
+	font-style: normal;
 	font-weight: 500;
+	line-height: 33px;
+	letter-spacing: 0em;
+	text-align: left;
 }
 
 .authorDescription {
@@ -389,6 +424,12 @@
 	grid-column: 2 / -1;
 	align-self: start;
 	color: #797d7e;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 28px;
+	letter-spacing: 0em;
+	text-align: left;
 }
 
 // ======================== POST DATE ===========================
