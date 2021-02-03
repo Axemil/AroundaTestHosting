@@ -1,6 +1,9 @@
 @import "@/scss/variables.scss";
 
 .title{
+	display: block;
+	max-width: 870px;
+	width: 100%;
 	font-weight: 500;
 	color: inherit;
 	line-height: 1.5;
@@ -13,11 +16,11 @@
 	font-size: 71px;
 	line-height: 106px;
 	letter-spacing: 2px;
-	@media (max-width: $maxTablet){
+	@media (max-width: $maxLaptop){
 		font-size: 56px;
 		line-height: 84px;
 	}
-	@media (max-width: $minTablet){
+	@media (max-width: $maxTablet){
 		font-size: 44px;
 		line-height: 66px;
 		letter-spacing: 1.5px;
@@ -29,7 +32,7 @@
 }
 .h1{
 	font-size: 50px;
-	@media (max-width: $maxTablet){
+	@media (max-width: $maxLaptop){
 		font-size: 44px;
 	}
 	@media (max-width: $minTablet){
@@ -42,7 +45,7 @@
 .h2{
 	font-size: 42px;
 	letter-spacing: 1.4px;
-	@media (max-width: $maxTablet){
+	@media (max-width: $maxLaptop){
 		font-size: 38px;
 	}
 	@media (max-width: $minTablet){
@@ -58,7 +61,7 @@
 }
 .h4{
 	font-size: 30px;
-	@media (max-width: $maxTablet){
+	@media (max-width: $maxLaptop){
 		font-size: 24px;
 	}
 	@media (max-width: $minTablet){

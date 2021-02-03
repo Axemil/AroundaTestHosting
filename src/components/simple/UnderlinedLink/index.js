@@ -21,7 +21,7 @@ const UndelinedLink = (initialProps) => {
     
     if(native) {
         return (
-        <a title={props.children} {...dynamicProps} className={`${props.className} ${s.link} stopCursor ${props.growingHover && s.linkGrowingHover}`}>
+        <a target="_blank" title={props.children} {...dynamicProps} className={`${props.className} ${s.link} stopCursor ${props.growingHover && s.linkGrowingHover}`}>
             <span>
                 {props.children}
             </span>
@@ -31,7 +31,7 @@ const UndelinedLink = (initialProps) => {
 
     return (
         <Link href={href} passHref={passHref}>
-            <a title={props.children} {...dynamicProps} className={`${props.className} ${s.link} stopCursor ${props.growingHover && s.linkGrowingHover}`}>
+            <a target="_blank" title={props.children} {...dynamicProps} className={`${props.className} ${s.link} stopCursor ${props.growingHover && s.linkGrowingHover}`}>
                 <span>
                  {props.children}
                 </span>
