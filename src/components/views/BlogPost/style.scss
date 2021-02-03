@@ -6,6 +6,9 @@
 	display: inherit;
 	grid-template-columns: inherit;
 	padding: 0;
+	@media(max-width: 820px){
+		overflow-x: hidden;
+	}
 }
 
 .wrapStartSection {
@@ -48,13 +51,13 @@
 	grid-column: 1 / -1;
 
 	@media (max-width: $maxTablet) {
-		margin-bottom: 90px;
+		margin-bottom: 70px;
 	}
 
-	@media (max-width: $maxMobile) {
-		padding-top: 169px;
-		grid-template-columns: 1fr;
-	}
+	// @media (max-width: $maxMobile) {
+	// 	padding-top: 169px;
+	// 	grid-template-columns: 1fr;
+	// }
 }
 
 .lineFooter{
@@ -75,16 +78,17 @@
 
 	@media (max-width: $maxLaptop) {
 		grid-column: 1 / 21;
+		height: 400px;
 	}
 
-	@media (max-width: $maxLaptop) {
-		grid-column: 1 / 21;
+	@media (max-width: $maxTablet) {
+		height: 364px;
+
 	}
 
 	@media (max-width: $maxMobile) {
 		width: 100%;
-		order: 1;
-		height: 40vh;
+		height: 240px;
 		object-position: center;
 	}
 }
@@ -97,11 +101,11 @@
 
 	@media (max-width: $maxTablet) {
 		grid-column: 25 / -7;
+		padding: 206px 0 0 0;
 	}
 
 	@media (max-width: $maxMobile) {
-		margin-bottom: 47px;
-		padding-left: calc(var(--cellSize) * 4);
+		padding-left: 16px;
 	}
 
 	a {
@@ -145,10 +149,29 @@
 		padding-bottom: 30px;
 
 
+		@media (max-width: $maxLaptop) {
+			font-size: 44px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 66px;
+			letter-spacing: 0em;
+			text-align: center;
+		}
 		@media (max-width: $maxTablet) {
-			font-size: 30px;
-			letter-spacing: 0.39px;
-			line-height: 45px;
+			font-size: 38px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 55px;
+			letter-spacing: 0em;
+			text-align: center;
+		}
+		@media (max-width: $maxMobile) {
+			font-size: 28px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 42px;
+			letter-spacing: 0em;
+			text-align: left;
 		}
 	}
 
@@ -162,6 +185,19 @@
 		padding: 0 0 20px;
 		text-transform: uppercase;
 		color: #7F838D;
+
+	    @media (max-width: $maxTablet) {
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 28px;
+			letter-spacing: 0em;
+			text-align: center;
+	    }
+
+	    @media (max-width: $maxMobile) {
+			text-align: left;
+	    }
 	}
 
 	// p {
@@ -396,6 +432,26 @@
 	max-width: 250px;
 	margin: 0 auto;
 	padding-bottom: 90px;
+	@media(max-width: $maxTablet){
+		padding-bottom: 70px;
+	}
+	@media(max-width: $maxMobile){
+		margin: 0;
+	}
+}
+
+.desctopDesc{
+	display: block;
+	@media(max-width: $maxLaptop){
+		display: none;
+	}
+}
+
+.mobileDesc{
+	display: none;
+	@media(max-width: $maxLaptop){
+		display: block;
+	}
 }
 
 .authorImage {
@@ -444,6 +500,7 @@
 
 	@media (max-width: $maxLaptop) {
 		grid-column: 4 / 10;
+		display: none;
 	}
 
 	@media (max-width: $maxTablet) {

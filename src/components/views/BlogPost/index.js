@@ -7,6 +7,7 @@ import slugify from "slugify"
 import style from "./style.scss"
 // import { Link as LocalLink } from "react-scroll"
 import Hungry from "@sections/Hungry"
+import LetsTalk from "@sections/LetsTalk"
 import MoreInteresting from "@sections/MoreInteresting"
 import StartSection from "@sections/StartSection"
 import VisibilitySensor from "react-visibility-sensor"
@@ -177,7 +178,7 @@ const BlogPost = ({ post: postData }) => {
                   src={post.author.imgUrl}
                 />
                 <p className={style.authorName}>{post.author.name}</p>
-                <p className={style.authorDescription}>{post.author.description}</p>
+                <p className={style.authorDescription}><span className={style.desctopDesc}>{post.author.description}</span><span className={style.mobileDesc}>{post.date}</span></p>
               </div>
             </div>
           </div>
@@ -198,7 +199,7 @@ const BlogPost = ({ post: postData }) => {
         {/* <div className={style.lineFooter}></div> */}
         <Hungry />
         <MoreInteresting currentPostId={post.id} />
-        <StartSection />
+        <LetsTalk />
       </section>
     )
   )

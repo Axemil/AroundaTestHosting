@@ -5,7 +5,7 @@
   display: inherit;
   grid-template-columns: inherit;
   grid-column: 1 / -1;
-  padding: 200px 0 123px;
+  padding: 80px 0;
 
   @media (max-width: 768px) {
     padding-top: 120px;
@@ -16,8 +16,8 @@
 }
 
 .wrapTop {
-  grid-column: 8 / -8;
-  margin-bottom: 98px;
+  grid-column: 6 / -6;
+  margin-bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,10 +35,14 @@
 
 .title {
   display: inline-block;
-  color: #111212;
-  font-size: 50px;
-  font-weight: normal;
-  line-height: 65px;
+  color: #141515;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 54px;
+  letter-spacing: 0em;
+  text-align: left;
+
   margin-top: 0;
   margin-bottom: 0;
 
@@ -55,12 +59,18 @@
 
 .link,
 .linkBottom {
-  color: #111212;
-  font-family: "PT Sans";
+  color: #141515;
   font-size: 18px;
-  font-weight: bold;
-  line-height: 23px;
-  border-bottom: solid 2px #30fddc;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  padding-bottom: 7px;
+  border-bottom: solid 3px #30fddc;
+
+  svg{
+    margin: 0 0 0 15px;
+  }
 }
 
 .link {
@@ -79,11 +89,10 @@
 // }
 
 .advices {
-  grid-column: 8 / -8;
-  display: inherit;
+  grid-column: 6 / -6;
+  display: flex;
+  justify-content: space-between;
   grid-template-columns: 1fr 1fr;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 120px;
 
   @media (max-width: $maxLaptop) {
     grid-column: 5 / -4;
@@ -94,52 +103,88 @@
   @media (max-width: $maxMobile) {
     grid-column: 4 / -4;
     grid-template-columns: 1fr;
-    padding-bottom: 60px;
   }
 
   a {
-    padding: 87px 87px 111px 107px;
-    transition: background 0.3s ease-in-out;
+    max-width: 302.5px;
+    width: 100%;
+    padding: 0;
+    margin: 0 15px;
+    // transition: background 0.3s ease-in-out;
 
-    @media (max-width: $maxLaptop) {
-      padding: 87px 72px 111px 81px;
+    &:first-child{
+      margin-left: 0;
     }
-    @media (max-width: $maxTablet) {
-      padding: 46px 17px 47px 32px;
+    &:last-child{
+      margin-right: 0;
     }
-    &:first-of-type {
-      @media (max-width: $maxTablet) {
-        padding: 46px 48px 47px 32px;
+
+    @media(max-width: $maxLaptop){
+      &:nth-child(n + 4) {
+        display: none;
       }
+    }
+
+    @media(max-width: $maxMobile){
+      &:nth-child(n + 3){
+        display: none;
+      }
+    }
+
+    // @media (max-width: $maxLaptop) {
+    //   padding: 87px 72px 111px 81px;
+    // }
+    // @media (max-width: $maxTablet) {
+    //   padding: 46px 17px 47px 32px;
+    // }
+    // &:first-of-type {
+    //   @media (max-width: $maxTablet) {
+    //     padding: 46px 48px 47px 32px;
+    //   }
+    // }
+    img{
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
     }
     p {
-      color: #9fa4a6;
-      font-family: "pt_sansregular";
-      font-size: 16px;
-      letter-spacing: 0.3px;
-      line-height: 33px;
-      &:first-of-type {
-        margin-bottom: 10px;
-        @media (max-width: $maxMobile) {
-          margin-bottom: 28px;
-        }
-      }
-      &:last-of-type {
-        margin-bottom: 38px;
-      }
+      color: #7F838D;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 21px;
+      letter-spacing: 0.1em;
+      text-align: left;
+      padding: 24px 0 8px;
+      text-transform: uppercase;
+
+      // &:first-of-type {
+      //   margin-bottom: 10px;
+      //   @media (max-width: $maxMobile) {
+      //     margin-bottom: 28px;
+      //   }
+      // }
+      // &:last-of-type {
+      //   margin-bottom: 38px;
+      // }
     }
 
     h2 {
-      color: #111212;
-      font-size: 38px;
-      letter-spacing: 0.7px;
-      font-weight: normal;
-      line-height: 57px;
-      margin-bottom: 30px;
+      color: #141515;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 30px;
+      letter-spacing: 0em;
+      text-align: left;
+
       @media (max-width: $maxTablet) {
-        font-size: 29px;
-        letter-spacing: 0.54px;
-        line-height: 41px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: left;
       }
       @media (max-width: $maxMobile) {
         font-size: 21px;
@@ -148,8 +193,8 @@
         margin-bottom: 35px;
       }
     }
-    &:hover {
-      background: #54ffd7;
-    }
+    // &:hover {
+    //   background: #54ffd7;
+    // }
   }
 }
