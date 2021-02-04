@@ -70,6 +70,15 @@ let MoreInteresting = ({ posts, fetchPosts, currentPostId }) => {
           )
         })}
       </div>
+      <div className={style.wrapBottom}>
+      <a className={style.link} href="/blog/">
+          All articles
+          <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.57031 1.00012L13.1911 5.62091L8.57031 10.2417" stroke="black" stroke-width="1.7"/>
+            <path d="M12.6602 5.61816L-0.000992408 5.61817" stroke="black" stroke-width="1.7"/>
+          </svg>
+      </a>
+      </div>
     </div>
   )
 }
