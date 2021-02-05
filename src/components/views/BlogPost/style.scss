@@ -100,6 +100,88 @@
 	}
 }
 
+.subscribeMobile{
+	grid-column: 14 / -14;
+	display: none;
+	justify-content: space-between;
+	padding: 36px 44px;
+	background: #F6F6F8;
+
+	@media (max-width: $maxLaptop) {
+		grid-column: 11 / -11;
+		display: flex;
+	}
+
+	@media (max-width: $maxTablet) {
+		grid-column: 4 / -4;
+		flex-direction: column;
+		justify-content: center;
+		align: center;
+		padding: 36px 6px 40px;
+	}
+
+	@media (max-width: $maxMobile) {
+		grid-column: 1 / -1;
+		margin: 0 16px;
+	}
+
+	.title{
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 30px;
+		letter-spacing: 0em;
+		text-align: left;
+		margin: 0 0 8px;
+		@media (max-width: $maxTablet) {
+			text-align: center;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 27px;
+			letter-spacing: 0em;
+		}
+	}
+	.text{
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 29px;
+		letter-spacing: 0em;
+		text-align: left;
+		@media (max-width: $maxTablet) {
+			text-align: center;
+			padding-bottom: 20px;
+		}
+	}
+	.subscribeButton{
+		margin-top: 0;
+		font-family: Gordita;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 16px;
+		letter-spacing: -0.02em;
+		text-align: center;
+		padding: 14px 32px;
+		border: 2px solid #141515;
+		border-radius: 100px;
+		background: none;
+		transition: .3s;
+		max-width: 153px;
+		width: 100%;
+		
+		&:hover{
+			background: #60FED9;
+			border: 2px solid rgba(0,0,0,0);
+		}
+
+		@media(max-width: $maxTablet){
+			margin: 0 auto;
+		}
+	}
+}
+
 .wrapTitle {
 	grid-column: 25 / -6;
 	align-self: center;
@@ -598,10 +680,11 @@
 
 	@media (max-width: $maxMobile) {
 		grid-column: 1 / -1;
-		margin-bottom: 24px;
-		margin-top: 32px;
+		margin-top: 40px;
+		margin-bottom: 40px;
 		font-size: 25px;
 		padding: 0 16px;
+
 	}
 }
 
@@ -789,7 +872,7 @@
 
 .link {
 	color: #111212;
-	background-image: linear-gradient(#30fddc, #30fddc);
+	background-image: linear-gradient(rgba(164, 169, 182, 0.63), rgba(164, 169, 182, 0.63));
 	background-repeat: no-repeat;
 	background-position: left 0 bottom 0;
 	background-size: 100% 3px;
@@ -798,6 +881,7 @@
 
 .link:hover {
 	background-size: 100% 50%;
+	background-image: linear-gradient(#60FED9, #60FED9);
 }
 
 // .link {
@@ -829,20 +913,78 @@
 // ======================== STICKY ASIDE =======================
 .stickyAside {
 	grid-row: 3 / span 3;
-	grid-column: 4 / 11;
+	grid-column: -4 / -12;
+	max-width: 315px;
 	position: sticky;
 	top: 150px;
 	background-color: #fff;
-	padding: 10px;
+	padding: 44px 0;
 	margin-bottom: 100px;
 	font-family: "Gorgita Regular", Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	line-height: 28px;
 	align-self: end;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	background: #F6F6F8;
 
-	@media (max-width: $maxLaptop) {
-		grid-column: 2 / 10;
+	// @media (max-width: $maxLaptop) {
+	// 	grid-column: 2 / 10;
+	// }
+
+	.title{
+		font-family: Gordita;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 36px;
+		letter-spacing: 0em;
+		text-align: left;
+		margin-bottom: 10px;
 	}
+	.text {
+		font-family: Gordita;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 33px;
+		letter-spacing: 0em;
+		text-align: center;
+		max-width: 244px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.subscribeButton{
+		margin-top: 24px;
+		font-family: Gordita;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 16px;
+		letter-spacing: -0.02em;
+		text-align: center;
+		padding: 14px 32px;
+		border: 2px solid #141515;
+		border-radius: 100px;
+		background: none;
+		transition: .3s;
+		max-width: 153px;
+		width: 100%;
+		
+		&:hover{
+			background: #60FED9;
+			border: 2px solid rgba(0,0,0,0);
+		}
+
+		@media(max-width: $maxTablet){
+			margin: 0 auto;
+		}
+	}
+
 
 	@media (max-width: $maxTablet) {
 		display: none;

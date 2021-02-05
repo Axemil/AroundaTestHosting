@@ -121,7 +121,21 @@ const BlogPost = ({ post: postData }) => {
                   setVisibility(!isVisible)
                 }}
               >
-                <Hungry />
+                {/* <Hungry /> */}
+              <div
+                // style={{
+                //   opacity: visibility ? 100 : 0,
+                //   transition: "opacity 0.2s ease-in-out"
+                // }}
+                // className={style.stickyAside}
+                className={style.subscribeMobile}
+              >
+                <div className={style.subscribeContent}>
+                  <p className={style.title}>Newsletter</p>
+                  <p className={style.text}>Get stories to your email every Tuesday!</p>
+                </div>
+                <SubscribeButton className={style.subscribeButton} text="Subscribe" />
+              </div>
               </VisibilitySensor>
             </VisibilitySensor>
           )

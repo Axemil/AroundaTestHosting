@@ -4,7 +4,7 @@ const data = [
         image: '/assets/images/velonto.jpg',
         title: 'Velonto, Food delivery',
         desc: 'Branding, UX/UI Design, Web design',
-        link: 'https://velonto.at/',
+        link: '/case/velonto',
         type: ['food delivery', 'landing pages', 'corporate websites', 'platforms', 'web applications', 'mobile applications', 'brand identity']
     },
     {
@@ -12,7 +12,7 @@ const data = [
         image: '/assets/images/gigzi.jpg',
         title: 'Gigzi, Blockchain platform',
         desc: 'Branding, UX/UI Design, Web design',
-        link: 'https://gigzi.com/',
+        link: '/case/gigzi',
         type: ['fintech', 'corporate websites', 'web applications', 'platforms','landing pages','brand identity']
         
     },
@@ -21,7 +21,7 @@ const data = [
         image: '/assets/images/bold.jpg',
         title: 'Bold, Meditation',
         desc: 'Branding, UX/UI Design',
-        link: ' https://thebold.app/',
+        link: '/case/bold',
         type: ['health', 'corporate websites', 'mobile applications','landing pages','brand identity']
     },
     {
@@ -29,7 +29,7 @@ const data = [
         image: '/assets/images/metricly.jpg',
         title: 'Metricly, SaaS',
         desc: 'Branding, UX/UI Design',
-        link: 'https://metricly.com/',
+        link: '/case/metricly',
         type: ['saas',  'corporate websites',]
     },
 ]
