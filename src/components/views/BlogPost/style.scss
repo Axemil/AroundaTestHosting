@@ -48,6 +48,9 @@
 	@media (max-width: $maxTablet){
 		padding-bottom: 50px;
 	}
+	@media (max-width: $maxTablet){
+		padding-bottom: 30px;
+	}
 }
 
 .top {
@@ -735,8 +738,9 @@
 	}
 
 	@media (max-width: $maxMobile) {
-		grid-column: 5 / -1;
+		grid-column: 1 / -1;
 		margin-bottom: 24px;
+		// padding: 0 16px;
 	}
 }
 
@@ -812,7 +816,8 @@
 
 	@media (max-width: $maxMobile) {
 		grid-column: 1 / -1;
-		margin-bottom: 24px;
+		margin-top: 50px;
+		margin-bottom: 20px;
 		padding: 0 16px;
 	}
 }
@@ -864,7 +869,7 @@
 
 	@media (max-width: $maxMobile) {
 		grid-column: 1 / -1;
-		margin-bottom: 24px;
+		margin-bottom: 20px;
 	}
 }
 
@@ -911,6 +916,43 @@
 // }
 
 // ======================== STICKY ASIDE =======================
+.stickySoc{
+	grid-row: 3 / span 3;
+	grid-column: 14 / 10;
+	position: sticky;
+	top: 150px;
+	a{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 48px;
+		height: 48px;
+		background: #F6F6F8;
+		border-radius: 100px;
+		margin-bottom: 11px;
+		@media(max-width: $maxMobile){
+		    width: 44px;
+		    height: 44px;
+			margin-bottom: 0;
+			margin-right: 10px;
+		}
+	}
+	@media (max-width: $maxLaptop){
+		grid-column: 7 / 10;
+	}
+	@media (max-width: $maxTablet){
+		grid-column: 2 / 2;
+	}
+	@media (max-width: $maxMobile){
+		grid-column: 1 / 1;
+		grid-row: inherit;
+		position: static;
+		padding: 0 16px;
+		display: flex;
+		margin-top: 50px;
+	}
+}
+
 .stickyAside {
 	grid-row: 3 / span 3;
 	grid-column: -4 / -12;
@@ -931,9 +973,9 @@
 	text-align: center;
 	background: #F6F6F8;
 
-	// @media (max-width: $maxLaptop) {
-	// 	grid-column: 2 / 10;
-	// }
+	@media (max-width: $maxLaptop) {
+		display: none;
+	}
 
 	.title{
 		font-family: Gordita;
@@ -959,7 +1001,7 @@
 	}
 
 	.subscribeButton{
-		margin-top: 24px;
+		margin-top: 20px;
 		font-family: Gordita;
 		font-size: 16px;
 		font-style: normal;
