@@ -21,7 +21,7 @@ import MoreInteresting from "@sections/MoreInteresting"
 // )
 
 const Blog = ({isMobile}) => {
-  const [search, setSearch] = React.useState(true)
+  const [search, setSearch] = React.useState(false)
   return (
     <section className={style.Blog}>
       <PopupSearch search={search} setSearch={setSearch} />
