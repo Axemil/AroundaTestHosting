@@ -18,6 +18,7 @@ const fetchPosts = (tagId) => (dispatch) => {
 }
 
 const transformResponse = (res) => {
+  console.log(res.items);
   return res.items.map((item) => ({
     id: item.sys.id,
     title: item.fields.title,
@@ -26,7 +27,8 @@ const transformResponse = (res) => {
     tags: item.fields.tags.map((t) => t.fields.tag),
     date: composeDate(item.fields.date),
     imageUrl: item.fields.image.fields.file.url,
-    author: item.fields.author.fields.name
+    author: item.fields.author.fields.name,
+    authorImage: item.fields.author.fields.image.fields.file.url,
   }))
 }
 

@@ -17,7 +17,9 @@ let Tags = ({ tagNames, isMobile }) => {
 
   const options = reactSelectOptionsFromTags(tagNames)
 
-  return isMobile ? <TagMenuVertical options={options} onChange={(value) => handleTagChange(value)} /> : <TagMenuHorizontal options={options} />
+  // return isMobile ? <TagMenuVertical options={options} onChange={(value) => handleTagChange(value)} /> : <TagMenuHorizontal options={options} />
+
+  return <TagMenuHorizontal options={options} />
 }
 
 const mapStateToProps = ({ tagNames }) => ({ tagNames })

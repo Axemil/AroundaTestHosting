@@ -8,6 +8,7 @@ const mapStateToProps = ({ posts, tags }) => ({ posts, tags });
 
 
 let ListWorksVisible = ({ posts, tags, fetchPosts }) => {
+  console.log(posts)
   return <ListWorks posts={posts} />;
 };
 

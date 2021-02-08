@@ -2,17 +2,23 @@
 @import "@/scss/mixins.scss";
 
 .tagsWrapper {
-	grid-column: 8 / -8;
-	display: flex;
-	align-items: center;
+	grid-column: 6 / -6;
+	// display: flex;
+	// align-items: center;
 	margin-bottom: 70px;
 
 	@media (max-width: 1300px) {
-		grid-column: 5 / -5;
+		grid-column: 4 / -4;
 	}
 
 	@media (max-width: 1080px) {
-		grid-column: 4 / -4;
+		margin-bottom: 60px;
+	}
+
+	@media (max-width: 700px) {
+		grid-column: 1 / -1;
+		padding: 0 16px;
+		margin-bottom: 40px;
 	}
 }
 
@@ -28,14 +34,68 @@
 	}
 }
 
+.h1Header{
+	font-size: 50px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 75px;
+	letter-spacing: 0em;
+	margin-bottom: 40px;
+	@media (max-width: 1300px) {
+		font-size: 44px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 66px;
+	}
+
+	@media (max-width: 1080px) {
+		font-size: 38px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 55px;
+		margin-bottom: 30px;
+	}
+
+	@media (max-width: 700px) {
+		font-size: 28px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 42px;
+	}
+	// grid-column: 6 / -6;
+}
+
+.tagDiv{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .tag {
 	display: block;
-	margin-right: 30px;
-	text-transform: uppercase;
-	color: #111212;
-	font-size: 16px;
-	letter-spacing: 0.3px;
-	line-height: 33px;
+	margin-right: 33px;
+	color: #141515;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 18px;
+	letter-spacing: -0.02em;
+	text-align: left;
+	transition: .3s;
+	padding-bottom: 5px;
+	border-bottom: 3px solid rgba(0,0,0,0);
+
+	&:hover, &:focus{
+		border-bottom: 3px solid #60FED9;
+	}
+
+	@media (max-width: 1080px) {
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 16px;
+		letter-spacing: -0.02em;
+	}
 }
 
 .subscribe {

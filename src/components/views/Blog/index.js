@@ -7,27 +7,29 @@ import Tags from "@sections/Tags"
 import ListWorksVisible from "@sections/ListWorksVisible"
 import Hungry from "@sections/Hungry"
 import PopupSearch from "@sections/PopupSearch"
-import MetaData from '@simple/MetaData';
+import MetaData from '@simple/MetaData'
+import LetsTalk from "@sections/LetsTalk"
+import MoreInteresting from "@sections/MoreInteresting"
 
-const TempSeparator = () => (
-  <div
-    style={{
-      height: "150px",
-      gridColumn: "1 / -1"
-    }}
-  ></div>
-)
+// const TempSeparator = () => (
+//   <div
+//     style={{
+//       height: "150px",
+//       gridColumn: "1 / -1"
+//     }}
+//   ></div>
+// )
 
 const Blog = ({isMobile}) => {
-  const [search, setSearch] = React.useState(false)
+  const [search, setSearch] = React.useState(true)
   return (
     <section className={style.Blog}>
       <PopupSearch search={search} setSearch={setSearch} />
       <Tags isMobile={isMobile} />
       <ListWorksVisible />
-      <Hungry blue />
-      <TempSeparator />
-      <StartSection />
+      <Hungry blue className={style.blogHungry} />
+      <MoreInteresting currentPostId={-1} />
+      <LetsTalk />
       
       <MetaData h1="Blog & News"
                 title="Blog — Useful Articles on Web & Mobile App Design | Arounda"

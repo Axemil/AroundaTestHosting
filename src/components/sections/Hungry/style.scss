@@ -221,51 +221,61 @@
 
 .Hungry {
 	&.HungryBlue {
-		background-color: #5bc7ff;
-		color: #fff;
-
-		& .title,
-		& .description {
-			color: #fff;
+		margin-top: 120px;
+		&:before{
+			display: none;
 		}
-
-		& .email {
-			p {
-				color: #fff;
-			}
-
-			input {
-				border-bottom: 2px solid #fff;
-				caret-color: #fff;
-				color: #fff;
-			}
-
-			input:focus {
-				border-color: #fff;
-			}
-
-			input::placeholder {
-				color: #fff;
-			}
+		@media(max-width: $maxTablet){
+			margin-top: 100px;
 		}
-
-		.submit {
-			background-color: #fff;
-			color: #393939;
-			border-bottom: none;
-			display: block;
-			height: 54px;
-			width: 144px;
-			margin-left: auto;
-			font-family: "PT Sans";
-			font-size: 16px;
-			font-weight: bold;
-			line-height: 22px;
-
-			@media (max-width: $maxMobile) {
-				width: 100%;
-			}
+		@media(max-width: $maxTablet){
+			margin-top: 80px;
 		}
+		// background-color: #5bc7ff;
+		// color: #fff;
+
+		// & .title,
+		// & .description {
+		// 	color: #fff;
+		// }
+
+		// & .email {
+		// 	p {
+		// 		color: #fff;
+		// 	}
+
+		// 	input {
+		// 		border-bottom: 2px solid #fff;
+		// 		caret-color: #fff;
+		// 		color: #fff;
+		// 	}
+
+		// 	input:focus {
+		// 		border-color: #fff;
+		// 	}
+
+		// 	input::placeholder {
+		// 		color: #fff;
+		// 	}
+		// }
+
+		// .submit {
+		// 	background-color: #fff;
+		// 	color: #393939;
+		// 	border-bottom: none;
+		// 	display: block;
+		// 	height: 54px;
+		// 	width: 144px;
+		// 	margin-left: auto;
+		// 	font-family: "PT Sans";
+		// 	font-size: 16px;
+		// 	font-weight: bold;
+		// 	line-height: 22px;
+
+		// 	@media (max-width: $maxMobile) {
+		// 		width: 100%;
+		// 	}
+		// }
 	}
 }
 

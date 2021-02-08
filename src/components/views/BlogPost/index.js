@@ -165,6 +165,8 @@ const BlogPost = ({ post: postData }) => {
     content
   }
 
+  // console.log(post)
+
   return (
     post && (
       <section className={style.BlogItem}>
@@ -182,7 +184,7 @@ const BlogPost = ({ post: postData }) => {
                   Back to blog
                 </a>
               </Link> */}
-              <h4>Branding</h4>
+              <h4>{post.tags[0].fields.tag}</h4>
               <h1>{post.title}</h1>
               <div className={style.author}>
                 {/* <img className={style.authorImage} src={post.author.imgUrl} /> */}

@@ -8,36 +8,26 @@ const ListWorks = ({ posts }) => {
   return (
     <div className={style.ListWorks}>
       {posts &&
-        posts.map(({ id, slug, imageUrl, tags, title, date, author }) => {
+        posts.map(({ id, slug, imageUrl, tags, title, date, author, authorImage }) => {
+          console.log(authorImage);
           return (
             <div key={id}>
               <Link href={`/blog/${slug}/`}>
                 <a className={style.item} title={title}>
                   <div
                     className={style.thumbnailContainer}
-                    // style={{
-                    //   height: 300,
-                    //   width: "100%",
-                    //   backgroundColor: "gray"
-                    // }}
                   >
                     <LazyLoadImage alt={title} className={style.thumbnail} src={imageUrl} />
                   </div>
-
-                  {/* <div
-                    style={{
-                      height: 300,
-                      width: "100%",
-                      backgroundImage: `url(${imageUrl})`,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                      backgroundRepeat: "no-repeat"
-                    }}
-                  ></div> */}
-
                   <p className={style.tag}>{tags.join(", ")}</p>
                   <h2 className={style.title}>{title}</h2>
-                  <p className={style.public}>{`${date} by ${author}`}</p>
+                  <div className={style.authorWrapper}>
+                    <LazyLoadImage alt={author} className={style.authorImage} src={authorImage} />
+                    <div className={style.textWrapper}>
+                      <p className={style.authorText}>{author}</p>
+                      <p className={style.dateText}>{date}</p>
+                    </div>
+                  </div>
                 </a>
               </Link>
             </div>

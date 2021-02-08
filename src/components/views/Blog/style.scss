@@ -5,9 +5,15 @@
 	grid-column: 1 / -1;
 	display: inherit;
 	grid-template-columns: inherit;
-	padding: 185px 0 0;
+	padding: 190px 0 0;
 
 	@media (max-width: $maxTablet) {
-		padding: 125px 0 0;
+		padding: 150px 0 0;
 	}
+}
+
+.blogHungry{
+	.Hungry:before{
+	    display: none;
+    }
 }
