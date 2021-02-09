@@ -45,15 +45,24 @@
 .title {
   display: inline-block;
   color: #141515;
-  font-size: 32px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 36px;
   font-style: normal;
   font-weight: 500;
   line-height: 54px;
   letter-spacing: 0em;
   text-align: left;
 
-  margin-top: 0;
-  margin-bottom: 0;
+
+  @media (max-width: $maxLaptop) {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 54px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
 
   @media (max-width: $maxTablet) {
     font-size: 30px;
