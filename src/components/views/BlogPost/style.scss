@@ -825,11 +825,13 @@
 // ======================== PARAGRAPH HEADING (H3) ===================
 .h3Heading {
 	grid-column: 14 / -14;
-	font-size: 24px;
+	font-size: 30px;
 	font-style: normal;
 	font-weight: 500;
-	line-height: 36px;
+	line-height: 45px;
 	letter-spacing: 0em;
+	text-align: left;
+
 	text-align: left;
 
 	margin-bottom: 14px;
