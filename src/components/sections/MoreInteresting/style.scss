@@ -140,7 +140,7 @@
   a {
     width: 100%;
     padding: 0;
-    margin: 0 15px;
+    margin: 0 20px;
     // transition: background 0.3s ease-in-out;
 
     &:first-child{
@@ -151,6 +151,7 @@
     }
 
     @media(max-width: $maxLaptop){
+      margin: 0 15px;
       &:nth-child(n + 4) {
         display: none;
       }

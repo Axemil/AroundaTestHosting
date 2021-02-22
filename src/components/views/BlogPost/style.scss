@@ -104,7 +104,7 @@
 }
 
 .subscribeMobile{
-	grid-column: 14 / -14;
+	grid-column: 11 / -17;
 	display: none;
 	justify-content: space-between;
 	padding: 36px 44px;
@@ -116,7 +116,7 @@
 	}
 
 	@media (max-width: $maxTablet) {
-		grid-column: 4 / -4;
+		grid-column: 8 / -10;
 		flex-direction: column;
 		justify-content: center;
 		align: center;
@@ -304,7 +304,7 @@
 
 .body {
 	position: relative;
-	grid-column: 14 / -14;
+	grid-column: 11 / -17;
 	margin-bottom: 230px;
 
 	@media (max-width: $maxLaptop) {
@@ -312,7 +312,7 @@
 	}
 
 	@media (max-width: $maxTablet) {
-		grid-column: 4 / -4;
+		grid-column: 8 / -10;
 	}
 
 	@media (max-width: $maxMobile) {
@@ -583,14 +583,17 @@
 
 // ======================== POST DATE ===========================
 .postDate {
-	grid-column: 7 / -8;
-	margin-bottom: 32px;
+	grid-column: 9 / -10;
+	margin-bottom: -28px;
 	justify-self: end;
-	color: #797d7e;
+	color: #7F838D;
 	font-size: 18px;
-	letter-spacing: 0.56px;
-	line-height: 33px;
-	margin-bottom: -33px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 28px;
+	letter-spacing: 0em;
+	text-align: left;
+
 
 	@media (max-width: $maxLaptop) {
 		grid-column: 4 / 10;
@@ -598,7 +601,7 @@
 	}
 
 	@media (max-width: $maxTablet) {
-		grid-column: 4 / -4;
+		grid-column: 8 / -10;
 		justify-self: start;
 	}
 
@@ -610,7 +613,7 @@
 
 // ======================== REGULAR TEXT ===================
 .regularText {
-	grid-column: 14 / -14;
+	grid-column: 11 / -17;
 	margin-bottom: 30px;
 	align-self: start;
 	font-family: Gordita;
@@ -634,7 +637,7 @@
 		letter-spacing: 0em;
 		text-align: left;
 
-		grid-column: 4 / -4;
+		grid-column: 8 / -10;
 	}
 
 	@media (max-width: $maxMobile) {
@@ -654,16 +657,17 @@
 
 // ======================== QUOTED TEXT ===================
 .quotedText {
-	grid-column: 14 / -14;
-	margin-top: 60px;
-	margin-bottom: 60px;
+	grid-column: 11 / -17;
+	margin-top: 30px;
+	margin-bottom: 90px;
 	color: #111212;
 	font-size: 30px;
 	font-style: normal;
 	font-weight: 500;
-	line-height: 54px;
+	line-height: 45px;
 	letter-spacing: 0em;
 	text-align: left;
+
 
 
 	@media (max-width: $maxLaptop) {
@@ -674,26 +678,29 @@
 		line-height: 36px;
 		letter-spacing: 0em;
 		text-align: left;
-
 	}
 
 	@media (max-width: $maxTablet) {
-		grid-column: 4 / -4;
+		grid-column: 8 / -10;
+		margin-top: 20px;
+		margin-bottom: 70px;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 30px;
+		letter-spacing: 0em;
+		text-align: left;
 	}
 
 	@media (max-width: $maxMobile) {
 		grid-column: 1 / -1;
-		margin-top: 40px;
-		margin-bottom: 40px;
-		font-size: 25px;
 		padding: 0 16px;
-
 	}
 }
 
 // ======================== LIST HEADING (H6) ===================
 .h6Heading {
-	grid-column: 14 / -14;
+	grid-column: 11 / -17;
 
 	color: #111212;
 	font-family: "pt_sansregular", sans-serif;
@@ -710,7 +717,7 @@
 	}
 
 	@media (max-width: $maxTablet) {
-		grid-column: 4 / -4;
+		grid-column: 8 / -10;
 	}
 
 	@media (max-width: $maxMobile) {
@@ -722,19 +729,18 @@
 
 // ========================= LIST ================================
 .list {
-	grid-column: 15 / -14;
+	grid-column: 12 / -17;
 
 	font-family: "pt_sansregular", sans-serif;
 	font-size: 21px;
 	line-height: 48px;
-	padding-left: 10px;
 
 	@media (max-width: $maxLaptop) {
 		grid-column: 11 / -11;
 	}
 
 	@media (max-width: $maxTablet) {
-		grid-column: 5 / -4;
+		grid-column: 9 / -10;
 	}
 
 	@media (max-width: $maxMobile) {
@@ -746,7 +752,11 @@
 
 .list .listItem {
 	position: relative;
-	margin-bottom: 1em;
+	margin-bottom: 10px;
+
+	@media(max-width: $maxMobile) {
+		margin-left: 20px;
+	}
 
 	color: #111212;
 	font-family: "pt_sansregular", sans-serif;
@@ -756,7 +766,7 @@
 	//   grid-column: 11 / -11;
 	// }
 	// @media (max-width: $maxTablet) {
-	//   grid-column: 4 / -4;
+	//   grid-column: 8 / -10;
 	// }
 	// @media (max-width: $maxMobile) {
 	//   grid-column: 5 / -4;
@@ -765,15 +775,20 @@
 }
 
 .listItem:before {
-	content: "";
-	position: absolute;
-	left: -27px;
-	height: 7px;
-	width: 7px;
-	background-color: #9fa4a6;
-	border-radius: 50%;
-	margin-top: 0.5em;
-	//  transform: translateY(-50%);
+	content: "-";
+    position: absolute;
+    left: -19px;
+    top: -9px;
+    /* height: 7px; */
+    /* width: 7px; */
+    /* background-color: #9fa4a6; */
+    /* border-radius: 50%; */
+    /* margin-top: 0.5em; */
+
+	@media(max-width: $maxMobile) {
+		left: 0;
+		top: -12px;
+	}
 }
 
 .listItem>.regularText {
@@ -782,7 +797,7 @@
 
 // ======================== PARAGRAPH HEADING (H2) ===================
 .h2Heading {
-	grid-column: 14 / -14;
+	grid-column: 11 / -17;
 	font-size: 36px;
 	font-style: normal;
 	font-weight: 500;
@@ -804,7 +819,7 @@
 	}
 
 	@media (max-width: $maxTablet) {
-		grid-column: 4 / -4;
+		grid-column: 8 / -10;
 		font-size: 30px;
 		font-style: normal;
 		font-weight: 500;
@@ -819,12 +834,18 @@
 		margin-top: 50px;
 		margin-bottom: 20px;
 		padding: 0 16px;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 36px;
+		letter-spacing: 0em;
+		text-align: left;
 	}
 }
 
 // ======================== PARAGRAPH HEADING (H3) ===================
 .h3Heading {
-	grid-column: 14 / -14;
+	grid-column: 11 / -17;
 	font-size: 30px;
 	font-style: normal;
 	font-weight: 500;
@@ -839,10 +860,22 @@
 
 	@media (max-width: $maxLaptop) {
 		grid-column: 11 / -11;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 36px;
+		letter-spacing: 0em;
+		text-align: left;
 	}
 
 	@media (max-width: $maxTablet) {
-		grid-column: 4 / -4;
+		grid-column: 8 / -10;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 30px;
+		letter-spacing: 0em;
+		text-align: left;
 	}
 
 	@media (max-width: $maxMobile) {
@@ -854,7 +887,7 @@
 
 // ======================== IMAGE IN CONTENT ===================
 .contentImage {
-	grid-column: 14 / -14;
+	grid-column: 11 / -17;
 	display: block;
 	width: 100%;
 	object-fit: cover;
@@ -866,7 +899,7 @@
 	}
 
 	@media (max-width: $maxTablet) {
-		grid-column: 4 / -4;
+		grid-column: 8 / -10;
 	}
 
 	@media (max-width: $maxMobile) {
@@ -920,7 +953,7 @@
 // ======================== STICKY ASIDE =======================
 .stickySoc{
 	grid-row: 3 / span 3;
-	grid-column: 14 / 10;
+	grid-column: 11 / 7;
 	position: sticky;
 	top: 150px;
 	a{
@@ -943,7 +976,7 @@
 		grid-column: 7 / 10;
 	}
 	@media (max-width: $maxTablet){
-		grid-column: 2 / 2;
+		grid-column: 3 / 3;
 	}
 	@media (max-width: $maxMobile){
 		grid-column: 1 / 1;
@@ -957,7 +990,7 @@
 
 .stickyAside {
 	grid-row: 3 / span 3;
-	grid-column: -4 / -12;
+	grid-column: -5 / -14;
 	max-width: 315px;
 	position: sticky;
 	top: 150px;
