@@ -145,6 +145,8 @@ class MyDocument extends Document {
                 )`
             }}
           ></script>
+          <meta name="author" content="Arounda agency"></meta>
+          <meta name="publish_date" property="og:publish_date" content="2020-10-21T00:00:00-0600"></meta>
         </Head>
         <body>
           <Main />
