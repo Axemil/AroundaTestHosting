@@ -146,6 +146,8 @@ class MyDocument extends Document {
             }}
           ></script>
           <meta name="author" content="Arounda agency"></meta>
+          <meta name="article-published_time" property="article:published_time" content="2020-10-21T00:00:00-0600"></meta>
+          <meta name="article-modified_time" property="article:modified_time" content="2020-10-22T13:47:16-0600"></meta>
           <meta name="publish_date" property="og:publish_date" content="2020-10-21T00:00:00-0600"></meta>
         </Head>
         <body>
