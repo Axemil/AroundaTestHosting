@@ -15,7 +15,15 @@ export const getServerSideProps = storeWrapper.getServerSideProps(async (context
     if (tagName && tags && tags[tagName]) {
       tagId = tags[tagName].id;
     }
-    await fetchPosts(tagId)(store.dispatch);
+    const blogPage = query['page'];
+    let blogId;
+    if(blogPage){
+      blogId = (blogPage - 1) * 2;
+    }
+    else{
+      blogId = 0;
+    }
+    await fetchPosts(tagId,blogId)(store.dispatch);
 });
 
 
