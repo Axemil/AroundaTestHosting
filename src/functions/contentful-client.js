@@ -7,10 +7,14 @@ const client = createClient({
   accessToken: config.accessToken
 })
 
-const getAllPosts = () =>
-  client.getEntries({
-    content_type: "blogPost"
-  })
+const getAllPosts = (skip) => client.getEntries({
+  skip: skip,
+  limit: 2,
+  order: 'sys.createdAt',
+  content_type: "blogPost",
+}).then(r => {console.log(r); return r;})
+
+
 
 const getAllPostsByTagId = (tagId) =>
   client

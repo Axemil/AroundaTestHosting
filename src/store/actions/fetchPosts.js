@@ -2,13 +2,13 @@ import addPosts from "./addPosts"
 import client from "../../functions/contentful-client"
 import { composeDate } from "../../functions/lib"
 
-const fetchPosts = (tagId) => (dispatch) => {
+const fetchPosts = (tagId, skip) => (dispatch) => {
   let p
 
   if (tagId) {
     p = client.getAllPostsByTagId(tagId)
   } else {
-    p = client.getAllPosts()
+    p = client.getAllPosts(skip)
   }
 
   return p.then((res) => {
