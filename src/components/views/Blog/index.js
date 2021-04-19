@@ -10,7 +10,7 @@ import Hungry from "@sections/Hungry"
 import PopupSearch from "@sections/PopupSearch"
 import MetaData from '@simple/MetaData'
 import LetsTalk from "@sections/LetsTalk"
-import MoreInteresting from "@sections/MoreInteresting"
+import PopularSection from "@sections/PopularSection"
 import Pagination from '@material-ui/lab/Pagination';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { useRouter } from 'next/router'
@@ -49,9 +49,13 @@ const useStyles = makeStyles((theme) =>({
         margin: '0 4px'
       },
       '& .Mui-selected': {
-        backgroundColor: '#30FDDC',
+        backgroundColor: '#30FDDC!important',
         color:'#000',
        },
+       '& button:hover': {
+        color: '#000',
+        background: 'none',
+       }
   }}),
 );
 
@@ -103,7 +107,7 @@ let Blog = ({ posts, tags, isMobile,fetchPosts}) => {
       <ListWorksVisible />
       <Pagination className={classes.root} count={Math.ceil(pagination / 12)} page={page} onChange={handleChange} hidePrevButton hideNextButton />
       <Hungry blue className={style.blogHungry} />
-      <MoreInteresting currentPostId={-1} />
+      <PopularSection currentPostId={-1} />
       <LetsTalk />
       <MetaData h1="Blog & News"
                 title="Blog — Useful Articles on Web & Mobile App Design | Arounda"
