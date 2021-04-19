@@ -16,6 +16,13 @@ const addPosts = posts => ({
     payload: posts
 })
 
+export const ADD_POSTS_INTER = 'ADD_POSTS_INTER'
+const addPostsInter = posts => ({
+    type: ADD_POSTS_INTER,
+    payload: posts
+})
+
+
 
 /**
  *  Normalizers
@@ -56,6 +63,12 @@ export const fetchTags = () => dispatch => {
 export const fetchPosts= () => dispatch => {
     client.getAllPosts().then(res => {
         dispatch(addPosts(normalizePosts(res)))
+    } )
+}
+
+export const fetchPostsInteresting= () => dispatch => {
+    client.getAllPostsInteresting().then(res => {
+        dispatch(addPostsInter(normalizePosts(res)))
     } )
 }
 

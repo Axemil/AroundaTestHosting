@@ -101,3 +101,61 @@
 .subscribe {
 	@media (max-width: 768px) {}
 }
+.searcherBlock{
+	svg{
+		display: block;
+	}
+}
+.searcher{
+	display: flex;
+	align-items: center;
+}
+.searcherBtn svg path{
+	fill: #A4A9B6;
+}
+.searcherBtnActive{
+	padding-right: 10px;
+	margin-right: 5px;
+}
+.searcherBtnActive svg path{
+	fill: #141515;
+}
+.searcherinput{
+	display: flex;
+	align-items: center;
+	input{
+		position: relative;
+		transition: .3s ease-in-out;
+		border: none;
+		outline: none;
+		width: 0;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 18px;
+		letter-spacing: -0.02em;
+		text-align: left;
+		&::placeholder{
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 18px;
+			letter-spacing: -0.02em;
+			text-align: left;
+			color: #A4A9B6;
+		}
+	}
+}
+
+.searcherCloseActive{
+	display: block;
+	margin-left: 9px;
+}
+
+.searcherClose{
+	display: none;
+}
+
+.searcherinputActive{
+	width: 330px!important;
+}

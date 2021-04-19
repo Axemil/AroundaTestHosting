@@ -1,5 +1,6 @@
 export const ADD_TAGS = "ADD_TAGS"
 export const ADD_POSTS = "ADD_POSTS"
+export const ADD_POSTS_INTER = "ADD_POSTS_INTER"
 export const ADD_POST = "ADD_POST"
 export const CLOSE_POPUP = "CLOSE_POPUP"
 export const OPEN_POPUP = "OPEN_POPUP"

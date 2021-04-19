@@ -1,5 +1,5 @@
 export const reactSelectOptionsFromTags = tags => [
-  { value: '/blog', label: 'All topics' },
+  { value: '/blog', label: 'All' },
 
   ...tags.map(tag => ({
     value: `/blog?tag=${tag}`,

@@ -1,16 +1,19 @@
-
-
+import { useState } from 'react'
 import style from "./style.scss"
 import VisibilitySensor from "react-visibility-sensor"
 import { connect } from "react-redux"
-import fetchPosts from "../../../store/actions/fetchPosts"
+import fetchPostsInteresting from "../../../store/actions/fetchPostsInteresting"
 import uniqueRandom from "unique-random"
 import Link from 'next/link'
 import { LazyLoadImage } from "react-lazy-load-image-component"
+// import addPostsInter from "./addPostsInter"
+import client from "../../../functions/contentful-client"
+import { composeDate } from "../../../functions/lib"
+import Carousel from 'react-grid-carousel'
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    posts: state.posts
+    postsInter: state.posts
   }
 }
 
@@ -23,22 +26,44 @@ const Spacer = () => (
   ></div>
 )
 
-let MoreInteresting = ({ posts, fetchPosts, currentPostId }) => {
+const transformResponse = (res) => {
+  return res.items.map((item) => ({
+    id: item.sys.id,
+    title: item.fields.title,
+    slug: item.fields.slug,
+    tag: item.fields.tags[0].fields.tag,
+    tags: item.fields.tags.map((t) => t.fields.tag),
+    date: composeDate(item.fields.date),
+    imageUrl: item.fields.image.fields.file.url,
+    author: item.fields.author.fields.name,
+    authorImage: item.fields.author.fields.image.fields.file.url,
+    total: res.total
+  }))
+}
+
+let MoreInteresting = ({ postsInter, fetchPostsInteresting, currentPostId }) => {
   React.useEffect(() => {
-    fetchPosts()
+    let p = client.getAllPostsInteresting()
+    p.then((res) => {
+      setMorePosts(transformResponse(res));
+    })
   }, [])
 
-  let morePosts
+  let [morePosts,setMorePosts] = useState([])
 
-  if (posts.length > 0) {
-    morePosts = []
-    posts = posts.filter((p) => p.id !== currentPostId)
-    let rand = uniqueRandom(0, posts.length - 1)
-    for (let c = 0; c < 4; c++) {
-      morePosts.push(posts[rand()])
-    }
-    console.log(morePosts)
-  }
+  // if(array != undefined){
+  //   setTimeout(() => {
+  //     morePosts.push(array.map((item) => item))
+  //   },1000)
+    
+  // }
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
 
   return !morePosts ? (
     <Spacer />
@@ -56,8 +81,9 @@ let MoreInteresting = ({ posts, fetchPosts, currentPostId }) => {
       </div>
       <div className={style.advices}>
         {morePosts.map((post, i) => {
+          if(i < 4)
           return(
-          <a key={i} href={`/blog/${post.slug}/`}>
+            <a key={i} href={`/blog/${post.slug}/`}>
             <LazyLoadImage
               src={post.imageUrl}
               alt={post.category}
@@ -66,9 +92,11 @@ let MoreInteresting = ({ posts, fetchPosts, currentPostId }) => {
             <p>{post.tags.join(", ")}</p>
             <h2>{post.title}</h2>
             {/* <p>{`${post.date} by ${post.author}`}</p> */}
-          </a>
+            </a>
           )
         })}
+        
+        
       </div>
       <div className={style.wrapBottom}>
       <a className={style.link} href="/blog/">
@@ -82,5 +110,5 @@ let MoreInteresting = ({ posts, fetchPosts, currentPostId }) => {
     </div>
   )
 }
-MoreInteresting = connect(mapStateToProps, { fetchPosts })(MoreInteresting)
+MoreInteresting = connect(mapStateToProps, { fetchPostsInteresting })(MoreInteresting)
 export default MoreInteresting

@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
-import { ADD_TAGS, ADD_POSTS } from "./actions";
+import { ADD_TAGS, ADD_POSTS, ADD_POSTS_INTER } from "./actions";
 
 const normalizePayload = payload => {
   let allItems = payload.reduce(
@@ -32,9 +32,19 @@ const posts = (state = [], action) => {
   }
 };
 
+const postsInter = (state = [], action) => {
+  switch (action.type) {
+    case ADD_POSTS_INTER:
+      return normalizePayload(action.payload)
+    default:
+      return state;
+  }
+};
+
 const reducer = combineReducers({
   tags,
-  posts
+  posts,
+  postsInter
 });
 
 const logger = store => next => action => {

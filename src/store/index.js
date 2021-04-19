@@ -1,5 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import { createWrapper } from 'next-redux-wrapper';
+import logger from 'redux-logger'
 
 import thunk from 'redux-thunk';
 import root from './reducers/root';
@@ -10,5 +11,5 @@ if(process.browser) {
 } else {
     composeEnhancers = compose
 }
-export const initStore = () => createStore(root, composeEnhancers(applyMiddleware(thunk)))
+export const initStore = () => createStore(root, composeEnhancers(applyMiddleware(thunk,logger)))
 export default createWrapper(initStore);

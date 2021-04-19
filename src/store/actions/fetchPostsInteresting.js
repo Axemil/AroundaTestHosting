@@ -1,24 +1,22 @@
-import addPosts from "./addPosts"
+import addPostsInter from "./addPostsInter"
 import client from "../../functions/contentful-client"
 import { composeDate } from "../../functions/lib"
 
-const fetchPosts = (tagId, skip, searchWord) => (dispatch) => {
+const fetchPostsInteresting = () => (dispatch) => {
   let p
 
   // if (tagId) {
   //   p = client.getAllPostsByTagId(tagId)
   //   return p.then((res) => {
   //     const posts = transformResponse(res)
-  //     dispatch(addPosts(posts))
+  //     dispatch(addPostsInter(posts))
   //   })
   // }
-  if (skip != undefined) {
-    p = client.getAllPosts(skip, searchWord, tagId)
+  p = client.getAllPostsInteresting()
     return p.then((res) => {
-      const posts = transformResponse(res)
-      dispatch(addPosts(posts))
-    })
-  }
+      const postsInter = transformResponse(res)
+      dispatch(addPostsInter(postsInter))
+  })
 }
 
 const transformResponse = (res) => {
@@ -36,4 +34,4 @@ const transformResponse = (res) => {
   }))
 }
 
-export default fetchPosts
+export default fetchPostsInteresting

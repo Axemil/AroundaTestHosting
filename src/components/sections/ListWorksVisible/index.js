@@ -1,4 +1,3 @@
-
 import { connect } from 'react-redux';
 import fetchPosts from '../../../store/actions/fetchPosts';
 
@@ -8,7 +7,6 @@ const mapStateToProps = ({ posts, tags }) => ({ posts, tags });
 
 
 let ListWorksVisible = ({ posts, tags, fetchPosts }) => {
-  console.log(posts)
   return <ListWorks posts={posts} />;
 };
 

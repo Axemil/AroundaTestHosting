@@ -17,3 +17,35 @@
 	    display: none;
     }
 }
+
+.paginationBlock{
+	display: grid;
+	grid-column: 1 / -1;
+	margin: 0 auto;
+	button{
+		height: 46px;
+		min-width: 46px;
+		font-family: Gordita;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 18px;
+		letter-spacing: 0em;
+		text-align: center;
+		border-radius: 50%;
+		background: #30FDDC;
+		color: #000;
+	}
+}
+
+.MuiPaginationItem-page.Mui-selected{
+	background: #30FDDC!important;
+}
+
+.searcherinput{
+	display: flex;
+	align-items: center;
+	input{
+
+	}
+}

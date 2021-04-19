@@ -13,6 +13,8 @@ import StartSection from "@sections/StartSection"
 import VisibilitySensor from "react-visibility-sensor"
 import SubscribeButton from "@simple/SubscribeButton"
 import { LazyLoadImage } from "react-lazy-load-image-component"
+import { route } from 'next/dist/next-server/server/router'
+import { useRouter } from 'next/router'
 
 const localLinkName = (name) => slugify(name).toLocaleLowerCase()
 
@@ -33,6 +35,7 @@ const Quote = (props) => {
 
 const BlogPost = ({ post: postData }) => {
   if (!postData.content) return null
+  const router = useRouter()
 
   const [visibility, setVisibility] = React.useState(true)
 
@@ -67,7 +70,14 @@ const BlogPost = ({ post: postData }) => {
           href = localLinkName(url)
           return (
             <a
-              to={href}
+              // to={href}
+              onClick={e => {
+                // console.log(router)
+                link = "";
+                const base = router.asPath;
+                let link = base.split('#')[0] + "#" + href;
+                router.push(link);
+              }}
               smooth="easeOutQuad"
               duration={800}
               className={style.link}

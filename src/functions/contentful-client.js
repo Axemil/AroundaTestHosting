@@ -7,18 +7,29 @@ const client = createClient({
   accessToken: config.accessToken
 })
 
-const getAllPosts = (skip) => client.getEntries({
+const getAllPosts = (skip = 0, search, tagId) => client.getEntries({
   skip: skip,
-  limit: 2,
+  limit: config.limit,
   order: 'sys.createdAt',
+  content_type: "blogPost",
+  links_to_entry: tagId,
+  "fields.title[match]": search,
+}).then(r => {console.log(r); return r;})
+
+const getAllPostsInteresting = () => client.getEntries({
+  order: '-sys.createdAt',
   content_type: "blogPost",
 }).then(r => {console.log(r); return r;})
 
 
 
-const getAllPostsByTagId = (tagId) =>
+const getAllPostsByTagId = (tagId, skip, search) =>
   client
     .getEntries({
+      skip: skip,
+      limit: config.limit,
+      order: 'sys.createdAt',
+      "fields.title[match]": search,
       content_type: "blogPost",
       links_to_entry: tagId
     })
@@ -39,6 +50,7 @@ const createTag = (tag) => {}
 
 export default {
   getAllPosts,
+  getAllPostsInteresting,
   getAllPostsByTagId,
   getPostBySlug,
   getTags
