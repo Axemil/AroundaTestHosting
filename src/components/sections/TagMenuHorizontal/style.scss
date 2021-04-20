@@ -105,6 +105,16 @@
 	svg{
 		display: block;
 	}
+	@media (max-width: 900px) {
+		position: fixed;
+    	top: 43px;
+    	right: 104px;
+    	z-index: 100000;
+	}
+	@media (max-width: 900px) {
+    	top: 45px;
+    	right: 58px;
+	}
 }
 .searcher{
 	display: flex;
@@ -135,6 +145,7 @@
 		line-height: 18px;
 		letter-spacing: -0.02em;
 		text-align: left;
+		background: none;
 		&::placeholder{
 			font-size: 18px;
 			font-style: normal;
@@ -158,4 +169,7 @@
 
 .searcherinputActive{
 	width: 330px!important;
+	@media (max-width: $maxMobile) {
+		width: 150px!important;
+	}
 }
